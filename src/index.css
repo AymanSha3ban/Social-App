@@ -5,6 +5,7 @@
 @theme {
   --color-purble : #6941C6 ;
   --breakpoint-2xl : 1400px ;
+  --font-error : 'Alex Brush' ;
 
 }
 body{
