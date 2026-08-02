@@ -15,6 +15,7 @@ export default function App() {
       {index : true , element : <Login></Login>} ,
       {path : 'register' , element : <Register></Register>},
       {path : 'home' , element : <Home></Home>},
+      {path : 'login' , element : <Login></Login>},
       {path : '*' , element : <NotFound></NotFound>},
     ]}
   ])

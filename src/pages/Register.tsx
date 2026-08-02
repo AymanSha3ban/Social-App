@@ -1,6 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { RegisterSchema, type RegisterData } from "../schema/RegisterSchema";
+import { Link, useNavigate } from "react-router-dom";
+import { addUser } from "../apis/Register.api";
+import { useState } from "react";
 
 export default function Register() {
   const {
@@ -10,10 +13,20 @@ export default function Register() {
   } = useForm<RegisterData>({
     resolver: zodResolver(RegisterSchema),
   });
+  const navigate = useNavigate() ;
 
-  const onSubmit = (data: RegisterData) => {
-    console.log("Data submited succefully");     
-    console.log(data);     
+  const [loading, setLoading] = useState(false);
+  
+  const onSubmit =async  (data: RegisterData) => {
+    try{
+      setLoading(true);
+      const my_data = await addUser(data) ;
+      navigate('/login') ;
+      console.log("User added successfully:", my_data);   
+    }catch(err){
+      setLoading(false);
+      console.log(err)
+    }  
   };
 
   return (
@@ -25,13 +38,26 @@ export default function Register() {
         <div className="flex flex-col">
           <input
             type="text"
-            {...register("name")}
-            placeholder="Your name"
+            {...register("firstName")}
+            placeholder="Your first name"
             className="w-full p-2 outline-none border-b-2 border-gray-300 focus:border-purple-500 transition-colors bg-transparent placeholder-gray-400"
           />
-          {errors.name && (
+          {errors.firstName && (
             <span className="text-red-500 text-xs font-medium mt-1">
-              {errors.name.message}
+              {errors.firstName.message}
+            </span>
+          )}
+        </div>
+        <div className="flex flex-col">
+          <input
+            type="text"
+            {...register("lastName")}
+            placeholder="Your last name"
+            className="w-full p-2 outline-none border-b-2 border-gray-300 focus:border-purple-500 transition-colors bg-transparent placeholder-gray-400"
+          />
+          {errors.lastName && (
+            <span className="text-red-500 text-xs font-medium mt-1">
+              {errors.lastName.message}
             </span>
           )}
         </div>
@@ -121,9 +147,11 @@ export default function Register() {
         <button
           type="submit"
           className="w-full mt-4 py-3 rounded-xl cursor-pointer bg-purple-600 text-white font-bold text-lg shadow-lg shadow-purple-300 hover:bg-purple-700 hover:scale-[1.02] transition-all"
+          disabled={loading}
         >
-          Login
+          {loading ? <i className="fas fa-spinner fa-spin"></i> : "Sign Up"}
         </button>
+        <Link to={'/login'} className="text-purple-500 font-bold text-center">Already have an account? Login</Link>
       </form>
     </div>
   );

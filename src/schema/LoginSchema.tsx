@@ -1,13 +1,18 @@
-import {z} from 'zod'
+import { z } from "zod";
 
 export const LoginSchema = z.object({
-    email : z
-        .string()
-        .email('your email not correct!')
-        .min(1 , "email is required !"),
-    password : z
-        .string()
-        .min(1,'password is required !'),
-}) ;
+  username: z
+    .string()
+    .min(3, "Username must be at least 3 characters!")
+    .max(20, "Username must be at most 20 characters!")
+    .regex(
+      /^[a-zA-Z0-9_]+$/,
+      "Username can only contain letters, numbers, and underscores!"
+    ),
 
-export type LoginData = z.infer< typeof LoginSchema >
+  password: z
+    .string()
+    .min(1, "Password is required!"),
+});
+
+export type LoginData = z.infer<typeof LoginSchema>;
