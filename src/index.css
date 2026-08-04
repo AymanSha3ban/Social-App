@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 
 @theme {
-  --color-purble : #6941C6 ;
+  --color-purple : #6941C6 ;
   --breakpoint-2xl : 1400px ;
   --font-error : 'Alex Brush' ;
 

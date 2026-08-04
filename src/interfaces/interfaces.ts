@@ -9,3 +9,8 @@ export interface AuthContextType {
     isAuthed: string | null;
     setIsAuthed: (isAuthed: string | null) => void;
 }
+
+export interface DarkModeContextType {
+    isDarkMode: boolean;
+    toggleDarkMode: () => void;
+}
