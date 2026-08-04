@@ -2,8 +2,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { LoginSchema, type LoginData } from "../schema/LoginSchema";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { loginUser } from "../apis/Login.api";
+import { AuthContext } from "../context/createdContext/AuthContext";
 
 export default function Login() {
   const {
@@ -15,7 +16,7 @@ export default function Login() {
   });
 
   const navigate = useNavigate() ;
-
+  const {setIsAuthed} = useContext(AuthContext)!;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   
@@ -24,8 +25,10 @@ export default function Login() {
       const my_data = await loginUser(data) ;
       setLoading(true);
       setError('');
+      localStorage.setItem('accessToken', my_data.accessToken);
+      setIsAuthed(my_data.accessToken);
       navigate('/home') ;
-      console.log("User login successfully:", my_data);   
+      console.log("User login successfully:");   
     }catch(err){
       setLoading(false);
       setError('Invalid username or password');
@@ -43,7 +46,7 @@ export default function Login() {
           <input
             type="username"
             {...register("username")}
-            placeholder="Your email"
+            placeholder="Enter your username"
             className="w-full p-2 outline-none border-b-2 border-gray-300 focus:border-purple-500 transition-colors bg-transparent placeholder-gray-400"
           />
           {errors.username && (

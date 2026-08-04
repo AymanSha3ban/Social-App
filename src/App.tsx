@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import ProtectedRoute from './components/ProtectedRoute'
 
 
 
@@ -14,7 +15,7 @@ export default function App() {
     {path : '/' , element : <Layout></Layout> , children:[
       {index : true , element : <Login></Login>} ,
       {path : 'register' , element : <Register></Register>},
-      {path : 'home' , element : <Home></Home>},
+      {path : 'home' , element : <ProtectedRoute><Home></Home></ProtectedRoute>},
       {path : 'login' , element : <Login></Login>},
       {path : '*' , element : <NotFound></NotFound>},
     ]}
