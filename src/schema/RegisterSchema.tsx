@@ -4,11 +4,11 @@ import {z} from 'zod'
 export const RegisterSchema = z.object({
   firstName: z
     .string()
-    .min(3, "name is required!"),
+    .min(3, "First name is required!"),
 
   lastName: z
     .string()
-    .min(3, "name is required!"),
+    .min(3, "Last name is required!"),
 
   username: z
     .string()
@@ -18,7 +18,6 @@ export const RegisterSchema = z.object({
       /^[a-zA-Z0-9_]+$/,
       "Username can only contain letters, numbers, and underscores!"
     ),
-
   email: z
     .string()
     .email("your email not correct!")
