@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { RegisterSchema, type RegisterData } from "../schema/RegisterSchema";
 import { Link, useNavigate } from "react-router-dom";
-import { addUser } from "../apis/Register.api";
+import { addUser } from "../apis/Auth/Register.api";
 import { useState } from "react";
 
 export default function Register() {

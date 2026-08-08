@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { LoginSchema, type LoginData } from "../schema/LoginSchema";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-import { loginUser } from "../apis/Login.api";
+import { loginUser } from "../apis/Auth/Login.api";
 import { AuthContext } from "../context/createdContext/AuthContext";
 
 export default function Login() {
