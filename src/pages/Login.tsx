@@ -26,6 +26,8 @@ export default function Login() {
       setLoading(true);
       setError('');
       localStorage.setItem('accessToken', my_data.accessToken);
+      localStorage.setItem('userId', my_data.id);
+      console.log(localStorage.getItem('userId'))
       setIsAuthed(my_data.accessToken);
       navigate('/home');
       console.log("User login successfully:");   

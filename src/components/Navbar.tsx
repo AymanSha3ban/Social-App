@@ -2,11 +2,19 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/createdContext/AuthContext";
 import { DarkModeContext } from "../context/createdContext/DarkContex";
+import { useQuery } from "@tanstack/react-query";
+import { getLoginedUser } from "../apis/Auth/Users.api";
+import type { UserType } from "../interfaces/interfaces"
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const { isAuthed, setIsAuthed } = useContext(AuthContext)!;
     const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext)!;
+    const { data : user, isLoading, isError } = useQuery<UserType>({
+    queryKey: ['LoginedUser'],
+    queryFn: getLoginedUser
+  });
+
     const navigate = useNavigate();
     
     const handleToggle = () => {
@@ -19,6 +27,28 @@ export default function Navbar() {
         navigate('/login');
         console.log("User logged out successfully");
     }
+
+    
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        <i className="fas fa-spinner fa-spin text-4xl text-purple-600 dark:text-purple-400"></i>
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="flex justify-center items-center py-20"> 
+        <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">
+          Error fetching profile data. Please try again later.
+        </p>
+      </div>
+    );
+  }
+
+  const { firstName } = user ?? {};
+
 
     return (
         <div className=" w-full">
@@ -50,6 +80,17 @@ export default function Navbar() {
                                             </svg>
                                             Home
                                         </Link>
+                                    </li>
+                                    
+                                    <li className="flex justify-center items-center p-2 border-b-2 border-purple-700 hover:text-purple-700  hover:border-2 hover:border-purple-700 hover:rounded-full  cursor-pointer transition-all"> 
+                                        <Link 
+                                            to={'/profile'} 
+                                            className="flex justify-center items-center gap-1.5"
+                                        >
+                                            <i className="fa-solid fa-user"></i>
+                                            <span>{firstName}</span>
+                                        </Link>
+                                      
                                     </li>
                                     <li onClick={handleLogout} className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-200 rounded-lg hover:bg-red-200 dark:hover:bg-red-900/40 hover:text-red-700 dark:hover:text-red-400 transition-colors cursor-pointer">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
