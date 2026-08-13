@@ -12,7 +12,7 @@ export default function CommentCard() {
 
   return (
     <div className="space-y-4">
-      {comments.data?.comments.map((comment: CommentType) => (
+      {comments.data?.map((comment: CommentType) => (
         <div 
           key={comment.id} 
           className="group bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-xl hover:bg-slate-900/80 hover:border-slate-700/60 transition-all duration-300"
