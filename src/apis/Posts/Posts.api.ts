@@ -1,8 +1,9 @@
+import type { IComment } from '../../interfaces/interfaces.ts';
 import {API} from '../BaseAPI.ts';
 
 export const getPosts = async () => {
     const res = await API.get("/posts");
-       return res.data.posts || res.data;
+    return res.data.posts || res.data;
 }
 
 export const getPost = async (id: number) => {
@@ -10,7 +11,11 @@ export const getPost = async (id: number) => {
     return res.data;
 };
 
-export const getPostComments = async (id: number) => {
-      const res = await API.get(`/comments?postId=${id}`);
+export const getComments = async (id: number) => {
+    const res = await API.get(`/comments?postId=${id}`);
+    return res.data;
+};
+export const addComments = async (comment:IComment) => {
+    const res = await API.post(`/comments?postId=${comment.postId}`, comment );
     return res.data;
 };

@@ -5,6 +5,7 @@ import { DarkModeContext } from "../context/createdContext/DarkContex";
 import { useQuery } from "@tanstack/react-query";
 import { getLoginedUser } from "../apis/Auth/Users.api";
 import type { UserType } from "../interfaces/interfaces"
+import Loading from "./Loading";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -39,15 +40,11 @@ export default function Navbar() {
 
   if (isError) {
     return (
-      <div className="flex justify-center items-center py-20"> 
-        <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">
-          Error fetching profile data. Please try again later.
-        </p>
-      </div>
+      <Loading/>
     );
   }
 
-  const { firstName } = user ?? {};
+  const { firstName } = user!;
 
 
     return (
@@ -82,7 +79,7 @@ export default function Navbar() {
                                         </Link>
                                     </li>
                                     
-                                    <li className="flex justify-center items-center p-2 border-b-2 border-purple-700 hover:text-purple-700  hover:border-2 hover:border-purple-700 hover:rounded-full  cursor-pointer transition-all"> 
+                                    <li className="flex justify-center items-center p-2  hover:text-purple-700  hover:border-2 hover:border-purple-700 hover:rounded-full  cursor-pointer transition-all"> 
                                         <Link 
                                             to={'/profile'} 
                                             className="flex justify-center items-center gap-1.5"

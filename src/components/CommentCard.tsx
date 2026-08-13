@@ -1,17 +1,22 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { getPostComments } from "../apis/Posts/Posts.api";
+import { getComments } from "../apis/Posts/Posts.api";
 import type { CommentType } from "../interfaces/interfaces";
 
 export default function CommentCard() {
   const { id } = useParams();
   const comments = useQuery({
     queryKey: ['comments', id],
-    queryFn: () => getPostComments(Number(id))
+    queryFn: () => getComments(Number(id))
   });
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2">
+      <div className="border border-slate-800 rounded-2xl p-4 shadow-xl dark:text-purple font-bold ">
+        <label htmlFor="message" className="block mb-2.5 text-lg font-medium text-heading">Your Comment</label>
+        <textarea id="message" rows={2} className="bg-neutral-secondary-medium border border-default-medium text-heading text-lg rounded-xl focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your comment here..." defaultValue={""} />
+        <button className="p-3 bg-purple text-blue-50 m-2.5 rounded hover:bg-purple-500 cursor-pointer">Comment</button>
+      </div>
       {comments.data?.map((comment: CommentType) => (
         <div 
           key={comment.id} 

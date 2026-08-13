@@ -1,8 +1,8 @@
 import type { RegisterData } from "../../schema/RegisterSchema";
-
-import {API} from '../BaseAPI.ts';
+import { API } from '../BaseAPI.ts';
 
 export const addUser = async (registerFormData: RegisterData) => {
-  const { data } = await API.post('/users', registerFormData); 
+  const user  = registerFormData ;
+  const { data } = await API.post('/users', user); 
   return data;
 };

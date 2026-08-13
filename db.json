@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "Emily",
       "lastName": "Johnson",
       "maidenName": "Smith",
@@ -71,7 +71,7 @@
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "firstName": "Michael",
       "lastName": "Williams",
       "maidenName": "",
@@ -141,7 +141,7 @@
       "role": "admin"
     },
     {
-      "id": 3,
+      "id": "3",
       "firstName": "Sophia",
       "lastName": "Brown",
       "maidenName": "",
@@ -211,7 +211,7 @@
       "role": "admin"
     },
     {
-      "id": 4,
+      "id": "4",
       "firstName": "James",
       "lastName": "Davis",
       "maidenName": "",
@@ -281,7 +281,7 @@
       "role": "admin"
     },
     {
-      "id": 5,
+      "id": "5",
       "firstName": "Emma",
       "lastName": "Miller",
       "maidenName": "Johnson",
@@ -351,7 +351,7 @@
       "role": "admin"
     },
     {
-      "id": 6,
+      "id": "6",
       "firstName": "Olivia",
       "lastName": "Wilson",
       "maidenName": "",
@@ -421,7 +421,7 @@
       "role": "moderator"
     },
     {
-      "id": 7,
+      "id": "7",
       "firstName": "Alexander",
       "lastName": "Jones",
       "maidenName": "",
@@ -491,7 +491,7 @@
       "role": "moderator"
     },
     {
-      "id": 8,
+      "id": "8",
       "firstName": "Ava",
       "lastName": "Taylor",
       "maidenName": "",
@@ -561,7 +561,7 @@
       "role": "moderator"
     },
     {
-      "id": 9,
+      "id": "9",
       "firstName": "Ethan",
       "lastName": "Martinez",
       "maidenName": "",
@@ -631,7 +631,7 @@
       "role": "moderator"
     },
     {
-      "id": 10,
+      "id": "10",
       "firstName": "Isabella",
       "lastName": "Anderson",
       "maidenName": "Davis",
@@ -701,7 +701,7 @@
       "role": "moderator"
     },
     {
-      "id": 11,
+      "id": "11",
       "firstName": "Liam",
       "lastName": "Garcia",
       "maidenName": "",
@@ -771,7 +771,7 @@
       "role": "moderator"
     },
     {
-      "id": 12,
+      "id": "12",
       "firstName": "Mia",
       "lastName": "Rodriguez",
       "maidenName": "",
@@ -841,7 +841,7 @@
       "role": "moderator"
     },
     {
-      "id": 13,
+      "id": "13",
       "firstName": "Noah",
       "lastName": "Hernandez",
       "maidenName": "",
@@ -911,7 +911,7 @@
       "role": "moderator"
     },
     {
-      "id": 14,
+      "id": "14",
       "firstName": "Charlotte",
       "lastName": "Lopez",
       "maidenName": "Martinez",
@@ -981,7 +981,7 @@
       "role": "moderator"
     },
     {
-      "id": 15,
+      "id": "15",
       "firstName": "William",
       "lastName": "Gonzalez",
       "maidenName": "",
@@ -1051,7 +1051,7 @@
       "role": "moderator"
     },
     {
-      "id": 16,
+      "id": "16",
       "firstName": "Avery",
       "lastName": "Perez",
       "maidenName": "",
@@ -1121,7 +1121,7 @@
       "role": "user"
     },
     {
-      "id": 17,
+      "id": "17",
       "firstName": "Evelyn",
       "lastName": "Sanchez",
       "maidenName": "",
@@ -1191,7 +1191,7 @@
       "role": "user"
     },
     {
-      "id": 18,
+      "id": "18",
       "firstName": "Logan",
       "lastName": "Torres",
       "maidenName": "",
@@ -1261,7 +1261,7 @@
       "role": "user"
     },
     {
-      "id": 19,
+      "id": "19",
       "firstName": "Abigail",
       "lastName": "Rivera",
       "maidenName": "",
@@ -1331,7 +1331,7 @@
       "role": "user"
     },
     {
-      "id": 20,
+      "id": "20",
       "firstName": "Jackson",
       "lastName": "Evans",
       "maidenName": "",
@@ -1401,7 +1401,7 @@
       "role": "user"
     },
     {
-      "id": 21,
+      "id": "21",
       "firstName": "Madison",
       "lastName": "Collins",
       "maidenName": "",
@@ -1471,7 +1471,7 @@
       "role": "user"
     },
     {
-      "id": 22,
+      "id": "22",
       "firstName": "Elijah",
       "lastName": "Stewart",
       "maidenName": "",
@@ -1541,7 +1541,7 @@
       "role": "user"
     },
     {
-      "id": 23,
+      "id": "23",
       "firstName": "Chloe",
       "lastName": "Morales",
       "maidenName": "",
@@ -1611,7 +1611,7 @@
       "role": "user"
     },
     {
-      "id": 24,
+      "id": "24",
       "firstName": "Mateo",
       "lastName": "Nguyen",
       "maidenName": "",
@@ -1681,7 +1681,7 @@
       "role": "user"
     },
     {
-      "id": 25,
+      "id": "25",
       "firstName": "Harper",
       "lastName": "Kelly",
       "maidenName": "Evans",
@@ -1751,7 +1751,7 @@
       "role": "user"
     },
     {
-      "id": 26,
+      "id": "26",
       "firstName": "Evelyn",
       "lastName": "Gonzalez",
       "maidenName": "",
@@ -1821,7 +1821,7 @@
       "role": "user"
     },
     {
-      "id": 27,
+      "id": "27",
       "firstName": "Daniel",
       "lastName": "Cook",
       "maidenName": "",
@@ -1891,7 +1891,7 @@
       "role": "user"
     },
     {
-      "id": 28,
+      "id": "28",
       "firstName": "Lily",
       "lastName": "Lee",
       "maidenName": "Brown",
@@ -1961,7 +1961,7 @@
       "role": "user"
     },
     {
-      "id": 29,
+      "id": "29",
       "firstName": "Henry",
       "lastName": "Hill",
       "maidenName": "",
@@ -2031,7 +2031,7 @@
       "role": "user"
     },
     {
-      "id": 30,
+      "id": "30",
       "firstName": "Addison",
       "lastName": "Wright",
       "maidenName": "",
@@ -2099,719 +2099,1212 @@
         "network": "Ethereum (ERC20)"
       },
       "role": "user"
+    },
+    {
+      "firstName": "Ayman",
+      "lastName": "Shaaban",
+      "username": "ayman17",
+      "email": "aymankhattap2021@gmail.com",
+      "password": "ayman123",
+      "confirmPassword": "ayman123",
+      "birth": "2004-05-17",
+      "gender": "male",
+      "id": "UND1ncFemWg"
+    },
+    {
+      "firstName": "Ali",
+      "lastName": "Shaaban",
+      "username": "ali18",
+      "email": "aymankhattap2022@gmail.com",
+      "password": "ali123",
+      "confirmPassword": "ali123",
+      "birth": "2004-05-17",
+      "gender": "male",
+      "id": "1rLvjGfVmr8"
+    },
+    {
+      "firstName": "Ahmed",
+      "lastName": "hassan",
+      "username": "ahmed10",
+      "email": "aymankhattap2021@gmail.com",
+      "password": "ahmed123",
+      "confirmPassword": "ahmed123",
+      "birth": "2004-05-17",
+      "gender": "male",
+      "id": "WARct_HcLx8"
+    },
+    {
+      "firstName": "Omnia",
+      "lastName": "Ayman",
+      "username": "omnia0",
+      "email": "aymankhattap2021@gmail.com",
+      "password": "om123",
+      "confirmPassword": "om123",
+      "birth": "2004-05-17",
+      "gender": "male",
+      "id": "x43CbpuqsmE"
     }
   ],
-  
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "His mother had always taught him",
       "body": "His mother had always taught him not to ever think of himself as better than others. He'd tried to live by this motto. He never looked down on those who were less fortunate or who had less money than him. But the stupidity of the group of people he was talking to made him change his mind.",
-      "tags": ["history", "american", "crime"],
-      "reactions": { "likes": 192, "dislikes": 25 },
+      "tags": [
+        "history",
+        "american",
+        "crime"
+      ],
+      "reactions": {
+        "likes": 192,
+        "dislikes": 25
+      },
       "views": 305,
       "userId": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "He was an expert but not in a discipline",
       "body": "He was an expert but not in a discipline that anyone could fully appreciate. He knew how to hold the cone just right so that the soft server ice-cream fell into it at the precise angle to form a perfect cone each and every time. It had taken years to perfect and he could now do it without even putting any thought behind it.",
-      "tags": ["french", "fiction", "english"],
-      "reactions": { "likes": 859, "dislikes": 32 },
+      "tags": [
+        "french",
+        "fiction",
+        "english"
+      ],
+      "reactions": {
+        "likes": 859,
+        "dislikes": 32
+      },
       "views": 4884,
       "userId": 2
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Dave watched as the forest burned up on the hill.",
       "body": "Dave watched as the forest burned up on the hill, only a few miles from her house. The car had been hastily packed and Marta was inside trying to round up the last of the pets. Dave went through his mental list of the most important papers and documents that they couldn't leave behind. He scolded himself for not having prepared these better in advance and hoped that he had remembered everything that was needed. He continued to wait for Marta to appear with the pets, but she still was nowhere to be seen.",
-      "tags": ["magical", "history", "french"],
-      "reactions": { "likes": 1448, "dislikes": 39 },
+      "tags": [
+        "magical",
+        "history",
+        "french"
+      ],
+      "reactions": {
+        "likes": 1448,
+        "dislikes": 39
+      },
       "views": 4152,
       "userId": 3
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "All he wanted was a candy bar.",
       "body": "All he wanted was a candy bar. It didn't seem like a difficult request to comprehend, but the clerk remained frozen and didn't seem to want to honor the request. It might have had something to do with the gun pointed at his face.",
-      "tags": ["mystery", "english", "american"],
-      "reactions": { "likes": 359, "dislikes": 18 },
+      "tags": [
+        "mystery",
+        "english",
+        "american"
+      ],
+      "reactions": {
+        "likes": 359,
+        "dislikes": 18
+      },
       "views": 4548,
       "userId": 4
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Hopes and dreams were dashed that day.",
       "body": "Hopes and dreams were dashed that day. It should have been expected, but it still came as a shock. The warning signs had been ignored in favor of the possibility, however remote, that it could actually happen. That possibility had grown from hope to an undeniable belief it must be destiny. That was until it wasn't and the hopes and dreams came crashing down.",
-      "tags": ["crime", "mystery", "love"],
-      "reactions": { "likes": 119, "dislikes": 30 },
+      "tags": [
+        "crime",
+        "mystery",
+        "love"
+      ],
+      "reactions": {
+        "likes": 119,
+        "dislikes": 30
+      },
       "views": 626,
       "userId": 5
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Dave wasn't exactly sure how he had ended up",
       "body": "Dave wasn't exactly sure how he had ended up in this predicament. He ran through all the events that had lead to this current situation and it still didn't make sense. He wanted to spend some time to try and make sense of it all, but he had higher priorities at the moment. The first was how to get out of his current situation of being naked in a tree with snow falling all around and no way for him to get down.",
-      "tags": ["english", "classic", "american"],
-      "reactions": { "likes": 15, "dislikes": 8 },
+      "tags": [
+        "english",
+        "classic",
+        "american"
+      ],
+      "reactions": {
+        "likes": 15,
+        "dislikes": 8
+      },
       "views": 38,
       "userId": 6
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "This is important to remember.",
       "body": "This is important to remember. Love isn't like pie. You don't need to divide it among all your friends and loved ones. No matter how much love you give, you can always give more. It doesn't run out, so don't try to hold back giving it as if it may one day run out. Give it freely and as much as you want.",
-      "tags": ["magical", "crime"],
-      "reactions": { "likes": 127, "dislikes": 26 },
+      "tags": [
+        "magical",
+        "crime"
+      ],
+      "reactions": {
+        "likes": 127,
+        "dislikes": 26
+      },
       "views": 168,
       "userId": 7
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "One can cook on and with an open fire.",
       "body": "One can cook on and with an open fire. These are some of the ways to cook with fire outside. Cooking meat using a spit is a great way to evenly cook meat. In order to keep meat from burning, it's best to slowly rotate it.",
-      "tags": ["american", "english"],
-      "reactions": { "likes": 1271, "dislikes": 36 },
+      "tags": [
+        "american",
+        "english"
+      ],
+      "reactions": {
+        "likes": 1271,
+        "dislikes": 36
+      },
       "views": 2116,
       "userId": 8
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "There are different types of secrets.",
       "body": "There are different types of secrets. She had held onto plenty of them during her life, but this one was different. She found herself holding onto the worst type. It was the type of secret that could gnaw away at your insides if you didn't tell someone about it, but it could end up getting you killed if you did.",
-      "tags": ["american", "history", "magical"],
-      "reactions": { "likes": 703, "dislikes": 18 },
+      "tags": [
+        "american",
+        "history",
+        "magical"
+      ],
+      "reactions": {
+        "likes": 703,
+        "dislikes": 18
+      },
       "views": 2235,
       "userId": 9
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "They rushed out the door.",
       "body": "They rushed out the door, grabbing anything and everything they could think of they might need. There was no time to double-check to make sure they weren't leaving something important behind. Everything was thrown into the car and they sped off. Thirty minutes later they were safe and that was when it dawned on them that they had forgotten the most important thing of all.",
-      "tags": ["fiction", "magical", "history"],
-      "reactions": { "likes": 455, "dislikes": 3 },
+      "tags": [
+        "fiction",
+        "magical",
+        "history"
+      ],
+      "reactions": {
+        "likes": 455,
+        "dislikes": 3
+      },
       "views": 4504,
       "userId": 10
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "It wasn't quite yet time to panic.",
       "body": "It wasn't quite yet time to panic. There was still time to salvage the situation. At least that is what she was telling himself. The reality was that it was time to panic and there wasn't time to salvage the situation, but he continued to delude himself into believing there was.",
-      "tags": ["mystery", "american", "history"],
-      "reactions": { "likes": 453, "dislikes": 8 },
+      "tags": [
+        "mystery",
+        "american",
+        "history"
+      ],
+      "reactions": {
+        "likes": 453,
+        "dislikes": 8
+      },
       "views": 984,
       "userId": 11
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "She was aware that things could go wrong.",
       "body": "She was aware that things could go wrong. In fact, she had trained her entire life in anticipation that things would go wrong one day. She had quiet confidence as she started to see that this was the day that all her training would be worthwhile and useful. At this point, she had no idea just how wrong everything would go that day.",
-      "tags": ["love", "english"],
-      "reactions": { "likes": 362, "dislikes": 45 },
+      "tags": [
+        "love",
+        "english"
+      ],
+      "reactions": {
+        "likes": 362,
+        "dislikes": 45
+      },
       "views": 480,
       "userId": 12
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "She wanted rainbow hair.",
       "body": "She wanted rainbow hair. That's what she told the hairdresser. It should be deep rainbow colors, too. She wasn't interested in pastel rainbow hair. She wanted it deep and vibrant so there was no doubt that she had done this on purpose.",
-      "tags": ["mystery", "classic", "french"],
-      "reactions": { "likes": 268, "dislikes": 39 },
+      "tags": [
+        "mystery",
+        "classic",
+        "french"
+      ],
+      "reactions": {
+        "likes": 268,
+        "dislikes": 39
+      },
       "views": 3038,
       "userId": 13
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "The paper was blank.",
       "body": "The paper was blank. It shouldn't have been. There should have been writing on the paper, at least a paragraph if not more. The fact that the writing wasn't there was frustrating. Actually, it was even more than frustrating. It was downright distressing.",
-      "tags": ["mystery", "english", "love"],
-      "reactions": { "likes": 118, "dislikes": 17 },
+      "tags": [
+        "mystery",
+        "english",
+        "love"
+      ],
+      "reactions": {
+        "likes": 118,
+        "dislikes": 17
+      },
       "views": 721,
       "userId": 14
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "The trees, therefore, must be such old",
       "body": "The trees, therefore, must be such old and primitive techniques that they thought nothing of them, deeming them so inconsequential that even savages like us would know of them and not be suspicious. At that, they probably didn't have too much time after they detected us orbiting and intending to land. And if that were true, there could be only one place where their civilization was hidden.",
-      "tags": ["fiction", "history", "crime"],
-      "reactions": { "likes": 951, "dislikes": 12 },
+      "tags": [
+        "fiction",
+        "history",
+        "crime"
+      ],
+      "reactions": {
+        "likes": 951,
+        "dislikes": 12
+      },
       "views": 2911,
       "userId": 15
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "There was only one way to do things in the Statton house.",
       "body": "There was only one way to do things in the Statton house. That one way was to do exactly what the father, Charlie, demanded. He made the decisions and everyone else followed without question. That was until today.",
-      "tags": ["magical", "french", "american"],
-      "reactions": { "likes": 1257, "dislikes": 11 },
+      "tags": [
+        "magical",
+        "french",
+        "american"
+      ],
+      "reactions": {
+        "likes": 1257,
+        "dislikes": 11
+      },
       "views": 2019,
       "userId": 16
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "She was in a hurry.",
       "body": "She was in a hurry. Not the standard hurry when you're in a rush to get someplace, but a frantic hurry. The type of hurry where a few seconds could mean life or death. She raced down the road ignoring speed limits and weaving between cars. She was only a few minutes away when traffic came to a dead standstill on the road ahead.",
-      "tags": ["french", "magical", "english"],
-      "reactions": { "likes": 50, "dislikes": 31 },
+      "tags": [
+        "french",
+        "magical",
+        "english"
+      ],
+      "reactions": {
+        "likes": 50,
+        "dislikes": 31
+      },
       "views": 511,
       "userId": 17
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "She had a terrible habit o comparing her life to others",
       "body": "She had a terrible habit o comparing her life to others. She realized that their life experiences were completely different than her own and that she saw only what they wanted her to see, but that didn't matter. She still compared herself and yearned for what she thought they had and she didn't.",
-      "tags": ["history", "french", "love"],
-      "reactions": { "likes": 277, "dislikes": 29 },
+      "tags": [
+        "history",
+        "french",
+        "love"
+      ],
+      "reactions": {
+        "likes": 277,
+        "dislikes": 29
+      },
       "views": 1127,
       "userId": 18
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "The rain and wind abruptly stopped.",
       "body": "The rain and wind abruptly stopped, but the sky still had the gray swirls of storms in the distance. Dave knew this feeling all too well. The calm before the storm. He only had a limited amount of time before all Hell broke loose, but he stopped to admire the calmness. Maybe it would be different this time, he thought, with the knowledge deep within that it wouldn't.",
-      "tags": ["fiction", "crime", "magical"],
-      "reactions": { "likes": 566, "dislikes": 2 },
+      "tags": [
+        "fiction",
+        "crime",
+        "magical"
+      ],
+      "reactions": {
+        "likes": 566,
+        "dislikes": 2
+      },
       "views": 2128,
       "userId": 19
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "He couldn't remember exactly where he had read it",
       "body": "He couldn't remember exactly where he had read it, but he was sure that he had. The fact that she didn't believe him was quite frustrating as he began to search the Internet to find the article. It wasn't as if it was something that seemed impossible. Yet she insisted on always seeing the source whenever he stated a fact.",
-      "tags": ["french", "classic"],
-      "reactions": { "likes": 999, "dislikes": 29 },
+      "tags": [
+        "french",
+        "classic"
+      ],
+      "reactions": {
+        "likes": 999,
+        "dislikes": 29
+      },
       "views": 4280,
       "userId": 20
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "He wandered down the stairs and into the basement",
       "body": "He wandered down the stairs and into the basement. The damp, musty smell of un-use hung in the air. A single, small window let in a glimmer of light, but this simply made the shadows in the basement deeper. He inhaled deeply and looked around at a mess that had been accumulating for over 25 years. He was positive that this was the place he wanted to live.",
-      "tags": ["french", "american"],
-      "reactions": { "likes": 1376, "dislikes": 13 },
+      "tags": [
+        "french",
+        "american"
+      ],
+      "reactions": {
+        "likes": 1376,
+        "dislikes": 13
+      },
       "views": 2738,
       "userId": 21
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "She has seen this scene before.",
       "body": "She has seen this scene before. It had come to her in dreams many times before. She had to pinch herself to make sure it wasn't a dream again. As her fingers squeezed against her arm, she felt the pain. It was this pain that immediately woke her up.",
-      "tags": ["classic", "love", "history"],
-      "reactions": { "likes": 1241, "dislikes": 20 },
+      "tags": [
+        "classic",
+        "love",
+        "history"
+      ],
+      "reactions": {
+        "likes": 1241,
+        "dislikes": 20
+      },
       "views": 4587,
       "userId": 22
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "It's an unfortunate reality that we don't teach people how to make money",
       "body": "It's an unfortunate reality that we don't teach people how to make money (beyond getting a 9 to 5 job) as part of our education system. The truth is there are a lot of different, legitimate ways to make money. That doesn't mean they are easy and that you won't have to work hard to succeed, but it does mean that if you're willing to open your mind a bit you don't have to be stuck in an office from 9 to 5 for the next fifty years o your life.",
-      "tags": ["crime", "english"],
-      "reactions": { "likes": 675, "dislikes": 16 },
+      "tags": [
+        "crime",
+        "english"
+      ],
+      "reactions": {
+        "likes": 675,
+        "dislikes": 16
+      },
       "views": 1634,
       "userId": 23
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "The robot clicked disapprovingly.",
       "body": "The robot clicked disapprovingly, gurgled briefly inside its cubical interior and extruded a pony glass of brownish liquid. \"Sir, you will undoubtedly end up in a drunkard's grave, dead of hepatic cirrhosis,\" it informed me virtuously as it returned my ID card. I glared as I pushed the glass across the table.",
-      "tags": ["crime", "american", "love"],
-      "reactions": { "likes": 87, "dislikes": 12 },
+      "tags": [
+        "crime",
+        "american",
+        "love"
+      ],
+      "reactions": {
+        "likes": 87,
+        "dislikes": 12
+      },
       "views": 97,
       "userId": 24
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "It went through such rapid contortions",
       "body": "It went through such rapid contortions that the little bear was forced to change his hold on it so many times he became confused in the darkness, and could not, for the life of him, tell whether he held the sheep right side up, or upside down. But that point was decided for him a moment later by the animal itself, who, with a sudden twist, jabbed its horns so hard into his lowest ribs that he gave a grunt of anger and disgust.",
-      "tags": ["fiction", "history", "french"],
-      "reactions": { "likes": 1162, "dislikes": 16 },
+      "tags": [
+        "fiction",
+        "history",
+        "french"
+      ],
+      "reactions": {
+        "likes": 1162,
+        "dislikes": 16
+      },
       "views": 2437,
       "userId": 25
     },
     {
-      "id": 26,
+      "id": "26",
       "title": "She patiently waited for his number to be called.",
       "body": "She patiently waited for his number to be called. She had no desire to be there, but her mom had insisted that she go. She's resisted at first, but over time she realized it was simply easier to appease her and go. Mom tended to be that way. She would keep insisting until you wore down and did what she wanted. So, here she sat, patiently waiting for her number to be called.",
-      "tags": ["french", "mystery", "crime"],
-      "reactions": { "likes": 444, "dislikes": 3 },
+      "tags": [
+        "french",
+        "mystery",
+        "crime"
+      ],
+      "reactions": {
+        "likes": 444,
+        "dislikes": 3
+      },
       "views": 4070,
       "userId": 26
     },
     {
-      "id": 27,
+      "id": "27",
       "title": "Ten more steps.",
       "body": "If he could take ten more steps it would be over, but his legs wouldn't move. He tried to will them to work, but they wouldn't listen to his brain. Ten more steps and it would be over but it didn't appear he would be able to do it.",
-      "tags": ["mystery", "classic", "love"],
-      "reactions": { "likes": 1387, "dislikes": 35 },
+      "tags": [
+        "mystery",
+        "classic",
+        "love"
+      ],
+      "reactions": {
+        "likes": 1387,
+        "dislikes": 35
+      },
       "views": 3218,
       "userId": 27
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "He had three simple rules by which he lived.",
       "body": "He had three simple rules by which he lived. The first was to never eat blue food. There was nothing in nature that was edible that was blue. People often asked about blueberries, but everyone knows those are actually purple. He understood it was one of the stranger rules to live by, but it had served him well thus far in the 50+ years of his life.",
-      "tags": ["crime", "love"],
-      "reactions": { "likes": 1291, "dislikes": 18 },
+      "tags": [
+        "crime",
+        "love"
+      ],
+      "reactions": {
+        "likes": 1291,
+        "dislikes": 18
+      },
       "views": 3531,
       "userId": 28
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "The chair sat in the corner where it had been",
       "body": "The chair sat in the corner where it had been for over 25 years. The only difference was there was someone actually sitting in it. How long had it been since someone had done that? Ten years or more he imagined. Yet there was no denying the presence in the chair now.",
-      "tags": ["mystery", "american"],
-      "reactions": { "likes": 1, "dislikes": 1 },
+      "tags": [
+        "mystery",
+        "american"
+      ],
+      "reactions": {
+        "likes": 1,
+        "dislikes": 1
+      },
       "views": 43,
       "userId": 29
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "Things aren't going well at all",
       "body": "Things aren't going well at all with mom today. she is just a limp noodle and wants to sleep all the time. I sure hope that things get better soon.",
-      "tags": ["american", "love", "fiction"],
-      "reactions": { "likes": 465, "dislikes": 30 },
+      "tags": [
+        "american",
+        "love",
+        "fiction"
+      ],
+      "reactions": {
+        "likes": 465,
+        "dislikes": 30
+      },
       "views": 3558,
       "userId": 30
     }
   ],
-
- "comments": [
+  "comments": [
     {
-      "id": 1,
+      "id": "1",
       "body": "This is some awesome thinking!",
       "postId": 1,
       "likes": 3,
-      "user": { "id": 1, "username": "emmac", "fullName": "Emma Wilson" }
+      "user": {
+        "id": 1,
+        "username": "emmac",
+        "fullName": "Emma Wilson"
+      }
     },
     {
-      "id": 2,
+      "id": "2",
       "body": "Completely agree with this perspective, really well written.",
       "postId": 1,
       "likes": 7,
-      "user": { "id": 2, "username": "michaelw", "fullName": "Michael Williams" }
+      "user": {
+        "id": 2,
+        "username": "michaelw",
+        "fullName": "Michael Williams"
+      }
     },
     {
-      "id": 3,
+      "id": "3",
       "body": "Super helpful, thanks for sharing!",
       "postId": 1,
       "likes": 5,
-      "user": { "id": 3, "username": "sophiab", "fullName": "Sophia Brown" }
+      "user": {
+        "id": 3,
+        "username": "sophiab",
+        "fullName": "Sophia Brown"
+      }
     },
     {
-      "id": 4,
+      "id": "4",
       "body": "What terrific math skills you're showing!",
       "postId": 2,
       "likes": 4,
-      "user": { "id": 4, "username": "jamesd", "fullName": "James Davis" }
+      "user": {
+        "id": 4,
+        "username": "jamesd",
+        "fullName": "James Davis"
+      }
     },
     {
-      "id": 5,
+      "id": "5",
       "body": "I love how detailed this explanation is.",
       "postId": 2,
       "likes": 2,
-      "user": { "id": 5, "username": "emmaj", "fullName": "Emma Miller" }
+      "user": {
+        "id": 5,
+        "username": "emmaj",
+        "fullName": "Emma Miller"
+      }
     },
     {
-      "id": 6,
+      "id": "6",
       "body": "You are an amazing writer!",
       "postId": 3,
       "likes": 2,
-      "user": { "id": 1, "username": "emilys", "fullName": "Emily Johnson" }
+      "user": {
+        "id": 1,
+        "username": "emilys",
+        "fullName": "Emily Johnson"
+      }
     },
     {
-      "id": 7,
+      "id": "7",
       "body": "This description literally made me feel like I was there.",
       "postId": 3,
       "likes": 12,
-      "user": { "id": 6, "username": "oliviaw", "fullName": "Olivia Wilson" }
+      "user": {
+        "id": 6,
+        "username": "oliviaw",
+        "fullName": "Olivia Wilson"
+      }
     },
     {
-      "id": 8,
+      "id": "8",
       "body": "Absolute masterpiece of a post.",
       "postId": 3,
       "likes": 8,
-      "user": { "id": 7, "username": "alexanderj", "fullName": "Alexander Jones" }
+      "user": {
+        "id": 7,
+        "username": "alexanderj",
+        "fullName": "Alexander Jones"
+      }
     },
     {
-      "id": 9,
+      "id": "9",
       "body": "Wow! You have improved so much!",
       "postId": 4,
       "likes": 1,
-      "user": { "id": 8, "username": "avat", "fullName": "Ava Taylor" }
+      "user": {
+        "id": 8,
+        "username": "avat",
+        "fullName": "Ava Taylor"
+      }
     },
     {
-      "id": 10,
+      "id": "10",
       "body": "This made my day, awesome content.",
       "postId": 4,
       "likes": 9,
-      "user": { "id": 9, "username": "ethanm", "fullName": "Ethan Martinez" }
+      "user": {
+        "id": 9,
+        "username": "ethanm",
+        "fullName": "Ethan Martinez"
+      }
     },
     {
-      "id": 11,
+      "id": "11",
       "body": "Nice idea!",
       "postId": 5,
       "likes": 1,
-      "user": { "id": 10, "username": "isabellad", "fullName": "Isabella Anderson" }
+      "user": {
+        "id": 10,
+        "username": "isabellad",
+        "fullName": "Isabella Anderson"
+      }
     },
     {
-      "id": 12,
+      "id": "12",
       "body": "Very creative approach to the topic.",
       "postId": 5,
       "likes": 3,
-      "user": { "id": 11, "username": "liamg", "fullName": "Liam Garcia" }
+      "user": {
+        "id": 11,
+        "username": "liamg",
+        "fullName": "Liam Garcia"
+      }
     },
     {
-      "id": 13,
+      "id": "13",
       "body": "You are showing excellent understanding!",
       "postId": 6,
       "likes": 5,
-      "user": { "id": 12, "username": "miar", "fullName": "Mia Rodriguez" }
+      "user": {
+        "id": 12,
+        "username": "miar",
+        "fullName": "Mia Rodriguez"
+      }
     },
     {
-      "id": 14,
+      "id": "14",
       "body": "Spot on analysis!",
       "postId": 6,
       "likes": 6,
-      "user": { "id": 13, "username": "noahh", "fullName": "Noah Hernandez" }
+      "user": {
+        "id": 13,
+        "username": "noahh",
+        "fullName": "Noah Hernandez"
+      }
     },
     {
-      "id": 15,
+      "id": "15",
       "body": "This is clear, concise, and complete!",
       "postId": 7,
       "likes": 1,
-      "user": { "id": 14, "username": "charlottem", "fullName": "Charlotte Lopez" }
+      "user": {
+        "id": 14,
+        "username": "charlottem",
+        "fullName": "Charlotte Lopez"
+      }
     },
     {
-      "id": 16,
+      "id": "16",
       "body": "Thanks for breaking it down so simply.",
       "postId": 7,
       "likes": 4,
-      "user": { "id": 15, "username": "williamg", "fullName": "William Gonzalez" }
+      "user": {
+        "id": 15,
+        "username": "williamg",
+        "fullName": "William Gonzalez"
+      }
     },
     {
-      "id": 17,
+      "id": "17",
       "body": "What a powerful argument!",
       "postId": 8,
       "likes": 0,
-      "user": { "id": 16, "username": "averyp", "fullName": "Avery Perez" }
+      "user": {
+        "id": 16,
+        "username": "averyp",
+        "fullName": "Avery Perez"
+      }
     },
     {
-      "id": 18,
+      "id": "18",
       "body": "Couldn't agree more with this.",
       "postId": 8,
       "likes": 3,
-      "user": { "id": 17, "username": "evelyns", "fullName": "Evelyn Sanchez" }
+      "user": {
+        "id": 17,
+        "username": "evelyns",
+        "fullName": "Evelyn Sanchez"
+      }
     },
     {
-      "id": 19,
+      "id": "19",
       "body": "I knew you could do it!",
       "postId": 9,
       "likes": 3,
-      "user": { "id": 18, "username": "logant", "fullName": "Logan Torres" }
+      "user": {
+        "id": 18,
+        "username": "logant",
+        "fullName": "Logan Torres"
+      }
     },
     {
-      "id": 20,
+      "id": "20",
       "body": "Incredible perspective right here.",
       "postId": 9,
       "likes": 11,
-      "user": { "id": 19, "username": "abigailr", "fullName": "Abigail Rivera" }
+      "user": {
+        "id": 19,
+        "username": "abigailr",
+        "fullName": "Abigail Rivera"
+      }
     },
     {
-      "id": 21,
+      "id": "21",
       "body": "Wonderful ideas!",
       "postId": 10,
       "likes": 0,
-      "user": { "id": 20, "username": "jacksone", "fullName": "Jackson Evans" }
+      "user": {
+        "id": 20,
+        "username": "jacksone",
+        "fullName": "Jackson Evans"
+      }
     },
     {
-      "id": 22,
+      "id": "22",
       "body": "Really inspiring stuff.",
       "postId": 10,
       "likes": 5,
-      "user": { "id": 21, "username": "madisonc", "fullName": "Madison Collins" }
+      "user": {
+        "id": 21,
+        "username": "madisonc",
+        "fullName": "Madison Collins"
+      }
     },
     {
-      "id": 23,
+      "id": "23",
       "body": "It was a pleasure to grade/read this!",
       "postId": 11,
       "likes": 8,
-      "user": { "id": 22, "username": "elijahs", "fullName": "Elijah Stewart" }
+      "user": {
+        "id": 22,
+        "username": "elijahs",
+        "fullName": "Elijah Stewart"
+      }
     },
     {
-      "id": 24,
+      "id": "24",
       "body": "Top tier insights as always.",
       "postId": 11,
       "likes": 2,
-      "user": { "id": 23, "username": "chloem", "fullName": "Chloe Morales" }
+      "user": {
+        "id": 23,
+        "username": "chloem",
+        "fullName": "Chloe Morales"
+      }
     },
     {
-      "id": 25,
+      "id": "25",
       "body": "Keep up the incredible work!",
       "postId": 12,
       "likes": 10,
-      "user": { "id": 24, "username": "mateon", "fullName": "Mateo Nguyen" }
+      "user": {
+        "id": 24,
+        "username": "mateon",
+        "fullName": "Mateo Nguyen"
+      }
     },
     {
-      "id": 26,
+      "id": "26",
       "body": "Brilliant write-up!",
       "postId": 12,
       "likes": 4,
-      "user": { "id": 25, "username": "harpere", "fullName": "Harper Kelly" }
+      "user": {
+        "id": 25,
+        "username": "harpere",
+        "fullName": "Harper Kelly"
+      }
     },
     {
-      "id": 27,
+      "id": "27",
       "body": "My goodness, how impressive!",
       "postId": 13,
       "likes": 10,
-      "user": { "id": 26, "username": "evelyng", "fullName": "Evelyn Gonzalez" }
+      "user": {
+        "id": 26,
+        "username": "evelyng",
+        "fullName": "Evelyn Gonzalez"
+      }
     },
     {
-      "id": 28,
+      "id": "28",
       "body": "Learned something new today thanks to this.",
       "postId": 13,
       "likes": 7,
-      "user": { "id": 27, "username": "danielc", "fullName": "Daniel Cook" }
+      "user": {
+        "id": 27,
+        "username": "danielc",
+        "fullName": "Daniel Cook"
+      }
     },
     {
-      "id": 29,
+      "id": "29",
       "body": "You're showing inventive ideas!",
       "postId": 14,
       "likes": 8,
-      "user": { "id": 28, "username": "lilyb", "fullName": "Lily Lee" }
+      "user": {
+        "id": 28,
+        "username": "lilyb",
+        "fullName": "Lily Lee"
+      }
     },
     {
-      "id": 30,
+      "id": "30",
       "body": "Fascinating point of view.",
       "postId": 14,
       "likes": 3,
-      "user": { "id": 29, "username": "henryh", "fullName": "Henry Hill" }
+      "user": {
+        "id": 29,
+        "username": "henryh",
+        "fullName": "Henry Hill"
+      }
     },
     {
-      "id": 31,
+      "id": "31",
       "body": "You've shown so much growth!",
       "postId": 15,
       "likes": 2,
-      "user": { "id": 30, "username": "addisonw", "fullName": "Addison Wright" }
+      "user": {
+        "id": 30,
+        "username": "addisonw",
+        "fullName": "Addison Wright"
+      }
     },
     {
-      "id": 32,
+      "id": "32",
       "body": "Such a solid post.",
       "postId": 15,
       "likes": 5,
-      "user": { "id": 1, "username": "emilys", "fullName": "Emily Johnson" }
+      "user": {
+        "id": 1,
+        "username": "emilys",
+        "fullName": "Emily Johnson"
+      }
     },
     {
-      "id": 33,
+      "id": "33",
       "body": "Interesting thoughts!",
       "postId": 16,
       "likes": 5,
-      "user": { "id": 2, "username": "michaelw", "fullName": "Michael Williams" }
+      "user": {
+        "id": 2,
+        "username": "michaelw",
+        "fullName": "Michael Williams"
+      }
     },
     {
-      "id": 34,
+      "id": "34",
       "body": "This totally makes sense now.",
       "postId": 16,
       "likes": 8,
-      "user": { "id": 3, "username": "sophiab", "fullName": "Sophia Brown" }
+      "user": {
+        "id": 3,
+        "username": "sophiab",
+        "fullName": "Sophia Brown"
+      }
     },
     {
-      "id": 35,
+      "id": "35",
       "body": "I love your neat work!",
       "postId": 17,
       "likes": 7,
-      "user": { "id": 4, "username": "jamesd", "fullName": "James Davis" }
+      "user": {
+        "id": 4,
+        "username": "jamesd",
+        "fullName": "James Davis"
+      }
     },
     {
-      "id": 36,
+      "id": "36",
       "body": "Always dropping great thoughts.",
       "postId": 17,
       "likes": 3,
-      "user": { "id": 5, "username": "emmaj", "fullName": "Emma Miller" }
+      "user": {
+        "id": 5,
+        "username": "emmaj",
+        "fullName": "Emma Miller"
+      }
     },
     {
-      "id": 37,
+      "id": "37",
       "body": "Doesn't it feel good to do such great work?",
       "postId": 18,
       "likes": 6,
-      "user": { "id": 6, "username": "oliviaw", "fullName": "Olivia Wilson" }
+      "user": {
+        "id": 6,
+        "username": "oliviaw",
+        "fullName": "Olivia Wilson"
+      }
     },
     {
-      "id": 38,
+      "id": "38",
       "body": "Pure quality right here.",
       "postId": 18,
       "likes": 2,
-      "user": { "id": 7, "username": "alexanderj", "fullName": "Alexander Jones" }
+      "user": {
+        "id": 7,
+        "username": "alexanderj",
+        "fullName": "Alexander Jones"
+      }
     },
     {
-      "id": 39,
+      "id": "39",
       "body": "First-rate work!",
       "postId": 19,
       "likes": 1,
-      "user": { "id": 8, "username": "avat", "fullName": "Ava Taylor" }
+      "user": {
+        "id": 8,
+        "username": "avat",
+        "fullName": "Ava Taylor"
+      }
     },
     {
-      "id": 40,
+      "id": "40",
       "body": "Really appreciated reading this.",
       "postId": 19,
       "likes": 6,
-      "user": { "id": 9, "username": "ethanm", "fullName": "Ethan Martinez" }
+      "user": {
+        "id": 9,
+        "username": "ethanm",
+        "fullName": "Ethan Martinez"
+      }
     },
     {
-      "id": 41,
+      "id": "41",
       "body": "This is fascinating information!",
       "postId": 20,
       "likes": 4,
-      "user": { "id": 10, "username": "isabellad", "fullName": "Isabella Anderson" }
+      "user": {
+        "id": 10,
+        "username": "isabellad",
+        "fullName": "Isabella Anderson"
+      }
     },
     {
-      "id": 42,
+      "id": "42",
       "body": "Couldn't have said it better myself.",
       "postId": 20,
       "likes": 9,
-      "user": { "id": 11, "username": "liamg", "fullName": "Liam Garcia" }
+      "user": {
+        "id": 11,
+        "username": "liamg",
+        "fullName": "Liam Garcia"
+      }
     },
     {
-      "id": 43,
+      "id": "43",
       "body": "You inspire me!",
       "postId": 21,
       "likes": 0,
-      "user": { "id": 12, "username": "miar", "fullName": "Mia Rodriguez" }
+      "user": {
+        "id": 12,
+        "username": "miar",
+        "fullName": "Mia Rodriguez"
+      }
     },
     {
-      "id": 44,
+      "id": "44",
       "body": "Absolute gold standard post.",
       "postId": 21,
       "likes": 4,
-      "user": { "id": 13, "username": "noahh", "fullName": "Noah Hernandez" }
+      "user": {
+        "id": 13,
+        "username": "noahh",
+        "fullName": "Noah Hernandez"
+      }
     },
     {
-      "id": 45,
+      "id": "45",
       "body": "This is right on target!",
       "postId": 22,
       "likes": 5,
-      "user": { "id": 14, "username": "charlottem", "fullName": "Charlotte Lopez" }
+      "user": {
+        "id": 14,
+        "username": "charlottem",
+        "fullName": "Charlotte Lopez"
+      }
     },
     {
-      "id": 46,
+      "id": "46",
       "body": "Right to the point, love it.",
       "postId": 22,
       "likes": 2,
-      "user": { "id": 15, "username": "williamg", "fullName": "William Gonzalez" }
+      "user": {
+        "id": 15,
+        "username": "williamg",
+        "fullName": "William Gonzalez"
+      }
     },
     {
-      "id": 47,
+      "id": "47",
       "body": "What an astounding observation!",
       "postId": 23,
       "likes": 1,
-      "user": { "id": 16, "username": "averyp", "fullName": "Avery Perez" }
+      "user": {
+        "id": 16,
+        "username": "averyp",
+        "fullName": "Avery Perez"
+      }
     },
     {
-      "id": 48,
+      "id": "48",
       "body": "Super deep thoughts here.",
       "postId": 23,
       "likes": 7,
-      "user": { "id": 17, "username": "evelyns", "fullName": "Evelyn Sanchez" }
+      "user": {
+        "id": 17,
+        "username": "evelyns",
+        "fullName": "Evelyn Sanchez"
+      }
     },
     {
-      "id": 49,
+      "id": "49",
       "body": "This is very well thought out!",
       "postId": 24,
       "likes": 1,
-      "user": { "id": 18, "username": "logant", "fullName": "Logan Torres" }
+      "user": {
+        "id": 18,
+        "username": "logant",
+        "fullName": "Logan Torres"
+      }
     },
     {
-      "id": 50,
+      "id": "50",
       "body": "Phenomenal write up.",
       "postId": 24,
       "likes": 4,
-      "user": { "id": 19, "username": "abigailr", "fullName": "Abigail Rivera" }
+      "user": {
+        "id": 19,
+        "username": "abigailr",
+        "fullName": "Abigail Rivera"
+      }
     },
     {
-      "id": 51,
+      "id": "51",
       "body": "I can tell you've been practicing!",
       "postId": 25,
       "likes": 9,
-      "user": { "id": 20, "username": "jacksone", "fullName": "Jackson Evans" }
+      "user": {
+        "id": 20,
+        "username": "jacksone",
+        "fullName": "Jackson Evans"
+      }
     },
     {
-      "id": 52,
+      "id": "52",
       "body": "Such a clear explanation.",
       "postId": 25,
       "likes": 3,
-      "user": { "id": 21, "username": "madisonc", "fullName": "Madison Collins" }
+      "user": {
+        "id": 21,
+        "username": "madisonc",
+        "fullName": "Madison Collins"
+      }
     },
     {
-      "id": 53,
+      "id": "53",
       "body": "You've come a long way!",
       "postId": 26,
       "likes": 7,
-      "user": { "id": 22, "username": "elijahs", "fullName": "Elijah Stewart" }
+      "user": {
+        "id": 22,
+        "username": "elijahs",
+        "fullName": "Elijah Stewart"
+      }
     },
     {
-      "id": 54,
+      "id": "54",
       "body": "Truly eye-opening.",
       "postId": 26,
       "likes": 5,
-      "user": { "id": 23, "username": "chloem", "fullName": "Chloe Morales" }
+      "user": {
+        "id": 23,
+        "username": "chloem",
+        "fullName": "Chloe Morales"
+      }
     },
     {
-      "id": 55,
+      "id": "55",
       "body": "I can tell you've been paying attention!",
       "postId": 27,
       "likes": 9,
-      "user": { "id": 24, "username": "mateon", "fullName": "Mateo Nguyen" }
+      "user": {
+        "id": 24,
+        "username": "mateon",
+        "fullName": "Mateo Nguyen"
+      }
     },
     {
-      "id": 56,
+      "id": "56",
       "body": "Remarkable points made here.",
       "postId": 27,
       "likes": 4,
-      "user": { "id": 25, "username": "harpere", "fullName": "Harper Kelly" }
+      "user": {
+        "id": 25,
+        "username": "harpere",
+        "fullName": "Harper Kelly"
+      }
     },
     {
-      "id": 57,
+      "id": "57",
       "body": "Reading this made my day!",
       "postId": 28,
       "likes": 8,
-      "user": { "id": 26, "username": "evelyng", "fullName": "Evelyn Gonzalez" }
+      "user": {
+        "id": 26,
+        "username": "evelyng",
+        "fullName": "Evelyn Gonzalez"
+      }
     },
     {
-      "id": 58,
+      "id": "58",
       "body": "Always bringing quality content.",
       "postId": 28,
       "likes": 2,
-      "user": { "id": 27, "username": "danielc", "fullName": "Daniel Cook" }
+      "user": {
+        "id": 27,
+        "username": "danielc",
+        "fullName": "Daniel Cook"
+      }
     },
     {
-      "id": 59,
+      "id": "59",
       "body": "This is very perceptive!",
       "postId": 29,
       "likes": 2,
-      "user": { "id": 28, "username": "lilyb", "fullName": "Lily Lee" }
+      "user": {
+        "id": 28,
+        "username": "lilyb",
+        "fullName": "Lily Lee"
+      }
     },
     {
-      "id": 60,
+      "id": "60",
       "body": "Amazing breakdown, thank you!",
       "postId": 29,
       "likes": 6,
-      "user": { "id": 29, "username": "henryh", "fullName": "Henry Hill" }
+      "user": {
+        "id": 29,
+        "username": "henryh",
+        "fullName": "Henry Hill"
+      }
     },
     {
-      "id": 61,
+      "id": "61",
       "body": "What an accomplishment!",
       "postId": 30,
       "likes": 8,
-      "user": { "id": 30, "username": "addisonw", "fullName": "Addison Wright" }
+      "user": {
+        "id": 30,
+        "username": "addisonw",
+        "fullName": "Addison Wright"
+      }
     },
     {
-      "id": 62,
+      "id": "62",
       "body": "Ending the list with a bang, great post!",
       "postId": 30,
       "likes": 14,
-      "user": { "id": 1, "username": "emilys", "fullName": "Emily Johnson" }
+      "user": {
+        "id": 1,
+        "username": "emilys",
+        "fullName": "Emily Johnson"
+      }
     }
   ],
   "total": 340,
   "skip": 0,
-  "limit": 30
+  "limit": 30,
+  "$schema": "./node_modules/json-server/schema.json"
 }
