@@ -12,9 +12,9 @@ export default function Navbar() {
     const { isAuthed, setIsAuthed } = useContext(AuthContext)!;
     const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext)!;
     const { data : user, isLoading, isError } = useQuery<UserType>({
-    queryKey: ['LoginedUser'],
-    queryFn: getLoginedUser
-  });
+        queryKey: ['LoginedUser'],
+        queryFn: getLoginedUser
+    });
 
     const navigate = useNavigate();
     

@@ -3301,10 +3301,54 @@
         "username": "emilys",
         "fullName": "Emily Johnson"
       }
+    },
+    {
+      "body": "test",
+      "postId": 1,
+      "likes": 0,
+      "user": {
+        "id": "x43CbpuqsmE",
+        "username": "omnia0",
+        "fullName": "Omnia Ayman"
+      },
+      "id": "8BZ2YID23TE"
+    },
+    {
+      "body": "comment have added now :)",
+      "postId": 1,
+      "likes": 0,
+      "user": {
+        "id": "x43CbpuqsmE",
+        "username": "omnia0",
+        "fullName": "Omnia Ayman"
+      },
+      "id": "gmcyqYfPkWk"
+    },
+    {
+      "body": "cool picture",
+      "postId": 11,
+      "likes": 0,
+      "user": {
+        "id": "x43CbpuqsmE",
+        "username": "omnia0",
+        "fullName": "Omnia Ayman"
+      },
+      "id": "2fP0Hx3zOEo"
+    },
+    {
+      "body": "hola",
+      "postId": 11,
+      "likes": 0,
+      "user": {
+        "id": "x43CbpuqsmE",
+        "username": "omnia0",
+        "fullName": "Omnia Ayman"
+      },
+      "id": "azYfIQ9oeIs"
     }
   ],
   "total": 340,
   "skip": 0,
-  "limit": 30,
+  "limit": 100,
   "$schema": "./node_modules/json-server/schema.json"
 }

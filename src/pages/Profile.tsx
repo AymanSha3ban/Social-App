@@ -26,7 +26,7 @@ export default function Profile() {
     );
   }
 
-  const { image, firstName, lastName, username, email, phone, gender, address } = user ?? {};
+  const { image, firstName, lastName, username, email, phone, gender, address  ,id} = user ?? {};
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -37,7 +37,7 @@ export default function Profile() {
           <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between -mt-16 mb-6 gap-4">
             <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
               <img 
-                src={image} 
+                src={image? image : `https://i.pravatar.cc/150?u=${id}` } 
                 alt={firstName} 
                 className="w-28 h-28 rounded-full object-cover border-4 border-white dark:border-[#151c2c] shadow-lg bg-gray-100 dark:bg-gray-800" 
               />
