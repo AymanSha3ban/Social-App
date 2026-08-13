@@ -31,7 +31,7 @@ export default function Profile() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="bg-white dark:bg-[#151c2c] border border-gray-200 dark:border-gray-800 rounded-2xl shadow-xl overflow-hidden transition-colors duration-300">
-        <div className="h-36 bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-800"></div>
+        <div className="h-36 bg-linear-to-r from-purple-600 via-indigo-600 to-purple-800"></div>
 
         <div className="px-6 pb-6 relative">
           <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between -mt-16 mb-6 gap-4">

@@ -50,7 +50,7 @@ export default function Navbar() {
     return (
         <div className=" w-full">
             <nav className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-sm border-b border-gray-100 dark:border-gray-800 fixed w-full z-20 top-0 left-0 transition-colors duration-300">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
+                <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
                     
                     <Link to="/home" className="logo text-xl font-bold tracking-widest text-purple-600 dark:text-purple-500">Social App</Link>
                     
@@ -114,7 +114,7 @@ export default function Navbar() {
                                 <label className="flex items-center justify-between px-4 py-3 cursor-pointer rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800 transition-colors group">
                                     <div className="relative" onChange={toggleDarkMode}>
                                         <input type="checkbox" className="sr-only peer" />
-                                        <div className="w-11 h-6 bg-gray-200 dark:bg-gray-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+                                        <div className="w-11 h-6 bg-gray-200 dark:bg-gray-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
                                     </div>
                                     <span className="flex gap-2 text-gray-700 dark:text-gray-300 ml-3">
                                         {isDarkMode ? <i className="fa-solid fa-sun"></i>

@@ -3346,9 +3346,5 @@
       },
       "id": "azYfIQ9oeIs"
     }
-  ],
-  "total": 340,
-  "skip": 0,
-  "limit": 100,
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

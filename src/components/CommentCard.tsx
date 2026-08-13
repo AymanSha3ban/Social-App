@@ -68,7 +68,7 @@ export default function CommentCard() {
         >
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-start gap-3.5">
-              <div className="relative flex-shrink-0">
+              <div className="relative shrink-0">
                 <img 
                     src={`https://i.pravatar.cc/150?u=${comment.id}`} 
                     alt="User Avatar" 
@@ -86,7 +86,7 @@ export default function CommentCard() {
             </button>
           </div>
 
-          <div className="mt-3.5 pl-[54px]">
+          <div className="mt-3.5 pl-13.5">
             <p className="text-slate-300 text-sm leading-relaxed font-normal">
               {comment.body}
             </p>
