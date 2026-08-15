@@ -10,7 +10,7 @@ import PostDetails from './pages/PostDetails'
 import { AuthContext } from './context/createdContext/AuthContext'
 import { useContext } from 'react'
 import Profile from './pages/Profile'
-
+import { Toaster } from 'react-hot-toast';
 
 
 export default function App() {
@@ -31,6 +31,8 @@ export default function App() {
   return (
     <>
       <RouterProvider router={routes}></RouterProvider>
+
+      <Toaster position="top-right" reverseOrder={false} />
     </>
   )
 }

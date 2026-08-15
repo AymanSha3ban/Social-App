@@ -2617,6 +2617,50 @@
       },
       "views": 3558,
       "userId": 30
+    },
+    {
+      "title": "post test",
+      "body": "test test test ",
+      "reactions": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "views": 0,
+      "userId": "x43CbpuqsmE",
+      "id": "p-v2GcZ5GnE"
+    },
+    {
+      "title": "test",
+      "body": "testttttttttttttttttttttttttttttt",
+      "reactions": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "views": 0,
+      "userId": "x43CbpuqsmE",
+      "id": "R4cu6xzHFfE"
+    },
+    {
+      "title": "Ayan ",
+      "body": "aymanm ayman aymnan ayman ",
+      "reactions": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "views": 0,
+      "userId": "x43CbpuqsmE",
+      "id": "MRLxge4qhzo"
+    },
+    {
+      "title": "test",
+      "body": "last test",
+      "reactions": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "views": 0,
+      "userId": "x43CbpuqsmE",
+      "id": "dyg8fKl9UGk"
     }
   ],
   "comments": [
@@ -3345,6 +3389,18 @@
         "fullName": "Omnia Ayman"
       },
       "id": "azYfIQ9oeIs"
+    },
+    {
+      "body": "good ",
+      "postId": 2,
+      "likes": 0,
+      "user": {
+        "id": "x43CbpuqsmE",
+        "username": "omnia0",
+        "fullName": "Omnia Ayman"
+      },
+      "id": "rs7v-9AZxXE"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

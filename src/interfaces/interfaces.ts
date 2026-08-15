@@ -9,6 +9,12 @@ export interface AuthContextType {
     isAuthed: string | null;
     setIsAuthed: (isAuthed: string | null) => void;
 }
+export interface PostContextType {
+  isLoading: boolean | null;
+  isError: boolean | null;
+  data: PostType[] ;
+  refetch: () => void;
+}
 
 export interface DarkModeContextType {
     isDarkMode: boolean;
@@ -16,10 +22,22 @@ export interface DarkModeContextType {
 }
 
 export interface PostType {
-  id: number;
+  id?: number | string;
   title: string;
   body: string;
-  tags: string[];
+  tags: string[] ;
+  reactions: {
+    likes: number;
+    dislikes: number;
+  };
+  views: number;
+  userId: number;
+}
+export interface AddPostType {
+  id?: number | string;
+  title: string;
+  body: string;
+  tags?: string[] | undefined;
   reactions: {
     likes: number;
     dislikes: number;
@@ -28,16 +46,16 @@ export interface PostType {
   userId: number;
 }
 export interface CommentType {
-  id: number;
+  id?: number | string;
   body: string;
   postId: number;
   likes: number;
   user: {
-    id: number;
-    username: string;
+    id: number | string;
+    username: string; 
     fullName: string;
-  };
-} 
+  }
+}
 
 export interface UserType {
   id: number;
@@ -108,14 +126,4 @@ export interface UserType {
   };
   role: string;
 }
-export interface IComment {
-  id?: number | string;
-  body: string;
-  postId: number;
-  likes: number;
-  user: {
-    id: number | string;
-    username: string; 
-    fullName: string;
-  }
-}
+

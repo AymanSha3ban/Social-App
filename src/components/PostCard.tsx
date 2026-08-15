@@ -35,7 +35,7 @@ export default function PostCard({post}: {post: PostType}) {
           {/* Post Header: User Info */}
           <div className="flex items-center gap-3 p-4 border-b border-gray-50 dark:border-gray-700">
             <img 
-              src={data && data.image}
+              src={data ? data.image :`https://picsum.photos/seed/${post.id}/800/400`}
               alt="User Avatar" 
               className="w-10 h-10 rounded-full object-cover bg-gray-200"
             />
@@ -60,7 +60,7 @@ export default function PostCard({post}: {post: PostType}) {
             
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-3">
-              {post.tags.map((tag) => (
+              {post.tags?.map((tag) => (
                 <span 
                   key={tag} 
                   className="text-purple-600 dark:text-purple-400 text-xs font-semibold cursor-pointer hover:underline"

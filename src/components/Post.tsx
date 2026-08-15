@@ -1,13 +1,11 @@
-import { getPosts } from "../apis/Posts/Posts.api";
-import { useQuery } from "@tanstack/react-query";
-import type { PostType } from "../interfaces/interfaces";
 import PostCard from "./PostCard";
-
+import { useContext } from "react";
+import { PostContext } from "../context/createdContext/PostContext";
 
 export default function Post() {
   
-  const {isLoading , isError , data } = useQuery<PostType[]>({ queryKey: ['posts'] , queryFn : getPosts}) ;
-
+  const context = useContext(PostContext);
+  const { isLoading, isError, data } = context || {};
  
 
   if (isLoading) {
