@@ -1,14 +1,26 @@
 import { Link } from "react-router-dom";
 import type { PostType, UserType } from "../interfaces/interfaces";
 import { getUser } from "../apis/Auth/Users.api";
-import { useQuery } from "@tanstack/react-query";
-
-
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { getLoginedUser } from "../apis/Auth/Users.api";
+import {deletePost} from '../apis/Posts/Posts.api'
 
 export default function PostCard({post}: {post: PostType}) {
 
   const {data , isError , isLoading}  = useQuery<UserType | undefined>({queryKey: ['user', post.userId], queryFn: () => getUser(post.userId)}) ; 
-  
+  const { data : loginUser} = useQuery<UserType>({
+    queryKey: ['LoginedUser'],
+    queryFn: getLoginedUser
+  });
+  const {mutate , isPending} = useMutation({
+    mutationFn: deletePost
+  })
+  const posty = loginUser?.id === post.userId
+
+  const handleDelete = ()=>{
+    if (post.id == null) return;
+    mutate(String(post.id))
+  }
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-20">
@@ -32,20 +44,31 @@ export default function PostCard({post}: {post: PostType}) {
           className="bg-white dark:bg-gray-800 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden transition-colors"
         >
           {/* Post Header: User Info */}
-          <div className="flex items-center gap-3 p-4 border-b border-gray-50 dark:border-gray-700">
-            <img 
-              src={data?.image ? data.image :`https://picsum.photos/seed/${post.id}/800/400`}
-              alt="User Avatar" 
-              className="w-10 h-10 rounded-full object-cover bg-gray-200"
-            />
-            <div>
-              <h4 className="font-bold text-gray-900 dark:text-white text-sm">
-                {data ? data.firstName + " " + data.lastName : `User ${post.userId}`}
-              </h4>
-              <span className="text-xs text-gray-500 dark:text-gray-400">
-                2 hours ago
-              </span>
+          <div className="flex items-center justify-between p-4 border-b border-gray-50 dark:border-gray-700">
+            <div className="flex  gap-3">
+              <img 
+                src={data?.image ? data.image :`https://picsum.photos/seed/${post.id}/800/400`}
+                alt="User Avatar" 
+                className="w-10 h-10 rounded-full object-cover bg-gray-200"
+              />
+              <div>
+                <h4 className="font-bold text-gray-900 dark:text-white text-sm">
+                  {data ? data.firstName + " " + data.lastName : `User ${post.userId}`}
+                </h4>
+                <span className="text-xs text-gray-500 dark:text-gray-400">
+                  2 hours ago
+                </span>
+              </div>
             </div>
+            {posty&&
+              <button 
+              className="dark:text-purple hover:text-red-500 cursor-pointer"
+              onClick={handleDelete}
+              disabled={isPending}
+              >
+               Delete Post
+              </button>
+            }
           </div>
 
           {/* Post Content */}

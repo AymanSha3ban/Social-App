@@ -14,6 +14,10 @@ export const addPost = async (post:AddPostType) => {
     const res = await API.post(`/posts/`, post);
     return res.data;
 };
+export const deletePost = async (postId: string ) => {
+    const res = await API.delete(`/posts/${postId}`);
+    return res.data;
+};
 
 
 export const getComments = async (id: number) => {
