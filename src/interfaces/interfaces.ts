@@ -30,6 +30,7 @@ export interface PostType {
     likes: number;
     dislikes: number;
   };
+  mediaURL : string ;
   views: number;
   userId: number;
 }
@@ -42,6 +43,7 @@ export interface AddPostType {
     likes: number;
     dislikes: number;
   };
+  mediaURL : string ;
   views: number;
   userId: number;
 }
@@ -56,6 +58,8 @@ export interface CommentType {
     fullName: string;
   }
 }
+
+
 
 export interface UserType {
   id: number;
@@ -126,4 +130,5 @@ export interface UserType {
   };
   role: string;
 }
+
 

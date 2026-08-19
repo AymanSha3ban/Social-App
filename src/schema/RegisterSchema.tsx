@@ -25,16 +25,18 @@ export const RegisterSchema = z.object({
 
   password: z
     .string()
-    .min(1, "password is required!"),
+    .min(6, "password is required!"),
 
   confirmPassword: z
     .string()
-    .min(1, "password is required!"),
-
+    .min(6, "password is required!") ,
   birth: z
     .string()
     .date(),
-
+  image : z
+    .string()
+    .optional(),
+  
   gender: z.enum(["male", "female"], {
     message: "select your gender!",
   }),

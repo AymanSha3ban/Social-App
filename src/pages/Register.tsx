@@ -3,7 +3,9 @@ import { useForm } from "react-hook-form";
 import { RegisterSchema, type RegisterData } from "../schema/RegisterSchema";
 import { Link, useNavigate } from "react-router-dom";
 import { addUser } from "../apis/Auth/Register.api";
-import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import toast from "react-hot-toast";
+import {checkUserExists} from '../apis/Auth/Register.api'
 
 export default function Register() {
   const {
@@ -15,18 +17,37 @@ export default function Register() {
   });
   const navigate = useNavigate();
 
-  const [loading, setLoading] = useState(false);
-  
-  const onSubmit = async (data: RegisterData) => {
-    try {
-      setLoading(true);
-      const my_data = await addUser(data);
+  const {mutate ,isPending} = useMutation({
+    mutationFn:addUser ,
+    onSuccess:(my_data)=>{
+      toast.success("User added successfully")
+      console.log( my_data);
       navigate('/login');
-      console.log("User added successfully:", my_data);   
-    } catch(err) {
-      setLoading(false);
-      console.log(err);
-    }  
+    } ,
+    onError :(err)=>{
+      toast.error("User not registered corectlley!")
+      console.log(err)
+    }
+  });
+  const onSubmit = async (data: RegisterData) => {
+    const userExists = await checkUserExists(data.email);
+  
+    if (userExists) {
+      toast.error("This email is already registered!");
+      return; 
+    }
+    mutate({
+      firstName: data.firstName ,
+      lastName: data.lastName ,
+      username: data.username ,
+      email: data.email ,
+      password: data.password,
+      image: "" ,
+      confirmPassword: data.confirmPassword,
+      birth: data.birth ,
+      gender: data.gender ,
+      
+    }); 
   };
 
   return (
@@ -162,9 +183,9 @@ export default function Register() {
         <button
           type="submit"
           className="w-full mt-4 py-3 rounded-xl cursor-pointer bg-purple-600 text-white font-bold text-lg shadow-lg shadow-purple-300 dark:shadow-none hover:bg-purple-700 hover:scale-[1.02] transition-all disabled:opacity-70"
-          disabled={loading}
+          disabled={isPending}
         >
-          {loading ? <i className="fas fa-spinner fa-spin"></i> : "Sign Up"}
+          {isPending ? <i className="fas fa-spinner fa-spin"></i> : "Sign Up"}
         </button>
         <Link to={'/login'} className="text-purple-500 dark:text-purple-400 font-bold text-center hover:text-purple-600 dark:hover:text-purple-300 transition-colors">
           Already have an account? Login

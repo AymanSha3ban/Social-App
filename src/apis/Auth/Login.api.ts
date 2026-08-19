@@ -11,7 +11,7 @@ export const loginUser = async (loginFormData: { username: string; password: str
     localStorage.setItem('token', 'fake-token-123');
     return { user, accessToken: 'fake-token-123' };
   } else {
-    throw new Error("Invalid credentials");
+    throw new Error("Invalid user");
   }
 
 };

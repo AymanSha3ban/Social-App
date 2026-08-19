@@ -2,9 +2,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { LoginSchema, type LoginData } from "../schema/LoginSchema";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { loginUser } from "../apis/Auth/Login.api";
 import { AuthContext } from "../context/createdContext/AuthContext";
+import { useMutation } from "@tanstack/react-query";
+import toast from "react-hot-toast";
 
 export default function Login() {
   const {
@@ -17,27 +19,23 @@ export default function Login() {
 
   const navigate = useNavigate();
   const { setIsAuthed } = useContext(AuthContext)!;
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  
-  const onSubmit = async (data: LoginData) => {
-    try {
-      const my_data = await loginUser(data);
-      setLoading(true);
-      setError('');
+
+  const {mutate , isPending} = useMutation({ 
+    mutationFn:loginUser ,
+    onSuccess: (my_data) => {
       localStorage.setItem('accessToken', my_data.accessToken);
-      console.log(my_data)
       localStorage.setItem('userId', my_data.user.id);
-      console.log(localStorage.getItem('userId'))
-      console.log(my_data.accessToken);
       setIsAuthed(my_data.accessToken);
+      toast.success("Login successful!");
       navigate('/home');
-      console.log("User login successfully:");   
-    } catch(err) {
-      setLoading(false);
-      setError('Invalid username or password');
-      console.log(err);
-    }  
+    },
+    onError: () => {
+      toast.error("Invalid username or password");
+    },
+  })
+  
+  const onSubmit= (data : LoginData) => {
+    mutate(data)
   };
 
   return (
@@ -48,7 +46,7 @@ export default function Login() {
       >
         <div className="flex flex-col">
           <input
-            type="username"
+            type="text"
             {...register("username")}
             placeholder="Enter your username"
             className="w-full p-2 outline-none border-b-2 border-gray-300 dark:border-gray-600 focus:border-purple-500 dark:focus:border-purple-400 transition-colors bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
@@ -73,13 +71,15 @@ export default function Login() {
             </span>
           )}
         </div>
-        <div className="text-red-500 dark:text-red-400 text-xs font-medium mt-1">{error && error}</div>
+
         <button
           type="submit"
-          className="w-full mt-4 py-3 rounded-xl cursor-pointer bg-purple-600 text-white font-bold text-lg shadow-lg shadow-purple-300 dark:shadow-none hover:bg-purple-700 hover:scale-[1.02] transition-all"
+          disabled={isPending}
+          className="w-full mt-4 py-3 rounded-xl cursor-pointer bg-purple-600 text-white font-bold text-lg shadow-lg shadow-purple-300 dark:shadow-none hover:bg-purple-700 hover:scale-[1.02] transition-all disabled:opacity-50"
         >
-          {loading ? <i className="fas fa-spinner fa-spin"></i> : "Login"}
+          {isPending ? <i className="fas fa-spinner fa-spin"></i> : "Login"}
         </button>
+
         <div className="flex justify-between px-5">
           <p className="text-gray-600 dark:text-gray-300">If you don't have account</p>
           <Link className="text-purple-500 dark:text-purple-400 font-bold hover:text-purple-600 dark:hover:text-purple-300 transition-colors" to={'/register'}>Go to have account</Link>

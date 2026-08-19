@@ -7,8 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 
 export default function PostCard({post}: {post: PostType}) {
 
-  const {data , isError , isLoading}  = useQuery<UserType | undefined>({queryKey: ['user', post.userId], queryFn: () => getUser(post.userId)}) ; ; 
-
+  const {data , isError , isLoading}  = useQuery<UserType | undefined>({queryKey: ['user', post.userId], queryFn: () => getUser(post.userId)}) ; 
   
   if (isLoading) {
     return (
@@ -35,7 +34,7 @@ export default function PostCard({post}: {post: PostType}) {
           {/* Post Header: User Info */}
           <div className="flex items-center gap-3 p-4 border-b border-gray-50 dark:border-gray-700">
             <img 
-              src={data ? data.image :`https://picsum.photos/seed/${post.id}/800/400`}
+              src={data?.image ? data.image :`https://picsum.photos/seed/${post.id}/800/400`}
               alt="User Avatar" 
               className="w-10 h-10 rounded-full object-cover bg-gray-200"
             />
@@ -74,7 +73,7 @@ export default function PostCard({post}: {post: PostType}) {
           {/* Post Image (Generated dynamically based on post ID) */}
           <Link to={`/posts/${post.id}`}>
             <img 
-              src={`https://picsum.photos/seed/${post.id}/800/400`} 
+              src={post.mediaURL ?  post.mediaURL : `https://picsum.photos/seed/${post.id}/800/400`} 
               alt="Post Cover" 
               className="w-full h-64 object-cover"
             />
