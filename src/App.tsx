@@ -11,6 +11,7 @@ import { AuthContext } from './context/createdContext/AuthContext'
 import { useContext } from 'react'
 import Profile from './pages/Profile'
 import { Toaster } from 'react-hot-toast';
+import StoriesRoom from './components/Story/StoriesRoom'
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
       {path : 'register' , element : <Register></Register>},
       {path : 'home' , element : <ProtectedRoute><Home></Home></ProtectedRoute>},
       {path : 'posts/:id' , element : <ProtectedRoute><PostDetails></PostDetails></ProtectedRoute>},
+      {path : 'story/:id' , element : <ProtectedRoute><StoriesRoom></StoriesRoom></ProtectedRoute>},
       {path : 'profile' , element : <ProtectedRoute><Profile></Profile></ProtectedRoute>},
       {path : 'login' , element : <Login></Login>},
       {path : '*' , element : <NotFound></NotFound>},

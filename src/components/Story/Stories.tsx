@@ -8,7 +8,7 @@ const Stories = () => {
     const { data: users, isLoading, isError } = useQuery<UserType[]>({
        queryKey: ['Users'],
        queryFn: getUsers
-     });
+    });
 
     const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -32,7 +32,7 @@ const Stories = () => {
         return (
         <div className="flex justify-center items-center py-20 bg-gray-100 dark:bg-[#0b1120] min-h-screen"> 
             <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">
-            Error fetching profile data. Please try again later.
+            Error fetching users data. Please try again later.
             </p>
         </div>
         );
@@ -53,16 +53,18 @@ const Stories = () => {
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {
-          users?.map((u) => {
-            return u.stories?.map((story) => (
-              <StoryCard 
-                story={story} 
-                key={story.id} 
-                UserImage={u?.image ?? ""} 
-                UserName={u.firstName} 
-              />
-            ));
-          })
+            users?.map((u) => {
+                if (!u.stories || u.stories.length === 0) return null;
+                return (
+                <StoryCard 
+                    story={u.stories[0]} 
+                    key={u.id} 
+                    userId={u.id}
+                    UserImage={u?.image ?? ""} 
+                    UserName={u.firstName} 
+                />
+                );
+            })
         }
       </div>
       <button 
