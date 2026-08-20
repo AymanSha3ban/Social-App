@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addPost } from "../apis/Posts/Posts.api";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -35,10 +35,14 @@ export default function CreatePost() {
     queryFn: getLoginedUser,
   });
 
+  const queryClient = useQueryClient()
+
   const { isPending, mutate } = useMutation({
+    
     mutationFn: addPost,
     onSuccess: () => {
       toast.success("Post created successfully!");
+      queryClient.invalidateQueries({ queryKey: ['posts'] });
     },
     onError: () => {
       toast.error("Failed to create post. Please try again.");
@@ -53,11 +57,11 @@ export default function CreatePost() {
         likes: 0,
         dislikes: 0,
       },
-      mediaURL: data.mediaURL,
+      mediaURL: data.mediaURL ?? "",
       views: 0,
-      userId: user?.id ?? 1,
-    });
-  };
+      userId: Number(user?.id)
+  }) ; 
+}
 
   return (
     <div className="flex justify-center items-center w-full px-4 my-5">
@@ -162,4 +166,4 @@ export default function CreatePost() {
       </div>
     </div>
   );
-}
+  }

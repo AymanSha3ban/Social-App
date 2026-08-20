@@ -4,2103 +4,724 @@
       "id": "1",
       "firstName": "Emily",
       "lastName": "Johnson",
-      "maidenName": "Smith",
-      "age": 29,
-      "gender": "female",
-      "email": "emily.johnson@x.dummyjson.com",
-      "phone": "+81 965-431-3024",
       "username": "emilys",
+      "email": "emily.johnson@x.dummyjson.com",
       "password": "emilyspass",
-      "birthDate": "1996-5-30",
-      "image": "https://dummyjson.com/icon/emilys/128",
-      "bloodGroup": "O-",
-      "height": 193.24,
-      "weight": 63.16,
-      "eyeColor": "Green",
-      "hair": {
-        "color": "Brown",
-        "type": "Curly"
-      },
-      "ip": "42.48.100.32",
+      "confirmPassword": "emilyspass",
+      "gender": "female",
+      "birth": "1996-05-30",
+      "phone": "+81 965-431-3024",
       "address": {
-        "address": "626 Main Street",
         "city": "Phoenix",
-        "state": "Mississippi",
-        "stateCode": "MS",
-        "postalCode": "29112",
-        "coordinates": {
-          "lat": -77.16213,
-          "lng": -92.084824
-        },
         "country": "United States"
       },
-      "macAddress": "47:fa:41:18:ec:eb",
-      "university": "University of Wisconsin--Madison",
-      "bank": {
-        "cardExpire": "05/28",
-        "cardNumber": "3693233511855044",
-        "cardType": "Diners Club International",
-        "currency": "GBP",
-        "iban": "GB74MH2UZLR9TRPHYNU8F8"
-      },
-      "company": {
-        "department": "Engineering",
-        "name": "Dooley, Kozey and Cronin",
-        "title": "Sales Manager",
-        "address": {
-          "address": "263 Tenth Street",
-          "city": "San Francisco",
-          "state": "Wisconsin",
-          "stateCode": "WI",
-          "postalCode": "37657",
-          "coordinates": {
-            "lat": 71.814525,
-            "lng": -161.150263
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user1/200/200",
+      "coverPath": "https://picsum.photos/seed/cover1/1200/400",
+      "stories": [
+        {
+          "id": "s1",
+          "mediaUrl": "https://picsum.photos/seed/story1/400/600"
         }
-      },
-      "ein": "977-175",
-      "ssn": "900-590-289",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "admin"
+      ]
     },
     {
       "id": "2",
       "firstName": "Michael",
       "lastName": "Williams",
-      "maidenName": "",
-      "age": 36,
-      "gender": "male",
-      "email": "michael.williams@x.dummyjson.com",
-      "phone": "+49 258-627-6644",
       "username": "michaelw",
+      "email": "michael.williams@x.dummyjson.com",
       "password": "michaelwpass",
-      "birthDate": "1989-8-10",
-      "image": "https://dummyjson.com/icon/michaelw/128",
-      "bloodGroup": "B+",
-      "height": 186.22,
-      "weight": 76.32,
-      "eyeColor": "Red",
-      "hair": {
-        "color": "Green",
-        "type": "Straight"
-      },
-      "ip": "12.13.116.142",
+      "confirmPassword": "michaelwpass",
+      "gender": "male",
+      "birth": "1989-08-10",
+      "phone": "+49 258-627-6644",
       "address": {
-        "address": "385 Fifth Street",
         "city": "Houston",
-        "state": "Alabama",
-        "stateCode": "AL",
-        "postalCode": "38807",
-        "coordinates": {
-          "lat": 22.815468,
-          "lng": 115.608581
-        },
         "country": "United States"
       },
-      "macAddress": "79:15:78:99:60:aa",
-      "university": "Ohio State University",
-      "bank": {
-        "cardExpire": "01/30",
-        "cardNumber": "3530633803003665",
-        "cardType": "JCB",
-        "currency": "USD",
-        "iban": "DE26362283149158045865"
-      },
-      "company": {
-        "department": "Support",
-        "name": "Spinka - Dickinson",
-        "title": "Support Specialist",
-        "address": {
-          "address": "395 Main Street",
-          "city": "Los Angeles",
-          "state": "New Hampshire",
-          "stateCode": "NH",
-          "postalCode": "73442",
-          "coordinates": {
-            "lat": 79.098326,
-            "lng": -119.624845
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user2/200/200",
+      "coverPath": "https://picsum.photos/seed/cover2/1200/400",
+      "stories": [
+        {
+          "id": "s2",
+          "mediaUrl": "https://picsum.photos/seed/story2/400/600"
         }
-      },
-      "ein": "912-602",
-      "ssn": "108-953-962",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/97.0.1072.76 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "admin"
+      ]
     },
     {
       "id": "3",
       "firstName": "Sophia",
       "lastName": "Brown",
-      "maidenName": "",
-      "age": 43,
-      "gender": "female",
-      "email": "sophia.brown@x.dummyjson.com",
-      "phone": "+81 210-652-2785",
       "username": "sophiab",
+      "email": "sophia.brown@x.dummyjson.com",
       "password": "sophiabpass",
-      "birthDate": "1982-11-6",
-      "image": "https://dummyjson.com/icon/sophiab/128",
-      "bloodGroup": "O-",
-      "height": 177.72,
-      "weight": 52.6,
-      "eyeColor": "Hazel",
-      "hair": {
-        "color": "White",
-        "type": "Wavy"
-      },
-      "ip": "214.225.51.195",
+      "confirmPassword": "sophiabpass",
+      "gender": "female",
+      "birth": "1982-11-06",
+      "phone": "+81 210-652-2785",
       "address": {
-        "address": "1642 Ninth Street",
         "city": "Washington",
-        "state": "Alabama",
-        "stateCode": "AL",
-        "postalCode": "32822",
-        "coordinates": {
-          "lat": 45.289366,
-          "lng": 46.832664
-        },
         "country": "United States"
       },
-      "macAddress": "12:a3:d3:6f:5c:5b",
-      "university": "Pepperdine University",
-      "bank": {
-        "cardExpire": "10/27",
-        "cardNumber": "6011212053392887",
-        "cardType": "Discover",
-        "currency": "EUR",
-        "iban": "DE12191213468288004835"
-      },
-      "company": {
-        "department": "Research and Development",
-        "name": "Schiller - Zieme",
-        "title": "Accountant",
-        "address": {
-          "address": "1896 Washington Street",
-          "city": "Dallas",
-          "state": "Nevada",
-          "stateCode": "NV",
-          "postalCode": "88511",
-          "coordinates": {
-            "lat": 20.086743,
-            "lng": -34.577107
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user3/200/200",
+      "coverPath": "https://picsum.photos/seed/cover3/1200/400",
+      "stories": [
+        {
+          "id": "s3",
+          "mediaUrl": "https://picsum.photos/seed/story3/400/600"
         }
-      },
-      "ein": "963-113",
-      "ssn": "638-461-822",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "admin"
+      ]
     },
     {
       "id": "4",
       "firstName": "James",
       "lastName": "Davis",
-      "maidenName": "",
-      "age": 46,
-      "gender": "male",
-      "email": "james.davis@x.dummyjson.com",
-      "phone": "+49 614-958-9364",
       "username": "jamesd",
+      "email": "james.davis@x.dummyjson.com",
       "password": "jamesdpass",
-      "birthDate": "1979-5-4",
-      "image": "https://dummyjson.com/icon/jamesd/128",
-      "bloodGroup": "AB+",
-      "height": 193.31,
-      "weight": 62.1,
-      "eyeColor": "Amber",
-      "hair": {
-        "color": "Blonde",
-        "type": "Straight"
-      },
-      "ip": "101.118.131.66",
+      "confirmPassword": "jamesdpass",
+      "gender": "male",
+      "birth": "1979-05-04",
+      "phone": "+49 614-958-9364",
       "address": {
-        "address": "238 Jefferson Street",
         "city": "Seattle",
-        "state": "Pennsylvania",
-        "stateCode": "PA",
-        "postalCode": "68354",
-        "coordinates": {
-          "lat": 16.782513,
-          "lng": -139.34723
-        },
         "country": "United States"
       },
-      "macAddress": "10:7d:df:1f:97:58",
-      "university": "University of Southern California",
-      "bank": {
-        "cardExpire": "07/30",
-        "cardNumber": "5303440212268149",
-        "cardType": "Mastercard",
-        "currency": "CAD",
-        "iban": "DE01300746880579852937"
-      },
-      "company": {
-        "department": "Support",
-        "name": "Pagac and Sons",
-        "title": "Research Analyst",
-        "address": {
-          "address": "1622 Lincoln Street",
-          "city": "Fort Worth",
-          "state": "Pennsylvania",
-          "stateCode": "PA",
-          "postalCode": "27768",
-          "coordinates": {
-            "lat": 54.91193,
-            "lng": -79.498328
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user4/200/200",
+      "coverPath": "https://picsum.photos/seed/cover4/1200/400",
+      "stories": [
+        {
+          "id": "s4",
+          "mediaUrl": "https://picsum.photos/seed/story4/400/600"
         }
-      },
-      "ein": "904-810",
-      "ssn": "116-951-314",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "admin"
+      ]
     },
     {
       "id": "5",
       "firstName": "Emma",
       "lastName": "Miller",
-      "maidenName": "Johnson",
-      "age": 31,
-      "gender": "female",
-      "email": "emma.miller@x.dummyjson.com",
-      "phone": "+91 759-776-1614",
       "username": "emmaj",
+      "email": "emma.miller@x.dummyjson.com",
       "password": "emmajpass",
-      "birthDate": "1994-6-13",
-      "image": "https://dummyjson.com/icon/emmaj/128",
-      "bloodGroup": "AB-",
-      "height": 192.8,
-      "weight": 63.62,
-      "eyeColor": "Green",
-      "hair": {
-        "color": "White",
-        "type": "Straight"
-      },
-      "ip": "224.126.22.183",
+      "confirmPassword": "emmajpass",
+      "gender": "female",
+      "birth": "1994-06-13",
+      "phone": "+91 759-776-1614",
       "address": {
-        "address": "607 Fourth Street",
         "city": "Jacksonville",
-        "state": "Colorado",
-        "stateCode": "CO",
-        "postalCode": "26593",
-        "coordinates": {
-          "lat": 0.505589,
-          "lng": -157.43281
-        },
         "country": "United States"
       },
-      "macAddress": "32:b9:7e:8d:f5:e8",
-      "university": "Northeastern University",
-      "bank": {
-        "cardExpire": "07/30",
-        "cardNumber": "5237188057591130",
-        "cardType": "Mastercard",
-        "currency": "NZD",
-        "iban": "DE19182355652037133559"
-      },
-      "company": {
-        "department": "Human Resources",
-        "name": "Graham - Gulgowski",
-        "title": "Quality Assurance Engineer",
-        "address": {
-          "address": "1460 Sixth Street",
-          "city": "San Antonio",
-          "state": "Idaho",
-          "stateCode": "ID",
-          "postalCode": "21965",
-          "coordinates": {
-            "lat": 44.346545,
-            "lng": -26.944701
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user5/200/200",
+      "coverPath": "https://picsum.photos/seed/cover5/1200/400",
+      "stories": [
+        {
+          "id": "s5",
+          "mediaUrl": "https://picsum.photos/seed/story5/400/600"
         }
-      },
-      "ein": "403-505",
-      "ssn": "526-210-885",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "admin"
+      ]
     },
     {
       "id": "6",
       "firstName": "Olivia",
       "lastName": "Wilson",
-      "maidenName": "",
-      "age": 23,
-      "gender": "female",
-      "email": "olivia.wilson@x.dummyjson.com",
-      "phone": "+91 607-295-6448",
       "username": "oliviaw",
+      "email": "olivia.wilson@x.dummyjson.com",
       "password": "oliviawpass",
-      "birthDate": "2002-4-20",
-      "image": "https://dummyjson.com/icon/oliviaw/128",
-      "bloodGroup": "B+",
-      "height": 182.61,
-      "weight": 58,
-      "eyeColor": "Hazel",
-      "hair": {
-        "color": "Gray",
-        "type": "Curly"
-      },
-      "ip": "249.178.112.207",
+      "confirmPassword": "oliviawpass",
+      "gender": "female",
+      "birth": "2002-04-20",
+      "phone": "+91 607-295-6448",
       "address": {
-        "address": "547 First Street",
         "city": "Fort Worth",
-        "state": "Tennessee",
-        "stateCode": "TN",
-        "postalCode": "83843",
-        "coordinates": {
-          "lat": 75.32627,
-          "lng": -26.15285
-        },
         "country": "United States"
       },
-      "macAddress": "9c:7f:ea:34:18:19",
-      "university": "University of North Carolina--Chapel Hill",
-      "bank": {
-        "cardExpire": "06/30",
-        "cardNumber": "376320072452632",
-        "cardType": "American Express",
-        "currency": "NZD",
-        "iban": "DE21153814367894194071"
-      },
-      "company": {
-        "department": "Product Management",
-        "name": "Pfannerstill Inc",
-        "title": "Research Analyst",
-        "address": {
-          "address": "425 Sixth Street",
-          "city": "Indianapolis",
-          "state": "Oklahoma",
-          "stateCode": "OK",
-          "postalCode": "74263",
-          "coordinates": {
-            "lat": 74.986644,
-            "lng": -132.916888
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user6/200/200",
+      "coverPath": "https://picsum.photos/seed/cover6/1200/400",
+      "stories": [
+        {
+          "id": "s6",
+          "mediaUrl": "https://picsum.photos/seed/story6/400/600"
         }
-      },
-      "ein": "921-709",
-      "ssn": "836-772-168",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "7",
       "firstName": "Alexander",
       "lastName": "Jones",
-      "maidenName": "",
-      "age": 39,
-      "gender": "male",
-      "email": "alexander.jones@x.dummyjson.com",
-      "phone": "+61 260-824-4986",
       "username": "alexanderj",
+      "email": "alexander.jones@x.dummyjson.com",
       "password": "alexanderjpass",
-      "birthDate": "1986-10-20",
-      "image": "https://dummyjson.com/icon/alexanderj/128",
-      "bloodGroup": "AB-",
-      "height": 153.89,
-      "weight": 77.42,
-      "eyeColor": "Blue",
-      "hair": {
-        "color": "White",
-        "type": "Straight"
-      },
-      "ip": "166.204.84.32",
+      "confirmPassword": "alexanderjpass",
+      "gender": "male",
+      "birth": "1986-10-20",
+      "phone": "+61 260-824-4986",
       "address": {
-        "address": "664 Maple Street",
         "city": "Indianapolis",
-        "state": "Delaware",
-        "stateCode": "DE",
-        "postalCode": "86684",
-        "coordinates": {
-          "lat": 35.289664,
-          "lng": 7.063255
-        },
         "country": "United States"
       },
-      "macAddress": "d2:64:58:2d:1c:46",
-      "university": "University of Illinois--Urbana-Champaign",
-      "bank": {
-        "cardExpire": "12/29",
-        "cardNumber": "5189302549548693",
-        "cardType": "Mastercard",
-        "currency": "PKR",
-        "iban": "DE67517655968963441488"
-      },
-      "company": {
-        "department": "Engineering",
-        "name": "Dickens - Beahan",
-        "title": "Web Developer",
-        "address": {
-          "address": "996 Eighth Street",
-          "city": "Washington",
-          "state": "Kansas",
-          "stateCode": "KS",
-          "postalCode": "27858",
-          "coordinates": {
-            "lat": -75.462366,
-            "lng": -128.025697
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user7/200/200",
+      "coverPath": "https://picsum.photos/seed/cover7/1200/400",
+      "stories": [
+        {
+          "id": "s7",
+          "mediaUrl": "https://picsum.photos/seed/story7/400/600"
         }
-      },
-      "ein": "638-127",
-      "ssn": "722-993-925",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "8",
       "firstName": "Ava",
       "lastName": "Taylor",
-      "maidenName": "",
-      "age": 28,
-      "gender": "female",
-      "email": "ava.taylor@x.dummyjson.com",
-      "phone": "+1 458-853-7877",
       "username": "avat",
+      "email": "ava.taylor@x.dummyjson.com",
       "password": "avatpass",
-      "birthDate": "1997-8-25",
-      "image": "https://dummyjson.com/icon/avat/128",
-      "bloodGroup": "AB-",
-      "height": 168.47,
-      "weight": 57.08,
-      "eyeColor": "Hazel",
-      "hair": {
-        "color": "Red",
-        "type": "Kinky"
-      },
-      "ip": "150.73.197.233",
+      "confirmPassword": "avatpass",
+      "gender": "female",
+      "birth": "1997-08-25",
+      "phone": "+1 458-853-7877",
       "address": {
-        "address": "1197 First Street",
         "city": "Fort Worth",
-        "state": "Rhode Island",
-        "stateCode": "RI",
-        "postalCode": "24771",
-        "coordinates": {
-          "lat": -81.194833,
-          "lng": -87.948158
-        },
         "country": "United States"
       },
-      "macAddress": "8d:2e:c2:d6:e7:a8",
-      "university": "University of Wisconsin--Madison",
-      "bank": {
-        "cardExpire": "08/30",
-        "cardNumber": "5349974103330333",
-        "cardType": "Mastercard",
-        "currency": "EUR",
-        "iban": "FR94ZM2MMGL1EVYQE1ZLCVCFH83"
-      },
-      "company": {
-        "department": "Marketing",
-        "name": "Nikolaus Inc",
-        "title": "Chief Executive Officer",
-        "address": {
-          "address": "930 Lincoln Street",
-          "city": "Austin",
-          "state": "Colorado",
-          "stateCode": "CO",
-          "postalCode": "47592",
-          "coordinates": {
-            "lat": 87.970083,
-            "lng": -42.769351
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user8/200/200",
+      "coverPath": "https://picsum.photos/seed/cover8/1200/400",
+      "stories": [
+        {
+          "id": "s8",
+          "mediaUrl": "https://picsum.photos/seed/story8/400/600"
         }
-      },
-      "ein": "297-762",
-      "ssn": "257-419-109",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "9",
       "firstName": "Ethan",
       "lastName": "Martinez",
-      "maidenName": "",
-      "age": 34,
-      "gender": "male",
-      "email": "ethan.martinez@x.dummyjson.com",
-      "phone": "+92 933-608-5081",
       "username": "ethanm",
+      "email": "ethan.martinez@x.dummyjson.com",
       "password": "ethanmpass",
-      "birthDate": "1991-2-12",
-      "image": "https://dummyjson.com/icon/ethanm/128",
-      "bloodGroup": "AB+",
-      "height": 159.19,
-      "weight": 68.81,
-      "eyeColor": "Hazel",
-      "hair": {
-        "color": "Purple",
-        "type": "Curly"
-      },
-      "ip": "63.191.127.71",
+      "confirmPassword": "ethanmpass",
+      "gender": "male",
+      "birth": "1991-02-12",
+      "phone": "+92 933-608-5081",
       "address": {
-        "address": "466 Pine Street",
         "city": "San Antonio",
-        "state": "Louisiana",
-        "stateCode": "LA",
-        "postalCode": "72360",
-        "coordinates": {
-          "lat": 74.074918,
-          "lng": -25.312703
-        },
         "country": "United States"
       },
-      "macAddress": "59:e:9e:e3:29:da",
-      "university": "Syracuse University",
-      "bank": {
-        "cardExpire": "10/27",
-        "cardNumber": "3598603288061479",
-        "cardType": "JCB",
-        "currency": "GBP",
-        "iban": "GB26PND7D83JTW4HL6LZ71"
-      },
-      "company": {
-        "department": "Support",
-        "name": "Gorczany - Gottlieb",
-        "title": "Legal Counsel",
-        "address": {
-          "address": "1597 Oak Street",
-          "city": "Chicago",
-          "state": "Florida",
-          "stateCode": "FL",
-          "postalCode": "28100",
-          "coordinates": {
-            "lat": -67.45208,
-            "lng": -23.209886
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user9/200/200",
+      "coverPath": "https://picsum.photos/seed/cover9/1200/400",
+      "stories": [
+        {
+          "id": "s9",
+          "mediaUrl": "https://picsum.photos/seed/story9/400/600"
         }
-      },
-      "ein": "790-434",
-      "ssn": "569-650-348",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "10",
       "firstName": "Isabella",
       "lastName": "Anderson",
-      "maidenName": "Davis",
-      "age": 32,
-      "gender": "female",
-      "email": "isabella.anderson@x.dummyjson.com",
-      "phone": "+49 770-658-4885",
       "username": "isabellad",
+      "email": "isabella.anderson@x.dummyjson.com",
       "password": "isabelladpass",
-      "birthDate": "1993-6-10",
-      "image": "https://dummyjson.com/icon/isabellad/128",
-      "bloodGroup": "A-",
-      "height": 150.56,
-      "weight": 50.1,
-      "eyeColor": "Brown",
-      "hair": {
-        "color": "Blonde",
-        "type": "Curly"
-      },
-      "ip": "114.9.114.205",
+      "confirmPassword": "isabelladpass",
+      "gender": "female",
+      "birth": "1993-06-10",
+      "phone": "+49 770-658-4885",
       "address": {
-        "address": "1964 Oak Street",
         "city": "New York",
-        "state": "Utah",
-        "stateCode": "UT",
-        "postalCode": "89352",
-        "coordinates": {
-          "lat": 41.331324,
-          "lng": 151.782727
-        },
         "country": "United States"
       },
-      "macAddress": "b1:b0:d0:a2:82:80",
-      "university": "California Institute of Technology (Caltech)",
-      "bank": {
-        "cardExpire": "03/30",
-        "cardNumber": "3602093733952858",
-        "cardType": "Diners Club International",
-        "currency": "USD",
-        "iban": "DE12934874962442340025"
-      },
-      "company": {
-        "department": "Marketing",
-        "name": "Pollich - Hilpert",
-        "title": "Chief Financial Officer",
-        "address": {
-          "address": "1029 Adams Street",
-          "city": "San Diego",
-          "state": "Maryland",
-          "stateCode": "MD",
-          "postalCode": "63847",
-          "coordinates": {
-            "lat": -25.843393,
-            "lng": -62.692681
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user10/200/200",
+      "coverPath": "https://picsum.photos/seed/cover10/1200/400",
+      "stories": [
+        {
+          "id": "s10",
+          "mediaUrl": "https://picsum.photos/seed/story10/400/600"
         }
-      },
-      "ein": "127-297",
-      "ssn": "902-438-728",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "11",
       "firstName": "Liam",
       "lastName": "Garcia",
-      "maidenName": "",
-      "age": 30,
-      "gender": "male",
-      "email": "liam.garcia@x.dummyjson.com",
-      "phone": "+92 870-217-6201",
       "username": "liamg",
+      "email": "liam.garcia@x.dummyjson.com",
       "password": "liamgpass",
-      "birthDate": "1995-6-6",
-      "image": "https://dummyjson.com/icon/liamg/128",
-      "bloodGroup": "AB-",
-      "height": 162.32,
-      "weight": 93.16,
-      "eyeColor": "Violet",
-      "hair": {
-        "color": "Red",
-        "type": "Wavy"
-      },
-      "ip": "56.201.85.9",
+      "confirmPassword": "liamgpass",
+      "gender": "male",
+      "birth": "1995-06-06",
+      "phone": "+92 870-217-6201",
       "address": {
-        "address": "576 Fifth Street",
         "city": "Denver",
-        "state": "South Dakota",
-        "stateCode": "SD",
-        "postalCode": "57252",
-        "coordinates": {
-          "lat": -66.218177,
-          "lng": -145.340165
-        },
         "country": "United States"
       },
-      "macAddress": "31:9a:28:8b:99:6c",
-      "university": "Ohio State University",
-      "bank": {
-        "cardExpire": "12/29",
-        "cardNumber": "3614993744940956",
-        "cardType": "Diners Club International",
-        "currency": "USD",
-        "iban": "DE65581882748067758114"
-      },
-      "company": {
-        "department": "Services",
-        "name": "Considine - Torp",
-        "title": "Web Developer",
-        "address": {
-          "address": "27 Cedar Street",
-          "city": "Philadelphia",
-          "state": "Connecticut",
-          "stateCode": "CT",
-          "postalCode": "79574",
-          "coordinates": {
-            "lat": -81.841588,
-            "lng": 31.79423
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user11/200/200",
+      "coverPath": "https://picsum.photos/seed/cover11/1200/400",
+      "stories": [
+        {
+          "id": "s11",
+          "mediaUrl": "https://picsum.photos/seed/story11/400/600"
         }
-      },
-      "ein": "326-604",
-      "ssn": "933-784-949",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "12",
       "firstName": "Mia",
       "lastName": "Rodriguez",
-      "maidenName": "",
-      "age": 25,
-      "gender": "female",
-      "email": "mia.rodriguez@x.dummyjson.com",
-      "phone": "+49 989-461-8403",
       "username": "miar",
+      "email": "mia.rodriguez@x.dummyjson.com",
       "password": "miarpass",
-      "birthDate": "2000-8-4",
-      "image": "https://dummyjson.com/icon/miar/128",
-      "bloodGroup": "O-",
-      "height": 188.08,
-      "weight": 56.03,
-      "eyeColor": "Blue",
-      "hair": {
-        "color": "Purple",
-        "type": "Wavy"
-      },
-      "ip": "11.72.253.90",
+      "confirmPassword": "miarpass",
+      "gender": "female",
+      "birth": "2000-08-04",
+      "phone": "+49 989-461-8403",
       "address": {
-        "address": "1627 Sixth Street",
         "city": "Jacksonville",
-        "state": "West Virginia",
-        "stateCode": "WV",
-        "postalCode": "41810",
-        "coordinates": {
-          "lat": 24.857497,
-          "lng": -34.865429
-        },
         "country": "United States"
       },
-      "macAddress": "53:d7:a4:6:1e:58",
-      "university": "William & Mary",
-      "bank": {
-        "cardExpire": "02/29",
-        "cardNumber": "343932350909214",
-        "cardType": "American Express",
-        "currency": "CAD",
-        "iban": "DE77118774979880310165"
-      },
-      "company": {
-        "department": "Accounting",
-        "name": "Miller, Schowalter and Wisozk",
-        "title": "Business Analyst",
-        "address": {
-          "address": "1039 Washington Street",
-          "city": "Philadelphia",
-          "state": "New Jersey",
-          "stateCode": "NJ",
-          "postalCode": "57518",
-          "coordinates": {
-            "lat": 85.455933,
-            "lng": 164.246103
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user12/200/200",
+      "coverPath": "https://picsum.photos/seed/cover12/1200/400",
+      "stories": [
+        {
+          "id": "s12",
+          "mediaUrl": "https://picsum.photos/seed/story12/400/600"
         }
-      },
-      "ein": "754-660",
-      "ssn": "749-524-124",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "13",
       "firstName": "Noah",
       "lastName": "Hernandez",
-      "maidenName": "",
-      "age": 41,
-      "gender": "male",
-      "email": "noah.hernandez@x.dummyjson.com",
-      "phone": "+49 393-605-6968",
       "username": "noahh",
+      "email": "noah.hernandez@x.dummyjson.com",
       "password": "noahhpass",
-      "birthDate": "1984-6-5",
-      "image": "https://dummyjson.com/icon/noahh/128",
-      "bloodGroup": "AB+",
-      "height": 188.62,
-      "weight": 69.49,
-      "eyeColor": "Brown",
-      "hair": {
-        "color": "Red",
-        "type": "Curly"
-      },
-      "ip": "169.154.126.57",
+      "confirmPassword": "noahhpass",
+      "gender": "male",
+      "birth": "1984-06-05",
+      "phone": "+49 393-605-6968",
       "address": {
-        "address": "1413 Maple Street",
         "city": "New York",
-        "state": "North Dakota",
-        "stateCode": "ND",
-        "postalCode": "73696",
-        "coordinates": {
-          "lat": -25.0377,
-          "lng": -151.70469
-        },
         "country": "United States"
       },
-      "macAddress": "d4:fe:ae:8f:eb:a3",
-      "university": "New York University (NYU)",
-      "bank": {
-        "cardExpire": "03/30",
-        "cardNumber": "6262462852322850",
-        "cardType": "UnionPay",
-        "currency": "PKR",
-        "iban": "DE13437032020581217601"
-      },
-      "company": {
-        "department": "Engineering",
-        "name": "Botsford, Marquardt and Roberts",
-        "title": "Database Administrator",
-        "address": {
-          "address": "62 Third Street",
-          "city": "Seattle",
-          "state": "Oregon",
-          "stateCode": "OR",
-          "postalCode": "83474",
-          "coordinates": {
-            "lat": 19.490447,
-            "lng": -13.173207
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user13/200/200",
+      "coverPath": "https://picsum.photos/seed/cover13/1200/400",
+      "stories": [
+        {
+          "id": "s13",
+          "mediaUrl": "https://picsum.photos/seed/story13/400/600"
         }
-      },
-      "ein": "877-628",
-      "ssn": "660-847-389",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/95.0.4638.54",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "14",
       "firstName": "Charlotte",
       "lastName": "Lopez",
-      "maidenName": "Martinez",
-      "age": 37,
-      "gender": "female",
-      "email": "charlotte.lopez@x.dummyjson.com",
-      "phone": "+44 373-953-5028",
       "username": "charlottem",
+      "email": "charlotte.lopez@x.dummyjson.com",
       "password": "charlottempass",
-      "birthDate": "1988-6-8",
-      "image": "https://dummyjson.com/icon/charlottem/128",
-      "bloodGroup": "AB-",
-      "height": 178.92,
-      "weight": 82.46,
-      "eyeColor": "Brown",
-      "hair": {
-        "color": "Gray",
-        "type": "Kinky"
-      },
-      "ip": "119.103.95.60",
+      "confirmPassword": "charlottempass",
+      "gender": "female",
+      "birth": "1988-06-08",
+      "phone": "+44 373-953-5028",
       "address": {
-        "address": "208 Second Street",
         "city": "Columbus",
-        "state": "Ohio",
-        "stateCode": "OH",
-        "postalCode": "42044",
-        "coordinates": {
-          "lat": -44.443762,
-          "lng": -151.420561
-        },
         "country": "United States"
       },
-      "macAddress": "f6:ff:37:aa:6c:f1",
-      "university": "Northeastern University",
-      "bank": {
-        "cardExpire": "12/27",
-        "cardNumber": "3634388457177035",
-        "cardType": "Diners Club International",
-        "currency": "PKR",
-        "iban": "DE54092147842698685963"
-      },
-      "company": {
-        "department": "Accounting",
-        "name": "Zulauf and Sons",
-        "title": "Chief Executive Officer",
-        "address": {
-          "address": "569 Jefferson Street",
-          "city": "Los Angeles",
-          "state": "Montana",
-          "stateCode": "MT",
-          "postalCode": "17779",
-          "coordinates": {
-            "lat": -18.371256,
-            "lng": 22.566258
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user14/200/200",
+      "coverPath": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1200",
+      "stories": [
+        {
+          "id": "s14",
+          "mediaUrl": "https://picsum.photos/seed/story14/400/600"
         }
-      },
-      "ein": "364-782",
-      "ssn": "255-491-479",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/96.0.4664.45",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "15",
       "firstName": "William",
       "lastName": "Gonzalez",
-      "maidenName": "",
-      "age": 33,
-      "gender": "male",
-      "email": "william.gonzalez@x.dummyjson.com",
-      "phone": "+81 905-252-7319",
       "username": "williamg",
+      "email": "william.gonzalez@x.dummyjson.com",
       "password": "williamgpass",
-      "birthDate": "1992-3-27",
-      "image": "https://dummyjson.com/icon/williamg/128",
-      "bloodGroup": "B-",
-      "height": 173.21,
-      "weight": 82.41,
-      "eyeColor": "Hazel",
-      "hair": {
-        "color": "Gray",
-        "type": "Curly"
-      },
-      "ip": "250.2.241.204",
+      "confirmPassword": "williamgpass",
+      "gender": "male",
+      "birth": "1992-03-27",
+      "phone": "+81 905-252-7319",
       "address": {
-        "address": "31 Maple Street",
         "city": "San Jose",
-        "state": "Utah",
-        "stateCode": "UT",
-        "postalCode": "78243",
-        "coordinates": {
-          "lat": 8.152876,
-          "lng": 113.29799
-        },
         "country": "United States"
       },
-      "macAddress": "f5:68:28:f9:ec:89",
-      "university": "Tufts University",
-      "bank": {
-        "cardExpire": "05/30",
-        "cardNumber": "6228256225004929",
-        "cardType": "UnionPay",
-        "currency": "PKR",
-        "iban": "DE63711022986572448914"
-      },
-      "company": {
-        "department": "Marketing",
-        "name": "Spinka - Dickinson",
-        "title": "Software Architect",
-        "address": {
-          "address": "1538 Eighth Street",
-          "city": "San Jose",
-          "state": "Missouri",
-          "stateCode": "MO",
-          "postalCode": "29673",
-          "coordinates": {
-            "lat": 24.169361,
-            "lng": -29.395167
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user15/200/200",
+      "coverPath": "https://picsum.photos/seed/cover15/1200/400",
+      "stories": [
+        {
+          "id": "s15",
+          "mediaUrl": "https://picsum.photos/seed/story15/400/600"
         }
-      },
-      "ein": "830-515",
-      "ssn": "690-544-755",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/96.0.4664.93",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "moderator"
+      ]
     },
     {
       "id": "16",
       "firstName": "Avery",
       "lastName": "Perez",
-      "maidenName": "",
-      "age": 26,
-      "gender": "female",
-      "email": "avery.perez@x.dummyjson.com",
-      "phone": "+61 731-431-3457",
       "username": "averyp",
+      "email": "avery.perez@x.dummyjson.com",
       "password": "averyppass",
-      "birthDate": "1999-3-10",
-      "image": "https://dummyjson.com/icon/averyp/128",
-      "bloodGroup": "O-",
-      "height": 172.68,
-      "weight": 93.9,
-      "eyeColor": "Brown",
-      "hair": {
-        "color": "Green",
-        "type": "Curly"
-      },
-      "ip": "131.217.4.214",
+      "confirmPassword": "averyppass",
+      "gender": "female",
+      "birth": "1999-03-10",
+      "phone": "+61 731-431-3457",
       "address": {
-        "address": "1125 First Street",
         "city": "Columbus",
-        "state": "Iowa",
-        "stateCode": "IA",
-        "postalCode": "30973",
-        "coordinates": {
-          "lat": 12.789127,
-          "lng": 85.792598
-        },
         "country": "United States"
       },
-      "macAddress": "b3:ff:f3:c5:37:46",
-      "university": "Harvard University",
-      "bank": {
-        "cardExpire": "08/29",
-        "cardNumber": "378024038311910",
-        "cardType": "American Express",
-        "currency": "USD",
-        "iban": "DE42403186906981858976"
-      },
-      "company": {
-        "department": "Accounting",
-        "name": "Herzog Inc",
-        "title": "Database Administrator",
-        "address": {
-          "address": "183 Maple Street",
-          "city": "New York",
-          "state": "Rhode Island",
-          "stateCode": "RI",
-          "postalCode": "45238",
-          "coordinates": {
-            "lat": -53.318189,
-            "lng": 105.835271
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user16/200/200",
+      "coverPath": "https://picsum.photos/seed/cover16/1200/400",
+      "stories": [
+        {
+          "id": "s16",
+          "mediaUrl": "https://picsum.photos/seed/story16/400/600"
         }
-      },
-      "ein": "348-493",
-      "ssn": "679-523-686",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/95.0.4638.69",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "17",
       "firstName": "Evelyn",
       "lastName": "Sanchez",
-      "maidenName": "",
-      "age": 38,
-      "gender": "female",
-      "email": "evelyn.sanchez@x.dummyjson.com",
-      "phone": "+1 623-880-6871",
       "username": "evelyns",
+      "email": "evelyn.sanchez@x.dummyjson.com",
       "password": "evelynspass",
-      "birthDate": "1987-10-13",
-      "image": "https://dummyjson.com/icon/evelyns/128",
-      "bloodGroup": "B+",
-      "height": 184.08,
-      "weight": 83.15,
-      "eyeColor": "Violet",
-      "hair": {
-        "color": "Blue",
-        "type": "Curly"
-      },
-      "ip": "87.114.135.146",
+      "confirmPassword": "evelynspass",
+      "gender": "female",
+      "birth": "1987-10-13",
+      "phone": "+1 623-880-6871",
       "address": {
-        "address": "1170 Lincoln Street",
         "city": "San Diego",
-        "state": "Wyoming",
-        "stateCode": "WY",
-        "postalCode": "43423",
-        "coordinates": {
-          "lat": -83.31484,
-          "lng": 11.768071
-        },
         "country": "United States"
       },
-      "macAddress": "f8:e5:bd:43:bc:d8",
-      "university": "Washington University in St. Louis",
-      "bank": {
-        "cardExpire": "01/29",
-        "cardNumber": "3514443781649095",
-        "cardType": "JCB",
-        "currency": "GBP",
-        "iban": "GB74239MLVNQ0UB9ANTFRM"
-      },
-      "company": {
-        "department": "Support",
-        "name": "Predovic - Johns",
-        "title": "Chief Financial Officer",
-        "address": {
-          "address": "1802 Ninth Street",
-          "city": "San Diego",
-          "state": "Minnesota",
-          "stateCode": "MN",
-          "postalCode": "89416",
-          "coordinates": {
-            "lat": 29.034592,
-            "lng": -78.004598
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user17/200/200",
+      "coverPath": "https://picsum.photos/seed/cover17/1200/400",
+      "stories": [
+        {
+          "id": "s17",
+          "mediaUrl": "https://picsum.photos/seed/story17/400/600"
         }
-      },
-      "ein": "604-817",
-      "ssn": "689-332-644",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/96.0.4664.45",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "18",
       "firstName": "Logan",
       "lastName": "Torres",
-      "maidenName": "",
-      "age": 32,
-      "gender": "male",
-      "email": "logan.torres@x.dummyjson.com",
-      "phone": "+81 507-434-8733",
       "username": "logant",
+      "email": "logan.torres@x.dummyjson.com",
       "password": "logantpass",
-      "birthDate": "1993-10-26",
-      "image": "https://dummyjson.com/icon/logant/128",
-      "bloodGroup": "A+",
-      "height": 190.04,
-      "weight": 72.43,
-      "eyeColor": "Green",
-      "hair": {
-        "color": "Green",
-        "type": "Curly"
-      },
-      "ip": "155.98.15.162",
+      "confirmPassword": "logantpass",
+      "gender": "male",
+      "birth": "1993-10-26",
+      "phone": "+81 507-434-8733",
       "address": {
-        "address": "907 Seventh Street",
         "city": "Columbus",
-        "state": "Arkansas",
-        "stateCode": "AR",
-        "postalCode": "78805",
-        "coordinates": {
-          "lat": -64.846516,
-          "lng": 174.775744
-        },
         "country": "United States"
       },
-      "macAddress": "40:d:5c:1:7d:bf",
-      "university": "University of Illinois--Urbana-Champaign",
-      "bank": {
-        "cardExpire": "04/30",
-        "cardNumber": "6258651210557142",
-        "cardType": "UnionPay",
-        "currency": "EUR",
-        "iban": "ES1171429445321693077621"
-      },
-      "company": {
-        "department": "Training",
-        "name": "Jast - Nader",
-        "title": "Data Analyst",
-        "address": {
-          "address": "947 Main Street",
-          "city": "Denver",
-          "state": "Minnesota",
-          "stateCode": "MN",
-          "postalCode": "71896",
-          "coordinates": {
-            "lat": -24.654063,
-            "lng": -147.255268
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user18/200/200",
+      "coverPath": "https://picsum.photos/seed/cover18/1200/400",
+      "stories": [
+        {
+          "id": "s18",
+          "mediaUrl": "https://picsum.photos/seed/story18/400/600"
         }
-      },
-      "ein": "576-218",
-      "ssn": "806-639-934",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/96.0.4664.45",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "19",
       "firstName": "Abigail",
       "lastName": "Rivera",
-      "maidenName": "",
-      "age": 29,
-      "gender": "female",
-      "email": "abigail.rivera@x.dummyjson.com",
-      "phone": "+91 228-363-7806",
       "username": "abigailr",
+      "email": "abigail.rivera@x.dummyjson.com",
       "password": "abigailrpass",
-      "birthDate": "1996-10-11",
-      "image": "https://dummyjson.com/icon/abigailr/128",
-      "bloodGroup": "B+",
-      "height": 186.39,
-      "weight": 74.61,
-      "eyeColor": "Violet",
-      "hair": {
-        "color": "Blue",
-        "type": "Kinky"
-      },
-      "ip": "19.183.240.94",
+      "confirmPassword": "abigailrpass",
+      "gender": "female",
+      "birth": "1996-10-11",
+      "phone": "+91 228-363-7806",
       "address": {
-        "address": "996 Oak Street",
         "city": "Chicago",
-        "state": "New Mexico",
-        "stateCode": "NM",
-        "postalCode": "11407",
-        "coordinates": {
-          "lat": 44.321308,
-          "lng": -3.723903
-        },
         "country": "United States"
       },
-      "macAddress": "1d:a6:58:2a:e5:e4",
-      "university": "California Institute of Technology (Caltech)",
-      "bank": {
-        "cardExpire": "01/27",
-        "cardNumber": "6011399019022417",
-        "cardType": "Discover",
-        "currency": "EUR",
-        "iban": "IT11QP2B5J81QM1FBX029VI5DD68O"
-      },
-      "company": {
-        "department": "Human Resources",
-        "name": "Prohaska - Thiel",
-        "title": "Business Analyst",
-        "address": {
-          "address": "1402 Adams Street",
-          "city": "Austin",
-          "state": "Wisconsin",
-          "stateCode": "WI",
-          "postalCode": "51456",
-          "coordinates": {
-            "lat": 25.672938,
-            "lng": -76.54967
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user19/200/200",
+      "coverPath": "https://picsum.photos/seed/cover19/1200/400",
+      "stories": [
+        {
+          "id": "s19",
+          "mediaUrl": "https://picsum.photos/seed/story19/400/600"
         }
-      },
-      "ein": "173-637",
-      "ssn": "655-823-929",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/97.0.1072.76 Safari/97.0.1072.76",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "20",
       "firstName": "Jackson",
       "lastName": "Evans",
-      "maidenName": "",
-      "age": 35,
-      "gender": "male",
-      "email": "jackson.evans@x.dummyjson.com",
-      "phone": "+44 468-628-6686",
       "username": "jacksone",
+      "email": "jackson.evans@x.dummyjson.com",
       "password": "jacksonepass",
-      "birthDate": "1990-11-30",
-      "image": "https://dummyjson.com/icon/jacksone/128",
-      "bloodGroup": "O-",
-      "height": 162.57,
-      "weight": 74.37,
-      "eyeColor": "Green",
-      "hair": {
-        "color": "Red",
-        "type": "Straight"
-      },
-      "ip": "221.127.144.198",
+      "confirmPassword": "jacksonepass",
+      "gender": "male",
+      "birth": "1990-11-30",
+      "phone": "+44 468-628-6686",
       "address": {
-        "address": "1873 Main Street",
         "city": "New York",
-        "state": "Arkansas",
-        "stateCode": "AR",
-        "postalCode": "26600",
-        "coordinates": {
-          "lat": 34.722451,
-          "lng": 63.448927
-        },
         "country": "United States"
       },
-      "macAddress": "81:14:1:97:88:85",
-      "university": "Ohio State University",
-      "bank": {
-        "cardExpire": "07/30",
-        "cardNumber": "376760688512826",
-        "cardType": "American Express",
-        "currency": "GBP",
-        "iban": "GB27CM0H0MNPXSPDGA0A1O"
-      },
-      "company": {
-        "department": "Legal",
-        "name": "Kuhlman LLC",
-        "title": "Web Developer",
-        "address": {
-          "address": "1706 First Street",
-          "city": "Chicago",
-          "state": "Hawaii",
-          "stateCode": "HI",
-          "postalCode": "34725",
-          "coordinates": {
-            "lat": -80.416937,
-            "lng": -83.224516
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user20/200/200",
+      "coverPath": "https://picsum.photos/seed/cover20/1200/400",
+      "stories": [
+        {
+          "id": "s20",
+          "mediaUrl": "https://picsum.photos/seed/story20/400/600"
         }
-      },
-      "ein": "843-260",
-      "ssn": "248-787-886",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/97.0.4692.99",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "21",
       "firstName": "Madison",
       "lastName": "Collins",
-      "maidenName": "",
-      "age": 27,
-      "gender": "female",
-      "email": "madison.collins@x.dummyjson.com",
-      "phone": "+81 259-957-5711",
       "username": "madisonc",
+      "email": "madison.collins@x.dummyjson.com",
       "password": "madisoncpass",
-      "birthDate": "1998-3-7",
-      "image": "https://dummyjson.com/icon/madisonc/128",
-      "bloodGroup": "B-",
-      "height": 189.28,
-      "weight": 56.96,
-      "eyeColor": "Red",
-      "hair": {
-        "color": "Gray",
-        "type": "Curly"
-      },
-      "ip": "85.34.1.204",
+      "confirmPassword": "madisoncpass",
+      "gender": "female",
+      "birth": "1998-03-07",
+      "phone": "+81 259-957-5711",
       "address": {
-        "address": "1892 Lincoln Street",
         "city": "Philadelphia",
-        "state": "New Jersey",
-        "stateCode": "NJ",
-        "postalCode": "62091",
-        "coordinates": {
-          "lat": 52.993694,
-          "lng": 160.486892
-        },
         "country": "United States"
       },
-      "macAddress": "13:b0:d0:23:4d:26",
-      "university": "University of Pennsylvania",
-      "bank": {
-        "cardExpire": "09/27",
-        "cardNumber": "5551259848327064",
-        "cardType": "Mastercard",
-        "currency": "EUR",
-        "iban": "ES3893300143587765232049"
-      },
-      "company": {
-        "department": "Engineering",
-        "name": "Mayer - Smitham",
-        "title": "Chief Technology Officer",
-        "address": {
-          "address": "1438 Main Street",
-          "city": "San Diego",
-          "state": "Delaware",
-          "stateCode": "DE",
-          "postalCode": "63144",
-          "coordinates": {
-            "lat": 1.629613,
-            "lng": 23.232982
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user21/200/200",
+      "coverPath": "https://picsum.photos/seed/cover21/1200/400",
+      "stories": [
+        {
+          "id": "s21",
+          "mediaUrl": "https://picsum.photos/seed/story21/400/600"
         }
-      },
-      "ein": "716-166",
-      "ssn": "457-258-950",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/97.0.4692.99",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "22",
       "firstName": "Elijah",
       "lastName": "Stewart",
-      "maidenName": "",
-      "age": 34,
-      "gender": "male",
-      "email": "elijah.stewart@x.dummyjson.com",
-      "phone": "+44 468-357-7872",
       "username": "elijahs",
+      "email": "elijah.stewart@x.dummyjson.com",
       "password": "elijahspass",
-      "birthDate": "1991-10-22",
-      "image": "https://dummyjson.com/icon/elijahs/128",
-      "bloodGroup": "A-",
-      "height": 195.33,
-      "weight": 81.64,
-      "eyeColor": "Blue",
-      "hair": {
-        "color": "Purple",
-        "type": "Straight"
-      },
-      "ip": "23.87.135.62",
+      "confirmPassword": "elijahspass",
+      "gender": "male",
+      "birth": "1991-10-22",
+      "phone": "+44 468-357-7872",
       "address": {
-        "address": "1701 Eighth Street",
         "city": "Columbus",
-        "state": "Illinois",
-        "stateCode": "IL",
-        "postalCode": "31585",
-        "coordinates": {
-          "lat": -54.833799,
-          "lng": -174.504027
-        },
         "country": "United States"
       },
-      "macAddress": "75:17:c6:35:fc:6d",
-      "university": "Georgetown University",
-      "bank": {
-        "cardExpire": "05/28",
-        "cardNumber": "3648138556543460",
-        "cardType": "Diners Club International",
-        "currency": "EUR",
-        "iban": "DE82018985741195770313"
-      },
-      "company": {
-        "department": "Legal",
-        "name": "Langworth Group",
-        "title": "Business Analyst",
-        "address": {
-          "address": "155 Ninth Street",
-          "city": "Washington",
-          "state": "South Dakota",
-          "stateCode": "SD",
-          "postalCode": "19039",
-          "coordinates": {
-            "lat": 61.279254,
-            "lng": -12.607767
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user22/200/200",
+      "coverPath": "https://picsum.photos/seed/cover22/1200/400",
+      "stories": [
+        {
+          "id": "s22",
+          "mediaUrl": "https://picsum.photos/seed/story22/400/600"
         }
-      },
-      "ein": "520-394",
-      "ssn": "287-380-801",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/96.0.4664.93",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "23",
       "firstName": "Chloe",
       "lastName": "Morales",
-      "maidenName": "",
-      "age": 40,
-      "gender": "female",
-      "email": "chloe.morales@x.dummyjson.com",
-      "phone": "+92 468-541-7133",
       "username": "chloem",
+      "email": "chloe.morales@x.dummyjson.com",
       "password": "chloempass",
-      "birthDate": "1985-4-21",
-      "image": "https://dummyjson.com/icon/chloem/128",
-      "bloodGroup": "O+",
-      "height": 185.07,
-      "weight": 63.97,
-      "eyeColor": "Brown",
-      "hair": {
-        "color": "Red",
-        "type": "Kinky"
-      },
-      "ip": "66.78.20.21",
+      "confirmPassword": "chloempass",
+      "gender": "female",
+      "birth": "1985-04-21",
+      "phone": "+92 468-541-7133",
       "address": {
-        "address": "401 Fourth Street",
         "city": "Dallas",
-        "state": "New Jersey",
-        "stateCode": "NJ",
-        "postalCode": "54972",
-        "coordinates": {
-          "lat": -30.190759,
-          "lng": -58.705979
-        },
         "country": "United States"
       },
-      "macAddress": "fc:f:29:e1:37:b8",
-      "university": "Syracuse University",
-      "bank": {
-        "cardExpire": "09/30",
-        "cardNumber": "347036238254235",
-        "cardType": "American Express",
-        "currency": "CNY",
-        "iban": "DE77762461851744284392"
-      },
-      "company": {
-        "department": "Sales",
-        "name": "Grady LLC",
-        "title": "Database Administrator",
-        "address": {
-          "address": "269 Third Street",
-          "city": "Houston",
-          "state": "North Carolina",
-          "stateCode": "NC",
-          "postalCode": "10385",
-          "coordinates": {
-            "lat": 40.098115,
-            "lng": -1.762972
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user23/200/200",
+      "coverPath": "https://picsum.photos/seed/cover23/1200/400",
+      "stories": [
+        {
+          "id": "s23",
+          "mediaUrl": "https://picsum.photos/seed/story23/400/600"
         }
-      },
-      "ein": "913-597",
-      "ssn": "938-883-163",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/96.0.4664.93",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "24",
       "firstName": "Mateo",
       "lastName": "Nguyen",
-      "maidenName": "",
-      "age": 31,
-      "gender": "male",
-      "email": "mateo.nguyen@x.dummyjson.com",
-      "phone": "+1 341-597-6694",
       "username": "mateon",
+      "email": "mateo.nguyen@x.dummyjson.com",
       "password": "mateonpass",
-      "birthDate": "1994-6-2",
-      "image": "https://dummyjson.com/icon/mateon/128",
-      "bloodGroup": "O+",
-      "height": 174.29,
-      "weight": 59.98,
-      "eyeColor": "Red",
-      "hair": {
-        "color": "Purple",
-        "type": "Wavy"
-      },
-      "ip": "192.57.144.7",
+      "confirmPassword": "mateonpass",
+      "gender": "male",
+      "birth": "1994-06-02",
+      "phone": "+1 341-597-6694",
       "address": {
-        "address": "1578 Fourth Street",
         "city": "Columbus",
-        "state": "Missouri",
-        "stateCode": "MO",
-        "postalCode": "20673",
-        "coordinates": {
-          "lat": -32.828675,
-          "lng": -82.557354
-        },
         "country": "United States"
       },
-      "macAddress": "a7:26:10:7a:36:29",
-      "university": "Columbia University",
-      "bank": {
-        "cardExpire": "12/29",
-        "cardNumber": "4021840414995098",
-        "cardType": "Visa",
-        "currency": "CAD",
-        "iban": "DE43275561962007561223"
-      },
-      "company": {
-        "department": "Accounting",
-        "name": "Spinka LLC",
-        "title": "Business Analyst",
-        "address": {
-          "address": "1967 Jefferson Street",
-          "city": "Dallas",
-          "state": "Louisiana",
-          "stateCode": "LA",
-          "postalCode": "78527",
-          "coordinates": {
-            "lat": 75.982676,
-            "lng": 164.459743
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user24/200/200",
+      "coverPath": "https://picsum.photos/seed/cover24/1200/400",
+      "stories": [
+        {
+          "id": "s24",
+          "mediaUrl": "https://picsum.photos/seed/story24/400/600"
         }
-      },
-      "ein": "229-249",
-      "ssn": "416-877-230",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/95.0.4638.69",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "25",
       "firstName": "Harper",
       "lastName": "Kelly",
-      "maidenName": "Evans",
-      "age": 28,
-      "gender": "female",
-      "email": "harper.kelly@x.dummyjson.com",
-      "phone": "+92 518-863-2863",
       "username": "harpere",
+      "email": "harper.kelly@x.dummyjson.com",
       "password": "harperepass",
-      "birthDate": "1997-3-3",
-      "image": "https://dummyjson.com/icon/harpere/128",
-      "bloodGroup": "AB-",
-      "height": 184.32,
-      "weight": 81.69,
-      "eyeColor": "Amber",
-      "hair": {
-        "color": "Red",
-        "type": "Curly"
-      },
-      "ip": "174.111.61.162",
+      "confirmPassword": "harperepass",
+      "gender": "female",
+      "birth": "1997-03-03",
+      "phone": "+92 518-863-2863",
       "address": {
-        "address": "1591 Adams Street",
         "city": "Philadelphia",
-        "state": "New York",
-        "stateCode": "NY",
-        "postalCode": "69521",
-        "coordinates": {
-          "lat": -26.832913,
-          "lng": -75.445017
-        },
         "country": "United States"
       },
-      "macAddress": "b:ff:33:67:94:e4",
-      "university": "Boston College",
-      "bank": {
-        "cardExpire": "06/27",
-        "cardNumber": "4488823564436432",
-        "cardType": "Visa",
-        "currency": "EUR",
-        "iban": "ES5874149276753342261515"
-      },
-      "company": {
-        "department": "Legal",
-        "name": "Leffler, Rolfson and Becker",
-        "title": "Business Development Manager",
-        "address": {
-          "address": "16 Maple Street",
-          "city": "Austin",
-          "state": "North Carolina",
-          "stateCode": "NC",
-          "postalCode": "68274",
-          "coordinates": {
-            "lat": -15.423746,
-            "lng": 149.298887
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user25/200/200",
+      "coverPath": "https://picsum.photos/seed/cover25/1200/400",
+      "stories": [
+        {
+          "id": "s25",
+          "mediaUrl": "https://picsum.photos/seed/story25/400/600"
         }
-      },
-      "ein": "592-557",
-      "ssn": "209-544-548",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/97.0.4692.99",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "26",
       "firstName": "Evelyn",
       "lastName": "Gonzalez",
-      "maidenName": "",
-      "age": 36,
-      "gender": "female",
-      "email": "evelyn.gonzalez@x.dummyjson.com",
-      "phone": "+61 708-508-4638",
       "username": "evelyng",
+      "email": "evelyn.gonzalez@x.dummyjson.com",
       "password": "evelyngpass",
-      "birthDate": "1989-2-5",
-      "image": "https://dummyjson.com/icon/evelyng/128",
-      "bloodGroup": "O+",
-      "height": 168.94,
-      "weight": 58.47,
-      "eyeColor": "Red",
-      "hair": {
-        "color": "Black",
-        "type": "Wavy"
-      },
-      "ip": "42.52.74.232",
+      "confirmPassword": "evelyngpass",
+      "gender": "female",
+      "birth": "1989-02-05",
+      "phone": "+61 708-508-4638",
       "address": {
-        "address": "1065 Lincoln Street",
         "city": "Dallas",
-        "state": "Maine",
-        "stateCode": "ME",
-        "postalCode": "84898",
-        "coordinates": {
-          "lat": 67.768359,
-          "lng": 71.268643
-        },
         "country": "United States"
       },
-      "macAddress": "89:5e:5a:2a:72:42",
-      "university": "Washington University in St. Louis",
-      "bank": {
-        "cardExpire": "08/28",
-        "cardNumber": "6011735364912274",
-        "cardType": "Discover",
-        "currency": "CAD",
-        "iban": "DE27147353096476220032"
-      },
-      "company": {
-        "department": "Accounting",
-        "name": "Tromp, Gaylord and Weber",
-        "title": "Project Manager",
-        "address": {
-          "address": "584 Ninth Street",
-          "city": "Jacksonville",
-          "state": "Wisconsin",
-          "stateCode": "WI",
-          "postalCode": "45633",
-          "coordinates": {
-            "lat": 26.014021,
-            "lng": 40.572436
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user26/200/200",
+      "coverPath": "https://picsum.photos/seed/cover26/1200/400",
+      "stories": [
+        {
+          "id": "s26",
+          "mediaUrl": "https://picsum.photos/seed/story26/400/600"
         }
-      },
-      "ein": "569-275",
-      "ssn": "487-680-127",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/95.0.4638.54",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "27",
       "firstName": "Daniel",
       "lastName": "Cook",
-      "maidenName": "",
-      "age": 42,
-      "gender": "male",
-      "email": "daniel.cook@x.dummyjson.com",
-      "phone": "+44 254-761-6843",
       "username": "danielc",
+      "email": "daniel.cook@x.dummyjson.com",
       "password": "danielcpass",
-      "birthDate": "1983-12-25",
-      "image": "https://dummyjson.com/icon/danielc/128",
-      "bloodGroup": "AB+",
-      "height": 186.21,
-      "weight": 83.72,
-      "eyeColor": "Brown",
-      "hair": {
-        "color": "Blonde",
-        "type": "Curly"
-      },
-      "ip": "1.61.73.142",
+      "confirmPassword": "danielcpass",
+      "gender": "male",
+      "birth": "1983-12-25",
+      "phone": "+44 254-761-6843",
       "address": {
-        "address": "1163 Pine Street",
         "city": "Los Angeles",
-        "state": "Nevada",
-        "stateCode": "NV",
-        "postalCode": "58781",
-        "coordinates": {
-          "lat": -3.456681,
-          "lng": -134.937482
-        },
         "country": "United States"
       },
-      "macAddress": "6e:73:dc:3a:85:10",
-      "university": "Columbia University",
-      "bank": {
-        "cardExpire": "05/29",
-        "cardNumber": "5485409595328150",
-        "cardType": "Mastercard",
-        "currency": "NZD",
-        "iban": "DE71341603969952506034"
-      },
-      "company": {
-        "department": "Support",
-        "name": "Morissette, Baumbach and Auer",
-        "title": "Legal Counsel",
-        "address": {
-          "address": "938 Fifth Street",
-          "city": "San Francisco",
-          "state": "South Dakota",
-          "stateCode": "SD",
-          "postalCode": "45305",
-          "coordinates": {
-            "lat": 21.323588,
-            "lng": -83.531427
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user27/200/200",
+      "coverPath": "https://picsum.photos/seed/cover27/1200/400",
+      "stories": [
+        {
+          "id": "s27",
+          "mediaUrl": "https://picsum.photos/seed/story27/400/600"
         }
-      },
-      "ein": "585-905",
-      "ssn": "645-515-583",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "28",
       "firstName": "Lily",
       "lastName": "Lee",
-      "maidenName": "Brown",
-      "age": 30,
-      "gender": "female",
-      "email": "lily.lee@x.dummyjson.com",
-      "phone": "+1 808-757-9867",
       "username": "lilyb",
+      "email": "lily.lee@x.dummyjson.com",
       "password": "lilybpass",
-      "birthDate": "1995-12-3",
-      "image": "https://dummyjson.com/icon/lilyb/128",
-      "bloodGroup": "AB-",
-      "height": 181.42,
-      "weight": 51.49,
-      "eyeColor": "Gray",
-      "hair": {
-        "color": "Purple",
-        "type": "Straight"
-      },
-      "ip": "67.184.255.96",
+      "confirmPassword": "lilybpass",
+      "gender": "female",
+      "birth": "1995-12-03",
+      "phone": "+1 808-757-9867",
       "address": {
-        "address": "1946 Oak Street",
         "city": "Phoenix",
-        "state": "Massachusetts",
-        "stateCode": "MA",
-        "postalCode": "41540",
-        "coordinates": {
-          "lat": -9.87059,
-          "lng": -72.336845
-        },
         "country": "United States"
       },
-      "macAddress": "18:b6:c7:a:50:3f",
-      "university": "Johns Hopkins University",
-      "bank": {
-        "cardExpire": "12/28",
-        "cardNumber": "5551782139834613",
-        "cardType": "Mastercard",
-        "currency": "CAD",
-        "iban": "DE49484285539189712621"
-      },
-      "company": {
-        "department": "Product Management",
-        "name": "Cremin Inc",
-        "title": "Quality Assurance Engineer",
-        "address": {
-          "address": "1735 Cedar Street",
-          "city": "Phoenix",
-          "state": "Wyoming",
-          "stateCode": "WY",
-          "postalCode": "85797",
-          "coordinates": {
-            "lat": 72.231441,
-            "lng": -158.147245
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user28/200/200",
+      "coverPath": "https://picsum.photos/seed/cover28/1200/400",
+      "stories": [
+        {
+          "id": "s28",
+          "mediaUrl": "https://picsum.photos/seed/story28/400/600"
         }
-      },
-      "ein": "229-776",
-      "ssn": "358-185-671",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/97.0.1072.76 Safari/97.0.1072.76",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "29",
       "firstName": "Henry",
       "lastName": "Hill",
-      "maidenName": "",
-      "age": 39,
-      "gender": "male",
-      "email": "henry.hill@x.dummyjson.com",
-      "phone": "+1 240-833-4680",
       "username": "henryh",
+      "email": "henry.hill@x.dummyjson.com",
       "password": "henryhpass",
-      "birthDate": "1986-8-19",
-      "image": "https://dummyjson.com/icon/henryh/128",
-      "bloodGroup": "O-",
-      "height": 180.25,
-      "weight": 95.84,
-      "eyeColor": "Gray",
-      "hair": {
-        "color": "Black",
-        "type": "Straight"
-      },
-      "ip": "194.43.55.202",
+      "confirmPassword": "henryhpass",
+      "gender": "male",
+      "birth": "1986-08-19",
+      "phone": "+1 240-833-4680",
       "address": {
-        "address": "1837 Maple Street",
         "city": "Indianapolis",
-        "state": "Delaware",
-        "stateCode": "DE",
-        "postalCode": "81783",
-        "coordinates": {
-          "lat": 35.498256,
-          "lng": 154.088476
-        },
         "country": "United States"
       },
-      "macAddress": "fa:c3:1b:21:5f:44",
-      "university": "University of Illinois--Urbana-Champaign",
-      "bank": {
-        "cardExpire": "11/29",
-        "cardNumber": "3625097026040498",
-        "cardType": "Diners Club International",
-        "currency": "EUR",
-        "iban": "DE08820336197191865470"
-      },
-      "company": {
-        "department": "Services",
-        "name": "Gerlach, Funk and Schoen",
-        "title": "Sales Manager",
-        "address": {
-          "address": "1651 Lincoln Street",
-          "city": "San Francisco",
-          "state": "West Virginia",
-          "stateCode": "WV",
-          "postalCode": "61805",
-          "coordinates": {
-            "lat": -59.936335,
-            "lng": -12.405368
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user29/200/200",
+      "coverPath": "https://picsum.photos/seed/cover29/1200/400",
+      "stories": [
+        {
+          "id": "s29",
+          "mediaUrl": "https://picsum.photos/seed/story29/400/600"
         }
-      },
-      "ein": "118-957",
-      "ssn": "925-686-100",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/96.0.4664.93",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
       "id": "30",
       "firstName": "Addison",
       "lastName": "Wright",
-      "maidenName": "",
-      "age": 33,
-      "gender": "female",
-      "email": "addison.wright@x.dummyjson.com",
-      "phone": "+1 514-384-3300",
       "username": "addisonw",
+      "email": "addison.wright@x.dummyjson.com",
       "password": "addisonwpass",
-      "birthDate": "1992-1-3",
-      "image": "https://dummyjson.com/icon/addisonw/128",
-      "bloodGroup": "B+",
-      "height": 179.32,
-      "weight": 76.93,
-      "eyeColor": "Brown",
-      "hair": {
-        "color": "Blonde",
-        "type": "Straight"
-      },
-      "ip": "11.35.69.81",
+      "confirmPassword": "addisonwpass",
+      "gender": "female",
+      "birth": "1992-01-03",
+      "phone": "+1 514-384-3300",
       "address": {
-        "address": "568 Tenth Street",
         "city": "San Francisco",
-        "state": "Montana",
-        "stateCode": "MT",
-        "postalCode": "54698",
-        "coordinates": {
-          "lat": 20.946052,
-          "lng": 100.228822
-        },
         "country": "United States"
       },
-      "macAddress": "fb:0:94:21:16:c",
-      "university": "Syracuse University",
-      "bank": {
-        "cardExpire": "06/28",
-        "cardNumber": "5274971895809762",
-        "cardType": "Mastercard",
-        "currency": "PKR",
-        "iban": "DE91480955939051635497"
-      },
-      "company": {
-        "department": "Services",
-        "name": "Kreiger Inc",
-        "title": "Human Resources Manager",
-        "address": {
-          "address": "1173 Eighth Street",
-          "city": "San Diego",
-          "state": "Michigan",
-          "stateCode": "MI",
-          "postalCode": "85777",
-          "coordinates": {
-            "lat": 65.324413,
-            "lng": 87.142893
-          },
-          "country": "United States"
+      "image": "https://picsum.photos/seed/user30/200/200",
+      "coverPath": "https://picsum.photos/seed/cover30/1200/400",
+      "stories": [
+        {
+          "id": "s30",
+          "mediaUrl": "https://picsum.photos/seed/story30/400/600"
         }
-      },
-      "ein": "415-286",
-      "ssn": "804-492-390",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/96.0.4664.93",
-      "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-      },
-      "role": "user"
+      ]
     },
     {
+      "id": "UND1ncFemWg",
       "firstName": "Ayman",
       "lastName": "Shaaban",
       "username": "ayman17",
@@ -2109,9 +730,22 @@
       "confirmPassword": "ayman123",
       "birth": "2004-05-17",
       "gender": "male",
-      "id": "UND1ncFemWg"
+      "phone": "+20 100-123-4567",
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/ayman/200/200",
+      "coverPath": "https://picsum.photos/seed/coverayman/1200/400",
+      "stories": [
+        {
+          "id": "s31",
+          "mediaUrl": "https://picsum.photos/seed/story31/400/600"
+        }
+      ]
     },
     {
+      "id": "1rLvjGfVmr8",
       "firstName": "Ali",
       "lastName": "Shaaban",
       "username": "ali18",
@@ -2120,9 +754,22 @@
       "confirmPassword": "ali123",
       "birth": "2004-05-17",
       "gender": "male",
-      "id": "1rLvjGfVmr8"
+      "phone": "+20 101-222-3333",
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/ali/200/200",
+      "coverPath": "https://picsum.photos/seed/coverali/1200/400",
+      "stories": [
+        {
+          "id": "s32",
+          "mediaUrl": "https://picsum.photos/seed/story32/400/600"
+        }
+      ]
     },
     {
+      "id": "WARct_HcLx8",
       "firstName": "Ahmed",
       "lastName": "hassan",
       "username": "ahmed10",
@@ -2131,9 +778,22 @@
       "confirmPassword": "ahmed123",
       "birth": "2004-05-17",
       "gender": "male",
-      "id": "WARct_HcLx8"
+      "phone": "+20 102-333-4444",
+      "address": {
+        "city": "Giza",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/ahmed/200/200",
+      "coverPath": "https://picsum.photos/seed/coverahmed/1200/400",
+      "stories": [
+        {
+          "id": "s33",
+          "mediaUrl": "https://picsum.photos/seed/story33/400/600"
+        }
+      ]
     },
     {
+      "id": "x43CbpuqsmE",
       "firstName": "Omnia",
       "lastName": "Ayman",
       "username": "omnia0",
@@ -2142,21 +802,46 @@
       "confirmPassword": "om123",
       "birth": "2004-05-17",
       "gender": "male",
-      "id": "x43CbpuqsmE"
+      "phone": "+20 103-444-5555",
+      "address": {
+        "city": "Giza",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/omnia/200/200",
+      "coverPath": "https://picsum.photos/seed/coveromnia/1200/400",
+      "stories": [
+        {
+          "id": "s34",
+          "mediaUrl": "https://picsum.photos/seed/story34/400/600"
+        }
+      ]
     },
     {
+      "id": "B_P_K1gf7tE",
       "firstName": "hind",
       "lastName": "Ayman",
       "username": "hind20",
       "email": "aymankhattap2021@gmail.com",
       "password": "hind123",
-      "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/21/12/mohamed-salah-6.jpg",
       "confirmPassword": "hind123",
       "birth": "2004-05-17",
       "gender": "female",
-      "id": "B_P_K1gf7tE"
+      "phone": "+20 104-555-6666",
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/hind/200/200",
+      "coverPath": "https://picsum.photos/seed/coverhind/1200/400",
+      "stories": [
+        {
+          "id": "s35",
+          "mediaUrl": "https://picsum.photos/seed/story35/400/600"
+        }
+      ]
     },
     {
+      "id": "HDW_vczMKDw",
       "firstName": "salah",
       "lastName": "hamid",
       "username": "salah10",
@@ -2165,9 +850,22 @@
       "confirmPassword": "123",
       "birth": "2026-08-20",
       "gender": "male",
-      "id": "HDW_vczMKDw"
+      "phone": "+20 105-666-7777",
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/salah/200/200",
+      "coverPath": "https://picsum.photos/seed/coversalah/1200/400",
+      "stories": [
+        {
+          "id": "s36",
+          "mediaUrl": "https://picsum.photos/seed/story36/400/600"
+        }
+      ]
     },
     {
+      "id": "FJKDLgjSp9o",
       "firstName": "saly",
       "lastName": "hamid",
       "username": "saly10",
@@ -2176,55 +874,91 @@
       "confirmPassword": "123456",
       "birth": "2026-08-20",
       "gender": "male",
-      "id": "FJKDLgjSp9o"
+      "phone": "+20 106-777-8888",
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/saly/200/200",
+      "coverPath": "https://picsum.photos/seed/coversaly/1200/400",
+      "stories": [
+        {
+          "id": "s37",
+          "mediaUrl": "https://picsum.photos/seed/story37/400/600"
+        }
+      ]
     },
     {
+      "id": "fZT0t9-mPPo",
       "firstName": "hosam",
       "lastName": "hamid",
       "username": "hos10",
       "email": "ayman.23120261@muc.edu.eg",
       "password": "123123",
-      "image": "",
       "confirmPassword": "123123",
       "birth": "2026-08-20",
       "gender": "male",
-      "id": "fZT0t9-mPPo"
+      "phone": "+20 107-888-9999",
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/hosam1/200/200",
+      "coverPath": "https://picsum.photos/seed/coverhosam/1200/400",
+      "stories": [
+        {
+          "id": "s38",
+          "mediaUrl": "https://picsum.photos/seed/story38/400/600"
+        }
+      ]
     },
     {
+      "id": "baOTHikxLDg",
       "firstName": "hos",
       "lastName": "hamid",
       "username": "hos11",
       "email": "ayman.23120261@muc.edu.eg",
       "password": "121212",
-      "image": "",
       "confirmPassword": "121212",
       "birth": "2026-08-20",
       "gender": "male",
-      "id": "baOTHikxLDg"
+      "phone": "+20 108-999-0000",
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/hos1/200/200",
+      "coverPath": "https://picsum.photos/seed/coverhos1/1200/400",
+      "stories": [
+        {
+          "id": "s39",
+          "mediaUrl": "https://picsum.photos/seed/story39/400/600"
+        }
+      ]
     },
     {
+      "id": "Pebb_FtSZX4",
       "firstName": "hos",
       "lastName": "hamid",
       "username": "hos11",
       "email": "ayman.23120261@muc.edu.eg",
       "password": "123123",
-      "image": "",
       "confirmPassword": "123123",
       "birth": "2026-08-20",
       "gender": "male",
-      "id": "fmcL_OSTkTQ"
-    },
-    {
-      "firstName": "hos",
-      "lastName": "hamid",
-      "username": "hos11",
-      "email": "ayman.23120261@muc.edu.eg",
-      "password": "123123",
-      "image": "",
-      "confirmPassword": "123123",
-      "birth": "2026-08-20",
-      "gender": "male",
-      "id": "Pebb_FtSZX4"
+      "phone": "+20 109-000-1111",
+      "address": {
+        "city": "Cairo",
+        "country": "Egypt"
+      },
+      "image": "https://picsum.photos/seed/hos2/200/200",
+      "coverPath": "https://picsum.photos/seed/coverhos2/1200/400",
+      "stories": [
+        {
+          "id": "s40",
+          "mediaUrl": "https://picsum.photos/seed/story40/400/600"
+        }
+      ]
     }
   ],
   "posts": [
@@ -2847,6 +1581,17 @@
       "views": 0,
       "userId": "HDW_vczMKDw",
       "id": "hpv72FPObqA"
+    },
+    {
+      "title": "test test",
+      "body": "test test test ",
+      "reactions": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "views": 0,
+      "userId": "baOTHikxLDg",
+      "id": "qztKlUsjVdI"
     }
   ],
   "comments": [

@@ -5,6 +5,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { getLoginedUser } from "../apis/Auth/Users.api";
 import {deletePost} from '../apis/Posts/Posts.api'
 
+
 export default function PostCard({post}: {post: PostType}) {
 
   const {data , isError , isLoading}  = useQuery<UserType | undefined>({queryKey: ['user', post.userId], queryFn: () => getUser(post.userId)}) ; 
@@ -13,9 +14,12 @@ export default function PostCard({post}: {post: PostType}) {
     queryFn: getLoginedUser
   });
   const {mutate , isPending} = useMutation({
-    mutationFn: deletePost
+    mutationFn: deletePost,
+    // onSuccess:()=>{
+      
+    // }
   })
-  const posty = loginUser?.id === post.userId
+  const posty = loginUser?.id != null && loginUser.id === String(post.userId)
 
   const handleDelete = ()=>{
     if (post.id == null) return;
@@ -94,14 +98,15 @@ export default function PostCard({post}: {post: PostType}) {
           </div>
 
           {/* Post Image (Generated dynamically based on post ID) */}
+          {post.mediaURL &&
           <Link to={`/posts/${post.id}`}>
             <img 
-              src={post.mediaURL ?  post.mediaURL : `https://picsum.photos/seed/${post.id}/800/400`} 
+              src={  post.mediaURL }
               alt="Post Cover" 
               className="w-full h-64 object-cover"
             />
           </Link>
-
+          }
           {/* Post Footer: Reactions, Views, Comments */}
           <div className="p-4 border-t border-gray-50 dark:border-gray-700 flex justify-between items-center text-gray-600 dark:text-gray-300 text-sm">
             

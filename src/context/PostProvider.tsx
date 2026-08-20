@@ -5,7 +5,7 @@ import { getPosts } from "../apis/Posts/Posts.api";
 
 
 export default function AuthProvider({ children }: { children: ReactNode }){
-    const {isLoading , isError , data ,refetch } = useQuery({ queryKey: ['posts'] , queryFn : getPosts}) ;
+    const {isLoading , isError , data ,refetch } = useQuery({ queryKey: ['posts'] , queryFn : getPosts }) ;
 
  
 
