@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { getPost } from "../apis/Posts/Posts.api";
 import { useQuery } from "@tanstack/react-query";
-import PostCard from "../components/PostCard";
+import PostCard from "../components/Post/PostCard";
 import type { PostType } from "../interfaces/interfaces";
 import CommentCard from "../components/CommentCard";
 

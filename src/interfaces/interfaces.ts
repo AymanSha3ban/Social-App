@@ -86,3 +86,7 @@ export interface UserType {
   stories: Story[];
   address: UserAddress;
 }
+export interface StoryType{
+  id ? : number | string  ; 
+  mediaUrl :string ; 
+}

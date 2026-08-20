@@ -1,8 +1,8 @@
 import PostCard from "./PostCard";
 import { useContext } from "react";
-import { PostContext } from "../context/createdContext/PostContext";
+import { PostContext } from "../../context/createdContext/PostContext";
 
-export default function Post() {
+export default function Posts() {
   
   const context = useContext(PostContext);
   const { isLoading, isError, data } = context || {};

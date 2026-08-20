@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import type { PostType, UserType } from "../interfaces/interfaces";
-import { getUser } from "../apis/Auth/Users.api";
+import type { PostType, UserType } from "../../interfaces/interfaces";
+import { getUser } from "../../apis/Auth/Users.api";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { getLoginedUser } from "../apis/Auth/Users.api";
-import {deletePost} from '../apis/Posts/Posts.api'
+import { getLoginedUser } from "../../apis/Auth/Users.api";
+import {deletePost} from '../../apis/Posts/Posts.api'
 
 
 export default function PostCard({post}: {post: PostType}) {
@@ -101,7 +101,7 @@ export default function PostCard({post}: {post: PostType}) {
           {post.mediaURL &&
           <Link to={`/posts/${post.id}`}>
             <img 
-              src={  post.mediaURL }
+              src={ post.mediaURL }
               alt="Post Cover" 
               className="w-full h-64 object-cover"
             />

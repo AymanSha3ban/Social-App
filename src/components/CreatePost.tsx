@@ -24,6 +24,7 @@ export default function CreatePost() {
     resolver: zodResolver(PostSchema),
   });
 
+  // eslint-disable-next-line react-hooks/incompatible-library
   const bodyValue = watch("body") || "";
 
   const onEmojiClick = (emojiData: EmojiClickData) => {

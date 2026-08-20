@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getLoginedUser } from "../apis/Auth/Users.api";
 import type { UserType } from "../interfaces/interfaces";
 import { useState, useContext } from "react";
-import PostCard from "../components/PostCard";
+import PostCard from "../components/Post/PostCard";
 import { PostContext } from "../context/createdContext/PostContext";
 
 export default function Profile() {
@@ -41,7 +41,7 @@ export default function Profile() {
       <div className="bg-white dark:bg-[#151c2c] shadow-sm border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-5xl mx-auto px-4">
           
-          <div className="relative h-48 sm:h-80 w-full rounded-b-xl overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-800">
+          <div className="relative h-48 sm:h-80 w-full rounded-b-xl overflow-hidden bg-linear-to-r from-purple-600 via-indigo-600 to-purple-800">
             <img 
               src={coverPath} 
               alt="Cover" 
