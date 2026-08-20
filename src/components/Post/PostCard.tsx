@@ -15,9 +15,6 @@ export default function PostCard({post}: {post: PostType}) {
   });
   const {mutate , isPending} = useMutation({
     mutationFn: deletePost,
-    // onSuccess:()=>{
-      
-    // }
   })
   const posty = loginUser?.id != null && loginUser.id === String(post.userId)
 
@@ -47,7 +44,6 @@ export default function PostCard({post}: {post: PostType}) {
         <div
           className="bg-white dark:bg-gray-800 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden transition-colors"
         >
-          {/* Post Header: User Info */}
           <div className="flex items-center justify-between p-4 border-b border-gray-50 dark:border-gray-700">
             <div className="flex  gap-3">
               <img 
@@ -75,7 +71,6 @@ export default function PostCard({post}: {post: PostType}) {
             }
           </div>
 
-          {/* Post Content */}
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white leading-tight">
               {post.title}
@@ -83,8 +78,7 @@ export default function PostCard({post}: {post: PostType}) {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
               {post.body}
             </p>
-            
-            {/* Tags */}
+  
             <div className="flex flex-wrap gap-2 mt-3">
               {post.tags?.map((tag) => (
                 <span 
@@ -97,7 +91,6 @@ export default function PostCard({post}: {post: PostType}) {
             </div>
           </div>
 
-          {/* Post Image (Generated dynamically based on post ID) */}
           {post.mediaURL &&
           <Link to={`/posts/${post.id}`}>
             <img 
@@ -107,11 +100,9 @@ export default function PostCard({post}: {post: PostType}) {
             />
           </Link>
           }
-          {/* Post Footer: Reactions, Views, Comments */}
           <div className="p-4 border-t border-gray-50 dark:border-gray-700 flex justify-between items-center text-gray-600 dark:text-gray-300 text-sm">
             
             <div className="flex gap-6">
-              {/* Likes & Dislikes */}
               <button className="flex items-center gap-1.5 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                 <i className="fa-regular fa-thumbs-up text-lg"></i>
                 <span className="font-medium">{post.reactions.likes}</span>
@@ -122,7 +113,6 @@ export default function PostCard({post}: {post: PostType}) {
                 <span className="font-medium">{post.reactions.dislikes}</span>
               </button>
 
-              {/* Comments Icon (Dummy count since API doesn't provide it here) */}
               <Link 
                 to={`/posts/${post.id}`} className="flex items-center gap-1.5 hover:text-blue-500 transition-colors"
               >
@@ -131,7 +121,6 @@ export default function PostCard({post}: {post: PostType}) {
               </Link>
             </div>
 
-            {/* Views */}
             <div className="flex items-center gap-1.5 text-gray-400">
               <i className="fa-regular fa-eye"></i>
               <span>{post.views}</span>

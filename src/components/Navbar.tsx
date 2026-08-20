@@ -1,23 +1,44 @@
-import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState, useEffect, useRef } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/createdContext/AuthContext";
 import { DarkModeContext } from "../context/createdContext/DarkContex";
 import { useQuery } from "@tanstack/react-query";
 import { getLoginedUser } from "../apis/Auth/Users.api";
-import type { UserType } from "../interfaces/interfaces"
+import type { UserType } from "../interfaces/interfaces";
 import Loading from "./Loading";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const menuRef = useRef<HTMLDivElement>(null);
     const { isAuthed, setIsAuthed } = useContext(AuthContext)!;
     const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext)!;
-    const { data : user, isLoading, isError } = useQuery<UserType>({
+    const { data: user, isLoading, isError } = useQuery<UserType>({
         queryKey: ['LoginedUser'],
         queryFn: getLoginedUser
     });
 
     const navigate = useNavigate();
-    
+    const location = useLocation();
+
+    useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setOpen(false);
+    }, [location.pathname]);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setOpen(false);
+            }
+        };
+        if (open) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [open]);
+
     const handleToggle = () => {
         setOpen(!open);
     };
@@ -26,29 +47,24 @@ export default function Navbar() {
         setIsAuthed(null);
         localStorage.removeItem('accessToken');
         navigate('/login');
-        console.log("User logged out successfully");
+    };
+
+    if (isLoading) {
+        return (
+            <div className="flex justify-center items-center py-20">
+                <i className="fas fa-spinner fa-spin text-4xl text-purple-600 dark:text-purple-400"></i>
+            </div>
+        );
     }
 
-    
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center py-20">
-        <i className="fas fa-spinner fa-spin text-4xl text-purple-600 dark:text-purple-400"></i>
-      </div>
-    );
-  }
+    if (isError) {
+        return <Loading />;
+    }
 
-  if (isError) {
-    return (
-      <Loading/>
-    );
-  }
-
-  const { firstName } = user!;
-
+    const { firstName  , image } = user!;
 
     return (
-        <div className=" w-full">
+        <div className="w-full" ref={menuRef}>
             <nav className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-sm border-b border-gray-100 dark:border-gray-800 fixed w-full z-20 top-0 left-0 transition-colors duration-300">
                 <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
                     
@@ -65,8 +81,9 @@ export default function Navbar() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={open ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
                         </svg>
                     </button>
+
                     <div className={`${!open ? 'hidden' : 'absolute top-16 right-4 w-52 bg-white dark:bg-gray-900 shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl p-2'} md:block md:static md:w-auto md:shadow-none md:border-none md:bg-transparent md:p-0 z-50 transition-all`}>
-                        <ul className="flex flex-col gap-1 md:flex-row md:space-x-4 md:gap-0 font-medium">
+                        <ul className="flex flex-col gap-1 md:flex-row md:space-x-4 md:gap-0 md:items-center font-medium">
                             
                             {isAuthed ? (
                                 <>
@@ -79,25 +96,24 @@ export default function Navbar() {
                                         </Link>
                                     </li>
                                     
-                                    <li className="flex justify-center items-center p-2  hover:text-purple-700  hover:border-2 hover:border-purple-700 hover:rounded-full  cursor-pointer transition-all"> 
+                                    <li> 
                                         <Link 
                                             to={'/profile'} 
-                                            className="flex justify-center items-center gap-1.5"
+                                            className="flex items-center gap-3 md:gap-1.5 px-4 py-3 md:px-3 md:py-2 text-sm text-gray-700 dark:text-gray-200 md:hover:text-purple-700 md:hover:border-2 md:hover:border-purple-700 md:hover:rounded-full rounded-lg hover:bg-purple-100 dark:hover:bg-gray-800 transition-all"
                                         >
-                                            <i className="fa-solid fa-user"></i>
+                                            <img src={image} alt="user image" className="w-8 h-8 rounded-full border-2 border-be-pink-500" />
                                             <span>{firstName}</span>
                                         </Link>
-                                      
                                     </li>
-                                    <li onClick={handleLogout} className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-200 rounded-lg hover:bg-red-200 dark:hover:bg-red-900/40 hover:text-red-700 dark:hover:text-red-400 transition-colors cursor-pointer">
+
+                                    <li onClick={handleLogout} className="flex md:hidden items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-200 rounded-lg hover:bg-red-200 dark:hover:bg-red-900/40 hover:text-red-700 dark:hover:text-red-400 transition-colors cursor-pointer">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
                                         </svg>  
                                         <span>Logout</span>
                                     </li>
                                 </>
-                            ) :
-                            (
+                            ) : (
                                 <>
                                     <li>
                                         <Link className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-200 rounded-lg hover:bg-purple-100 dark:hover:bg-gray-800 hover:text-purple-700 dark:hover:text-purple-400 transition-colors" to={'/'}>
@@ -112,13 +128,12 @@ export default function Navbar() {
                             
                             <li>
                                 <label className="flex items-center justify-between px-4 py-3 cursor-pointer rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800 transition-colors group">
-                                    <div className="relative" onChange={toggleDarkMode}>
-                                        <input type="checkbox" className="sr-only peer" />
+                                    <div className="relative" onClick={toggleDarkMode}>
+                                        <input type="checkbox" className="sr-only peer" checked={isDarkMode} readOnly />
                                         <div className="w-11 h-6 bg-gray-200 dark:bg-gray-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:inset-s-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
                                     </div>
                                     <span className="flex gap-2 text-gray-700 dark:text-gray-300 ml-3">
-                                        {isDarkMode ? <i className="fa-solid fa-sun"></i>
-                                        : <i className="fa-solid fa-moon"></i>}
+                                        {isDarkMode ? <i className="fa-solid fa-sun"></i> : <i className="fa-solid fa-moon"></i>}
                                     </span>
                                 </label>
                             </li>
