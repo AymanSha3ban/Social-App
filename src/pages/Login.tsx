@@ -2,11 +2,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { LoginSchema, type LoginData } from "../schema/LoginSchema";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
 import { loginUser } from "../apis/Auth/Login.api";
-import { AuthContext } from "../context/createdContext/AuthContext";
 import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
+import { useAuthStore } from "../Stores/useAuthStore";
 
 export default function Login() {
   const {
@@ -18,14 +17,14 @@ export default function Login() {
   });
 
   const navigate = useNavigate();
-  const { setIsAuthed } = useContext(AuthContext)!;
+  const {login} = useAuthStore();
 
   const {mutate , isPending} = useMutation({ 
     mutationFn:loginUser ,
     onSuccess: (my_data) => {
       localStorage.setItem('accessToken', my_data.accessToken);
       localStorage.setItem('userId', my_data.user.id);
-      setIsAuthed(my_data.accessToken);
+      login(my_data.user );
       toast.success("Login successful!");
       navigate('/home');
     },
@@ -36,6 +35,7 @@ export default function Login() {
   
   const onSubmit= (data : LoginData) => {
     mutate(data)
+
   };
 
   return (

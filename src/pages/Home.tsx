@@ -2,16 +2,15 @@ import Stories from "../components/Story/Stories";
 import CreatePost from "../components/CreatePost";
 import Posts from "../components/Post/Posts";
 import Frinds from "../components/Frinds";
-import { AuthContext } from "../context/createdContext/AuthContext";
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuthStore } from "../Stores/useAuthStore";
 
 export default function Home() {
-  const { setIsAuthed } = useContext(AuthContext)!;
+  const logout  = useAuthStore(state=>state.logout);
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    setIsAuthed(null);
+    logout();
     localStorage.removeItem('accessToken');
     navigate('/login');
   };
@@ -39,7 +38,7 @@ export default function Home() {
           </section>
         </main>
 
-        <aside className="hidden lg:block lg:col-span-1 flex flex-col justify-between sticky top-24 h-[calc(100vh-7rem)] pb-4">
+        <aside className="hidden lg:block lg:col-span-1 flex-col justify-between sticky top-24 h-[calc(100vh-7rem)] pb-4">
           <div className="space-y-4 overflow-y-auto scrollbar-none pr-1">
             <div className="bg-white dark:bg-[#151c2c] p-4 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800">
               <h3 className="font-bold text-sm text-gray-500 dark:text-gray-400 mb-3">Trending Topics</h3>
