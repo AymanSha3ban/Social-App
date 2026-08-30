@@ -1,9 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addPost } from "../../apis/Posts/Posts.api";
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import type { UserType } from "../../interfaces/interfaces";
-import { getLoginedUser } from "../../apis/Auth/Users.api";
+import { useAuthStore } from "../../Stores/useAuthStore";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -31,10 +29,7 @@ export default function CreatePost() {
     setValue("body", bodyValue + emojiData.emoji);
   };
 
-  const { data: user } = useQuery<UserType>({
-    queryKey: ['loginedUser'],
-    queryFn: getLoginedUser,
-  });
+  const user = useAuthStore(state=>state.user);
 
   const queryClient = useQueryClient();
 
@@ -50,18 +45,23 @@ export default function CreatePost() {
   });
 
   const onSubmit = (data: PostSchemaType) => {
-    mutate({
-      title: data.title,
-      body: data.body,
-      reactions: {
-        likes: 0,
-        dislikes: 0,
-      },
-      mediaURL: data.mediaURL ?? "",
-      views: 0,
-      userId: Number(user?.id)
-    }); 
-  };
+  if (!user?.id) {
+    toast.error("User not found");
+    return;
+  }
+
+  mutate({
+    title: data.title,
+    body: data.body,
+    reactions: {
+      likes: 0,
+      dislikes: 0,
+    },
+    mediaURL: data.mediaURL ?? "",
+    views: 0,
+    userId: user.id,
+  });
+};
 
   return (
     <div className="flex justify-center items-center w-full px-4 my-5">

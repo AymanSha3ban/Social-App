@@ -45,7 +45,7 @@ export interface AddPostType {
   };
   mediaURL : string ;
   views: number;
-  userId: number;
+  userId: string;
 }
 export interface CommentType {
   id?: number | string;
@@ -89,4 +89,15 @@ export interface UserType {
 export interface StoryType{
   id ? : number | string  ; 
   mediaUrl :string ; 
+}
+
+
+export interface PaginatedPosts {
+  first: number;
+  prev: number | null;
+  next: number | null;
+  last: number;
+  pages: number;
+  items: number;
+  data: PostType[];
 }

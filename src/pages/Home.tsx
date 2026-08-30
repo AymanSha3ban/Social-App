@@ -25,6 +25,7 @@ export default function Home() {
         </aside>
 
         <main className="col-span-1 lg:col-span-2 space-y-6">
+          
           <section className="bg-white dark:bg-[#151c2c] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
             <Stories />
           </section>

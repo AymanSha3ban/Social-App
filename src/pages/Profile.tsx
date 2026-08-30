@@ -1,18 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
 import { getLoginedUser } from "../apis/Auth/Users.api";
-import type { UserType } from "../interfaces/interfaces";
+import type { PaginatedPosts, UserType } from "../interfaces/interfaces";
 import PostCard from "../components/Post/PostCard";
 import { useState } from "react";
-import { getPosts } from "../apis/Posts/Posts.api";
+import { getUserPosts } from "../apis/Posts/Posts.api";
+import { keepPreviousData } from "@tanstack/react-query";
+import PaginationBtn from "../components/Post/PaginationBtn";
 
 export default function Profile() {
   const { data: user, isLoading, isError } = useQuery<UserType>({
     queryKey: ['LoginedUser'],
     queryFn: getLoginedUser
   });
-  
- const {isLoading : postLoading , isError : postError  , data } = useQuery({ queryKey: ['posts'] , queryFn : getPosts }) ;
-  
+
+  const [page , setPage ] = useState(1)
+  const userId  = user?.id ; 
+ const { isLoading: postLoading, isError: postError, data } =
+  useQuery<PaginatedPosts>({
+    queryKey: ['userPosts', userId, page],
+    queryFn: () => getUserPosts(page, userId!),
+    enabled: !!userId,
+    placeholderData: keepPreviousData,
+  });
 
   const [activeTab, setActiveTab] = useState<'posts' | 'about'>('posts');
 
@@ -35,6 +44,7 @@ export default function Profile() {
   }
 
   const { image, firstName, lastName, username, email, phone, gender, address, id, coverPath } = user ?? {};
+  const posts = data?.data;
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-[#0b1120] text-gray-900 dark:text-gray-100 transition-colors duration-300">
@@ -140,10 +150,15 @@ export default function Profile() {
           </div>
           :
           <div className="md:col-span-2 space-y-4">
-            {data
-              ?.filter((post) => String(user?.id) === String(post.userId))
-              .map((post) => (
-                <PostCard post={post} key={post.id} />
+            {data && (
+              <PaginationBtn
+                page={page}
+                setPage={setPage}
+                data={data}
+              />
+            )}
+            {posts?.map((post) => (
+              <PostCard post={post} key={post.id} />
             ))}
 
           </div>

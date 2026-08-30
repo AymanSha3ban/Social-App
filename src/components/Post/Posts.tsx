@@ -1,11 +1,20 @@
 import PostCard from "./PostCard";
 import { useQuery } from "@tanstack/react-query";
 import { getPosts } from "../../apis/Posts/Posts.api";
+import { useState } from "react";
+import { keepPreviousData } from "@tanstack/react-query";
+import type { PaginatedPosts } from "../../interfaces/interfaces";
+import PaginationBtn from "./PaginationBtn";
 
 
 export default function Posts() {
+  const [page , setPage ] = useState(1)
 
-  const {isLoading , isError , data } = useQuery({ queryKey: ['posts'] , queryFn : getPosts }) ;
+  const {isLoading , isError , data } = useQuery<PaginatedPosts>({ 
+    queryKey: ['posts'  , page ] ,
+    queryFn : () => getPosts(page) ,
+    placeholderData : keepPreviousData
+  }) ;
  
 
   if (isLoading) {
@@ -27,7 +36,14 @@ export default function Posts() {
 
   return (
     <div className="flex flex-col gap-8 p-4 max-w-2xl mx-auto">
-      {data?.map((post) => (
+      {data && (
+        <PaginationBtn
+          page={page}
+          setPage={setPage}
+          data={data}
+        />
+      )}
+      {data?.data.map((post) => (
         <PostCard post={post} key={post.id} />
       ))}
     </div>

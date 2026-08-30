@@ -11,6 +11,7 @@ export default function PostDetails() {
   const {isLoading , isError , data} = useQuery<PostType>({
     queryKey: ['post', postId],
     queryFn: () => getPost(postId),
+    enabled: !isNaN(postId),
   });
 
     if (isLoading) {

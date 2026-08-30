@@ -8,11 +8,17 @@ import {deletePost} from '../../apis/Posts/Posts.api'
 
 export default function PostCard({post}: {post: PostType}) {
 
-  const {data , isError , isLoading}  = useQuery<UserType | undefined>({queryKey: ['user', post.userId], queryFn: () => getUser(post.userId)}) ; 
+  const {data , isError , isLoading}  = useQuery<UserType | undefined>({
+    queryKey: ['user', post.userId], 
+    queryFn: () => getUser(post.userId),
+    enabled: Boolean(post.userId),
+  }) ; 
+
   const { data : loginUser} = useQuery<UserType>({
     queryKey: ['LoginedUser'],
     queryFn: getLoginedUser
   });
+  
   const {mutate , isPending} = useMutation({
     mutationFn: deletePost,
   })
