@@ -1,21 +1,26 @@
 import PostCard from "./PostCard";
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import { getPosts } from "../../apis/Posts/Posts.api";
-import { useState } from "react";
-import { keepPreviousData } from "@tanstack/react-query";
-import type { PaginatedPosts } from "../../interfaces/interfaces";
-import PaginationBtn from "./PaginationBtn";
 
 
 export default function Posts() {
-  const [page , setPage ] = useState(1)
 
-  const {isLoading , isError , data } = useQuery<PaginatedPosts>({ 
-    queryKey: ['posts'  , page ] ,
-    queryFn : () => getPosts(page) ,
-    placeholderData : keepPreviousData
+  const {
+    isLoading , 
+    isError , 
+    data , 
+    fetchNextPage , 
+    hasNextPage ,
+    isFetchingNextPage 
+  } = useInfiniteQuery({ 
+    queryKey: ['posts'] ,
+    queryFn : ({pageParam}) => getPosts(pageParam),
+    initialPageParam : 1 ,
+    getNextPageParam :(lastPage)=>{
+      return lastPage.next ;
+    }
   }) ;
- 
+  console.log(data)
 
   if (isLoading) {
     return (
@@ -36,16 +41,43 @@ export default function Posts() {
 
   return (
     <div className="flex flex-col gap-8 p-4 max-w-2xl mx-auto">
-      {data && (
-        <PaginationBtn
-          page={page}
-          setPage={setPage}
-          data={data}
-        />
-      )}
-      {data?.data.map((post) => (
-        <PostCard post={post} key={post.id} />
-      ))}
+      {data?.pages.map((page) =>
+        page.data.map((post)=><PostCard post={post} key={post.id} />) ) }
+      <button
+        disabled={!hasNextPage || isFetchingNextPage}
+        onClick={() => fetchNextPage()}
+        className="
+          w-40 m-auto
+          px-5 py-2.5
+          rounded-xl
+          text-sm font-semibold
+          text-white
+          bg-purple-600
+          shadow-lg shadow-purple-500/30
+
+          hover:bg-purple-700
+          hover:shadow-purple-500/40
+          hover:scale-105
+
+          dark:bg-purple-700
+          dark:hover:bg-purple-600
+          dark:shadow-purple-900/50
+
+          disabled:opacity-50
+          disabled:cursor-not-allowed
+          disabled:hover:scale-100
+          disabled:hover:bg-purple-600
+          disabled:shadow-none
+
+          transition-all duration-300
+        "
+      >
+        {isFetchingNextPage
+          ? "Loading..."
+          : hasNextPage
+            ? "Load More"
+            : "No more posts"}
+      </button>
     </div>
   );
 }
