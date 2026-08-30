@@ -1,7 +1,8 @@
 import type { AddPostType, CommentType } from '../../interfaces/interfaces.ts';
 import {API} from '../BaseAPI.ts';
+import type { PostType } from '../../interfaces/interfaces.ts';
 
-export const getPosts = async () => {
+export const getPosts = async (): Promise<PostType[]> => {
     const res = await API.get("/posts");
     return res.data.posts || res.data;
 }

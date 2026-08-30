@@ -1,5 +1,5 @@
 import Stories from "../components/Story/Stories";
-import CreatePost from "../components/CreatePost";
+import CreatePost from "../components/Post/CreatePost";
 import Posts from "../components/Post/Posts";
 import Frinds from "../components/Frinds";
 import { useNavigate } from "react-router-dom";

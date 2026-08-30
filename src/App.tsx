@@ -14,12 +14,11 @@ import { useAuthStore } from './Stores/useAuthStore'
 
 export default function App() {
 
-  const {isAuthenticated} = useAuthStore();
-  console.log(isAuthenticated)
+  const user= useAuthStore(state=>state.user);
 
   const routes = createBrowserRouter([
     {path : '/' , element : <Layout></Layout> , children:[
-      {index : true , element : isAuthenticated ? <Home></Home> : <Login></Login>} ,
+      {index : true , element : user ? <Home></Home> : <Login></Login>} ,
       {path : 'register' , element : <Register></Register>},
       {path : 'home' , element : <ProtectedRoute><Home></Home></ProtectedRoute>},
       {path : 'posts/:id' , element : <ProtectedRoute><PostDetails></PostDetails></ProtectedRoute>},

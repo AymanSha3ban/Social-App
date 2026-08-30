@@ -1,11 +1,11 @@
 import PostCard from "./PostCard";
-import { useContext } from "react";
-import { PostContext } from "../../context/createdContext/PostContext";
+import { useQuery } from "@tanstack/react-query";
+import { getPosts } from "../../apis/Posts/Posts.api";
+
 
 export default function Posts() {
-  
-  const context = useContext(PostContext);
-  const { isLoading, isError, data } = context || {};
+
+  const {isLoading , isError , data } = useQuery({ queryKey: ['posts'] , queryFn : getPosts }) ;
  
 
   if (isLoading) {

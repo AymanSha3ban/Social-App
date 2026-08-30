@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { addComments, getComments } from "../apis/Posts/Posts.api";
 import type { CommentType , UserType} from "../interfaces/interfaces";
 import { useState } from "react";
@@ -7,6 +7,7 @@ import { getLoginedUser } from "../apis/Auth/Users.api";
 export default function CommentCard() {
   const [commentBody, setCommentBody] = useState("");
   const { id } = useParams();
+  const queryClient = useQueryClient();
 
   const comments = useQuery({
     queryKey: ['comments', id],
@@ -22,7 +23,9 @@ export default function CommentCard() {
     mutationFn: addComments,
     onSuccess: () => {
       setCommentBody("");
-      comments.refetch();
+      queryClient.invalidateQueries({
+        queryKey: ['comments']
+      })
     } 
   });
 

@@ -2354,6 +2354,17 @@
         "fullName": "hind Ayman"
       },
       "id": "fOKvGrg3Stk"
+    },
+    {
+      "body": "test comments ",
+      "postId": 1,
+      "likes": 0,
+      "user": {
+        "id": "HDW_vczMKDw",
+        "username": "salah10",
+        "fullName": "salah hamid"
+      },
+      "id": "MbLKqBLwi8E"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

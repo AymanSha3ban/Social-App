@@ -1,22 +1,16 @@
-import { useContext, useState, useEffect, useRef } from "react";
+import {  useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { DarkModeContext } from "../context/createdContext/DarkContex";
-import { useQuery } from "@tanstack/react-query";
-import { getLoginedUser } from "../apis/Auth/Users.api";
-import type { UserType } from "../interfaces/interfaces";
-import Loading from "./Loading";
 import { useAuthStore } from "../Stores/useAuthStore";
+import { useThemeStore } from "../Stores/useThemeStore";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     const logout  = useAuthStore((state)=>state.logout); 
-    const isAuthenticated  = useAuthStore((state)=>state.isAuthenticated); 
-    const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext)!;
-    const { data: user, isLoading, isError } = useQuery<UserType>({
-        queryKey: ['LoginedUser'],
-        queryFn: getLoginedUser
-    });
+    const user  = useAuthStore((state)=>state.user); 
+    const isDarkMode = useThemeStore((state) => state.isDarkMode);
+    const toggleDarkMode = useThemeStore((state) => state.toggleDarkMode);
+  
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -48,20 +42,9 @@ export default function Navbar() {
         logout();
         navigate('/login');
     };
-
-    if (isLoading) {
-        return (
-            <div className="flex justify-center items-center py-20">
-                <i className="fas fa-spinner fa-spin text-4xl text-purple-600 dark:text-purple-400"></i>
-            </div>
-        );
-    }
-
-    if (isError) {
-        return <Loading />;
-    }
-
-    const { firstName  , image } = user!;
+    
+    const firstName = user?.firstName;
+    const image = user?.image;
 
     return (
         <div className="w-full" ref={menuRef}>
@@ -85,7 +68,7 @@ export default function Navbar() {
                     <div className={`${!open ? 'hidden' : 'absolute top-16 right-4 w-52 bg-white dark:bg-gray-900 shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl p-2'} md:block md:static md:w-auto md:shadow-none md:border-none md:bg-transparent md:p-0 z-50 transition-all`}>
                         <ul className="flex flex-col gap-1 md:flex-row md:space-x-4 md:gap-0 md:items-center font-medium">
                             
-                            {isAuthenticated ? (
+                            {user ? (
                                 <>
                                     <li>
                                         <Link className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-200 rounded-lg hover:bg-purple-100 dark:hover:bg-gray-800 hover:text-purple-700 dark:hover:text-purple-400 transition-colors" to={'/home'}>

@@ -1,13 +1,13 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { addPost } from "../apis/Posts/Posts.api";
+import { addPost } from "../../apis/Posts/Posts.api";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import type { UserType } from "../interfaces/interfaces";
-import { getLoginedUser } from "../apis/Auth/Users.api";
+import type { UserType } from "../../interfaces/interfaces";
+import { getLoginedUser } from "../../apis/Auth/Users.api";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { PostSchema, type PostSchemaType } from "../schema/PostSchema";
+import { PostSchema, type PostSchemaType } from "../../schema/PostSchema";
 import EmojiPicker, { Theme, type EmojiClickData } from "emoji-picker-react";
 
 export default function CreatePost() {

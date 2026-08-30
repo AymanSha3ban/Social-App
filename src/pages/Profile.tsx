@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { getLoginedUser } from "../apis/Auth/Users.api";
 import type { UserType } from "../interfaces/interfaces";
-import { useState, useContext } from "react";
 import PostCard from "../components/Post/PostCard";
-import { PostContext } from "../context/createdContext/PostContext";
+import { useState } from "react";
+import { getPosts } from "../apis/Posts/Posts.api";
 
 export default function Profile() {
   const { data: user, isLoading, isError } = useQuery<UserType>({
@@ -11,12 +11,12 @@ export default function Profile() {
     queryFn: getLoginedUser
   });
   
-  const context = useContext(PostContext);
-  const { data } = context || {};
+ const {isLoading : postLoading , isError : postError  , data } = useQuery({ queryKey: ['posts'] , queryFn : getPosts }) ;
+  
 
   const [activeTab, setActiveTab] = useState<'posts' | 'about'>('posts');
 
-  if (isLoading) {
+  if (isLoading || postLoading) {
     return (
       <div className="flex justify-center items-center py-20 bg-gray-100 dark:bg-[#0b1120] min-h-screen">
         <i className="fas fa-spinner fa-spin text-4xl text-purple-600 dark:text-purple-400"></i>
@@ -24,7 +24,7 @@ export default function Profile() {
     );
   }
 
-  if (isError) {
+  if (isError || postError) {
     return (
       <div className="flex justify-center items-center py-20 bg-gray-100 dark:bg-[#0b1120] min-h-screen"> 
         <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">
