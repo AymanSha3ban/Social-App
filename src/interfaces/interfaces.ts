@@ -30,6 +30,7 @@ export interface PostType {
     likes: number;
     dislikes: number;
   };
+  likedBy?: string[];
   mediaURL : string ;
   views: number;
   userId: number;
@@ -43,6 +44,7 @@ export interface AddPostType {
     likes: number;
     dislikes: number;
   };
+  likedBy?: string[];
   mediaURL : string ;
   views: number;
   userId: string;
@@ -85,6 +87,8 @@ export interface UserType {
   coverPath?: string;
   stories: Story[];
   address: UserAddress;
+  followers?: string[];
+  following?: string[];
 }
 export interface StoryType{
   id ? : number | string  ; 
@@ -107,5 +111,6 @@ export interface IReactions {
   reactions : {
     likes : number , 
     dislikes : number ,
-  }
+  },
+  likedBy?: string[]
 }

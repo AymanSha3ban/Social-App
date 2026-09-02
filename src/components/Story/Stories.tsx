@@ -2,7 +2,9 @@ import { useQuery } from "@tanstack/react-query"
 import { getUsers, getLoginedUser } from "../../apis/Auth/Users.api"
 import type { UserType } from "../../interfaces/interfaces";
 import StoryCard from "./StoryCard";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { StoriesSkeleton } from "../UI/Skeletons";
+import AddStoryModal from "./AddStoryModal";
 
 const Stories = () => {
     const { data: users, isLoading: usersLoading } = useQuery<UserType[]>({
@@ -16,6 +18,7 @@ const Stories = () => {
     });
 
     const scrollRef = useRef<HTMLDivElement>(null);
+    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
     const scroll = (direction: 'left' | 'right') => {
       if (scrollRef.current) {
@@ -26,11 +29,7 @@ const Stories = () => {
     };
 
     if (usersLoading || loginLoading) {
-        return (
-        <div className="flex justify-center items-center py-20 bg-gray-100 dark:bg-[#0b1120] min-h-screen">
-            <i className="fas fa-spinner fa-spin text-4xl text-purple-600 dark:text-purple-400"></i>
-        </div>
-        );
+        return <StoriesSkeleton />;
     }
 
     const sortedUsers = users ? [...users].sort((a, b) => {
@@ -53,6 +52,18 @@ const Stories = () => {
         className="flex items-center gap-4 overflow-x-auto pb-2 scrollbar-none scroll-smooth"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
+        <div className="flex-shrink-0 cursor-pointer" onClick={() => setIsAddModalOpen(true)}>
+          <div className="relative w-24 h-40 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-800 flex flex-col hover:opacity-90 transition shadow-sm">
+            <img src={loginUser?.image || `https://i.pravatar.cc/150?u=${loginUser?.id}`} alt="Me" className="w-full h-2/3 object-cover"/>
+            <div className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center border-4 border-white dark:border-[#151c2c]">
+              <i className="fas fa-plus text-xs"></i>
+            </div>
+            <div className="flex-1 flex items-end justify-center pb-2 bg-white dark:bg-[#151c2c]">
+              <span className="text-[11px] font-semibold">Create Story</span>
+            </div>
+          </div>
+        </div>
+
         {
           sortedUsers.map((u) => {
             if (!u.stories || u.stories.length === 0) return null;
@@ -77,6 +88,8 @@ const Stories = () => {
       >
         <i className="fas fa-chevron-right"></i>
       </button>
+
+      <AddStoryModal isOpen={isAddModalOpen} onClose={() => setIsAddModalOpen(false)} user={loginUser} />
     </div>
   )
 }

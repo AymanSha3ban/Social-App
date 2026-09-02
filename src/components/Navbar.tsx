@@ -2,6 +2,7 @@ import {  useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuthStore } from "../Stores/useAuthStore";
 import { useThemeStore } from "../Stores/useThemeStore";
+import SearchBar from "./SearchBar";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -53,6 +54,8 @@ export default function Navbar() {
                     
                     <Link to="/home" className="logo text-xl font-bold tracking-widest text-purple-600 dark:text-purple-500">Social App</Link>
                     
+                    {user && <div className="flex-1 max-w-xl mx-8"><SearchBar /></div>}
+
                     <button 
                         onClick={handleToggle} 
                         type="button"

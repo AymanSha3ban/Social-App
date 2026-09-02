@@ -1,16 +1,57 @@
-import { useQuery } from "@tanstack/react-query";
-import { getLoginedUser } from "../apis/Auth/Users.api";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { getLoginedUser, getUser, patchUser } from "../apis/Auth/Users.api";
 import type { PaginatedPosts, UserType } from "../interfaces/interfaces";
 import PostCard from "../components/Post/PostCard";
 import { useState } from "react";
 import { getUserPosts } from "../apis/Posts/Posts.api";
 import { keepPreviousData } from "@tanstack/react-query";
 import PaginationBtn from "../components/Post/PaginationBtn";
+import { ProfileSkeleton } from "../components/UI/Skeletons";
+import { useParams } from "react-router-dom";
 
 export default function Profile() {
-  const { data: user, isLoading, isError } = useQuery<UserType>({
+  const { userId: paramUserId } = useParams();
+  const queryClient = useQueryClient();
+
+  const { data: loginUser, isLoading: isLoginLoading } = useQuery<UserType>({
     queryKey: ['LoginedUser'],
     queryFn: getLoginedUser
+  });
+
+  const isOwnProfile = !paramUserId || String(paramUserId) === String(loginUser?.id);
+  const targetUserId = paramUserId || loginUser?.id;
+
+  const { data: user, isLoading: isUserLoading, isError } = useQuery<UserType>({
+    queryKey: ['user', targetUserId],
+    queryFn: () => isOwnProfile ? getLoginedUser() : getUser(Number(targetUserId)),
+    enabled: !!targetUserId
+  });
+
+  const isLoading = isLoginLoading || isUserLoading;
+
+  const { mutate: mutateFollow, isPending: isFollowPending } = useMutation({
+    mutationFn: async ({ isFollowing }: { isFollowing: boolean }) => {
+      if (!loginUser || !user) return;
+      const currentFollowing = loginUser.following || [];
+      const currentFollowers = user.followers || [];
+      
+      const newFollowing = isFollowing 
+        ? currentFollowing.filter(id => id !== String(user.id))
+        : [...currentFollowing, String(user.id)];
+        
+      const newFollowers = isFollowing
+        ? currentFollowers.filter(id => id !== String(loginUser.id))
+        : [...currentFollowers, String(loginUser.id)];
+
+      await Promise.all([
+        patchUser(String(loginUser.id), { following: newFollowing }),
+        patchUser(String(user.id), { followers: newFollowers })
+      ]);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['LoginedUser'] });
+      queryClient.invalidateQueries({ queryKey: ['user', targetUserId] });
+    }
   });
 
   const [page , setPage ] = useState(1)
@@ -26,11 +67,7 @@ export default function Profile() {
   const [activeTab, setActiveTab] = useState<'posts' | 'about'>('posts');
 
   if (isLoading || postLoading) {
-    return (
-      <div className="flex justify-center items-center py-20 bg-gray-100 dark:bg-[#0b1120] min-h-screen">
-        <i className="fas fa-spinner fa-spin text-4xl text-purple-600 dark:text-purple-400"></i>
-      </div>
-    );
+    return <ProfileSkeleton />;
   }
 
   if (isError || postError) {
@@ -85,19 +122,36 @@ export default function Profile() {
                   @{username}
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  500 friends • Frontend Developer
+                  <span className="font-bold text-gray-900 dark:text-white">{user?.followers?.length || 0}</span> followers • <span className="font-bold text-gray-900 dark:text-white">{user?.following?.length || 0}</span> following
                 </p>
               </div>
             </div>
             <div className="flex items-center gap-2 mb-2">
-              <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2 transition shadow-md">
-                <i className="fas fa-plus"></i>
-                <span>Add Story</span>
-              </button>
-              <button className="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2 transition">
-                <i className="fas fa-pen"></i>
-                <span>Edit Profile</span>
-              </button>
+              {isOwnProfile ? (
+                <>
+                  <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2 transition shadow-md">
+                    <i className="fas fa-plus"></i>
+                    <span>Add Story</span>
+                  </button>
+                  <button className="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2 transition">
+                    <i className="fas fa-pen"></i>
+                    <span>Edit Profile</span>
+                  </button>
+                </>
+              ) : (
+                <button 
+                  disabled={isFollowPending}
+                  onClick={() => mutateFollow({ isFollowing: loginUser?.following?.includes(String(user?.id)) ?? false })}
+                  className={`px-6 py-2 rounded-xl text-sm font-medium flex items-center gap-2 transition shadow-md disabled:opacity-50 ${
+                    loginUser?.following?.includes(String(user?.id))
+                      ? 'bg-gray-200 dark:bg-gray-800 hover:bg-red-100 hover:text-red-600 dark:hover:bg-red-900/30 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-700' 
+                      : 'bg-purple-600 hover:bg-purple-700 text-white'
+                  }`}
+                >
+                  <i className={`fas ${loginUser?.following?.includes(String(user?.id)) ? 'fa-user-minus' : 'fa-user-plus'}`}></i>
+                  <span>{loginUser?.following?.includes(String(user?.id)) ? 'Unfollow' : 'Follow'}</span>
+                </button>
+              )}
             </div>
           </div>
 

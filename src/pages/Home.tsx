@@ -1,9 +1,10 @@
 import Stories from "../components/Story/Stories";
 import CreatePost from "../components/Post/CreatePost";
 import Posts from "../components/Post/Posts";
-import Frinds from "../components/Frinds";
+import Connections from "../components/Connections";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../Stores/useAuthStore";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 export default function Home() {
   const logout  = useAuthStore(state=>state.logout);
@@ -21,7 +22,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-4 gap-6">
         
         <aside className="hidden lg:block lg:col-span-1 space-y-4 sticky top-24 h-fit">
-          <Frinds />
+          <Connections />
         </aside>
 
         <main className="col-span-1 lg:col-span-2 space-y-6">
@@ -35,7 +36,9 @@ export default function Home() {
           </section>
 
           <section className="space-y-4">
-            <Posts /> 
+            <ErrorBoundary>
+              <Posts /> 
+            </ErrorBoundary>
           </section>
         </main>
 

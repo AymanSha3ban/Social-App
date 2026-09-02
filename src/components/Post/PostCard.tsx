@@ -32,8 +32,12 @@ export default function PostCard({post}: {post: PostType}) {
       await queryClient.cancelQueries({
         queryKey: ["posts"],
       });
+      await queryClient.cancelQueries({
+        queryKey: ["post", Number(newData.postId)],
+      });
 
-      const previousData = queryClient.getQueryData(["posts"]);
+      const previousPostsData = queryClient.getQueryData(["posts"]);
+      const previousPostData = queryClient.getQueryData(["post", Number(newData.postId)]);
 
       queryClient.setQueryData(["posts"], (oldData: any) => {
         if (!oldData || !oldData.pages) return oldData;
@@ -47,6 +51,7 @@ export default function PostCard({post}: {post: PostType}) {
                 ? {
                     ...p,
                     reactions: newData.reactions,
+                    likedBy: newData.likedBy,
                   }
                 : p
             ),
@@ -54,21 +59,39 @@ export default function PostCard({post}: {post: PostType}) {
         };
       });
 
-      return { previousData };
+      queryClient.setQueryData(["post", Number(newData.postId)], (oldData: any) => {
+        if (!oldData) return oldData;
+        return {
+          ...oldData,
+          reactions: newData.reactions,
+          likedBy: newData.likedBy,
+        };
+      });
+
+      return { previousPostsData, previousPostData };
     },
 
-    onError: (_error, _newData, context) => {
-      if (context?.previousData) {
+    onError: (_error, newData, context) => {
+      if (context?.previousPostsData) {
         queryClient.setQueryData(
           ["posts"],
-          context.previousData
+          context.previousPostsData
+        );
+      }
+      if (context?.previousPostData) {
+        queryClient.setQueryData(
+          ["post", Number(newData.postId)],
+          context.previousPostData
         );
       }
     },
 
-    onSettled: () => {
+    onSettled: (_data, _error, variables) => {
       queryClient.invalidateQueries({
         queryKey: ["posts"],
+      });
+      queryClient.invalidateQueries({
+        queryKey: ["post", Number(variables.postId)],
       });
     },
   });
@@ -78,23 +101,30 @@ export default function PostCard({post}: {post: PostType}) {
     if (post.id == null) return;
     mutate(String(post.id))
   }
-  const mutateLikes = () => {
-    mutateReactions({
-      postId: String(post.id),
-      reactions: {
-        likes: post.reactions.likes + 1,
-        dislikes: post.reactions.dislikes,
-      },
-    });
-  };
+  const isLiked = loginUser?.id ? post.likedBy?.includes(String(loginUser.id)) : false;
 
-  const mutateDislikes = () => {
+  const toggleLike = () => {
+    if (!loginUser?.id) return;
+    
+    const userIdStr = String(loginUser.id);
+    const currentLikedBy = post.likedBy || [];
+    const currentlyLiked = currentLikedBy.includes(userIdStr);
+    
+    const newLikedBy = currentlyLiked 
+      ? currentLikedBy.filter(id => id !== userIdStr)
+      : [...currentLikedBy, userIdStr];
+      
+    const newLikesCount = currentlyLiked 
+      ? Math.max(0, post.reactions.likes - 1) 
+      : post.reactions.likes + 1;
+
     mutateReactions({
       postId: String(post.id),
       reactions: {
-        likes: post.reactions.likes,
-        dislikes: post.reactions.dislikes + 1,
+        ...post.reactions,
+        likes: newLikesCount,
       },
+      likedBy: newLikedBy
     });
   };
   if (isLoading) {
@@ -180,35 +210,22 @@ export default function PostCard({post}: {post: PostType}) {
             <div className="flex gap-6">
               <button
                type="button"
-               className="flex items-center gap-1.5 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+               className={`flex items-center gap-1.5 transition-colors ${isLiked ? 'text-purple-600 dark:text-purple-400' : 'hover:text-purple-600 dark:hover:text-purple-400'}`}
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  mutateLikes();
+                  toggleLike();
                 }}
               >
-                <i className="fa-regular fa-thumbs-up text-lg"></i>
+                <i className={`${isLiked ? 'fa-solid' : 'fa-regular'} fa-thumbs-up text-lg`}></i>
                 <span className="font-medium">{post.reactions.likes}</span>
-              </button>
-              
-              <button 
-                type="button"
-                className="flex items-center gap-1.5 hover:text-red-500 transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  mutateDislikes();
-                }}
-              >
-                <i className="fa-regular fa-thumbs-down text-lg"></i>
-                <span className="font-medium">{post.reactions.dislikes}</span>
               </button>
 
               <Link 
                 to={`/posts/${post.id}`} className="flex items-center gap-1.5 hover:text-blue-500 transition-colors"
               >
                 <i className="fa-regular fa-comment text-lg"></i>
-                <span className="font-medium">24</span>
+                <span className="font-medium">Comments</span>
               </Link>
             </div>
 
