@@ -36,7 +36,16 @@ export const addComments = async (comment:CommentType) => {
     const res = await API.post(`/comments?postId=${comment.postId}`, comment );
     return res.data;
 };
-export const updateReactions = async ({postId , reactions} : IReactions)=>{
-    const res = await API.patch(`/posts/${postId}` , {reactions})
+export const deleteComment = async (commentId: string) => {
+    const res = await API.delete(`/comments/${commentId}`);
+    return res.data;
+};
+export const updateReactions = async ({postId , reactions, likedBy} : IReactions)=>{
+    const res = await API.patch(`/posts/${postId}` , {reactions, likedBy})
     return res.data ; 
 }
+
+export const searchPosts = async (query: string) => {
+    const res = await API.get(`/posts?q=${query}`);
+    return res.data;
+};
