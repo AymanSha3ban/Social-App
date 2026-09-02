@@ -1,75 +1,71 @@
-# React + TypeScript + Vite
+# Social Media Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-grade, responsive, and robust Social Media web application built with modern React.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Advanced Interactions**: Facebook-style Like/Unlike toggling with instantaneous optimistic UI updates.
+- **Dynamic User Profiles**: Dedicated profile pages (`/profile/:userId`) with user stats, connections, and personal post feeds.
+- **Connections / Follow System**: Follow and Unfollow other users to curate your network.
+- **Stories System**: View interactive, auto-advancing stories and seamlessly create your own using a modal interface.
+- **Real-time Search**: Search bar in the navigation header to instantly find users and posts.
+- **Robust Commenting**: Add and delete comments seamlessly with optimistic updates.
+- **Premium UI/UX**: Dark mode support, glassmorphism elements, loading skeletons, error boundaries, and fully responsive Tailwind CSS design.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Routing**: [React Router DOM](https://reactrouter.com/) (v7)
+- **State Management**: 
+  - [Zustand](https://github.com/pmndrs/zustand) (Global UI State: Auth & Theme)
+  - [TanStack Query / React Query](https://tanstack.com/query/latest) (Server State & Optimistic Updates)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Form Handling**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **Backend Mock**: [JSON Server](https://github.com/typicode/json-server)
 
-## Expanding the ESLint configuration
+## 🏗 Architecture & Data Flow
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This application adheres to a strict separation of concerns:
+- **Zustand** is utilized exclusively for client-side global UI states, such as the active theme (Dark/Light mode) and the current authenticated user session.
+- **TanStack React Query** handles all asynchronous server state. It fetches data, manages caching, synchronizes data, and executes **Optimistic Updates**. When a user likes a post, adds a comment, or follows someone, the UI updates instantly before the server confirms the mutation, ensuring a snappy, seamless experience.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm or yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+### 1. Install Dependencies
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Run the Mock Backend (JSON Server)
+In a new terminal window, start the JSON server to serve `db.json`:
+```bash
+npx json-server db.json --port 3000
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3. Start the Development Server
+In another terminal window, start the Vite development server:
+```bash
+npm run dev
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The application will be available at `http://localhost:5173`.
 
+## 📂 Project Structure
+
+```
+src/
+├── apis/          # Axios instances and API call definitions (Posts, Users, Auth)
+├── assets/        # Static assets (images, icons)
+├── components/    # Reusable UI components (PostCard, CommentCard, Skeletons, Navbar, etc.)
+├── interfaces/    # TypeScript interfaces and types
+├── pages/         # Route components (Home, Profile, PostDetails, Login, Register)
+├── schema/        # Zod validation schemas for forms
+├── Stores/        # Zustand stores (useAuthStore, useThemeStore)
+├── App.tsx        # Main application component and routing configuration
+└── main.tsx       # Entry point and React Query Provider
 ```
