@@ -20,7 +20,6 @@ export default function Posts() {
       return lastPage.next ;
     }
   }) ;
-  console.log(data)
 
   if (isLoading) {
     return (

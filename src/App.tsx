@@ -24,6 +24,7 @@ export default function App() {
       {path : 'posts/:id' , element : <ProtectedRoute><PostDetails></PostDetails></ProtectedRoute>},
       {path : 'story/:id' , element : <ProtectedRoute><StoriesRoom></StoriesRoom></ProtectedRoute>},
       {path : 'profile' , element : <ProtectedRoute><Profile></Profile></ProtectedRoute>},
+      {path : 'profile/:userId' , element : <ProtectedRoute><Profile></Profile></ProtectedRoute>},
       {path : 'login' , element : <Login></Login>},
       {path : '*' , element : <NotFound></NotFound>},
     ]}

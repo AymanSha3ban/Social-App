@@ -22,6 +22,11 @@
           "id": "s1",
           "mediaUrl": "https://picsum.photos/seed/story1/400/600"
         }
+      ],
+      "following": [
+        "3",
+        "4",
+        "2"
       ]
     },
     {
@@ -46,6 +51,9 @@
           "id": "s2",
           "mediaUrl": "https://picsum.photos/seed/story2/400/600"
         }
+      ],
+      "followers": [
+        "1"
       ]
     },
     {
@@ -70,6 +78,9 @@
           "id": "s3",
           "mediaUrl": "https://picsum.photos/seed/story3/400/600"
         }
+      ],
+      "followers": [
+        "1"
       ]
     },
     {
@@ -94,6 +105,9 @@
           "id": "s4",
           "mediaUrl": "https://picsum.photos/seed/story4/400/600"
         }
+      ],
+      "followers": [
+        "1"
       ]
     },
     {
@@ -984,12 +998,13 @@
         "crime"
       ],
       "reactions": {
-        "likes": 192,
-        "dislikes": 25
+        "likes": 277,
+        "dislikes": 28
       },
       "views": 305,
       "userId": 1,
-      "mediaUrl": ""
+      "mediaUrl": "",
+      "likedBy": []
     },
     {
       "id": "2",
@@ -1001,12 +1016,15 @@
         "english"
       ],
       "reactions": {
-        "likes": 859,
-        "dislikes": 32
+        "likes": 863,
+        "dislikes": 33
       },
       "views": 4884,
       "userId": 2,
-      "mediaUrl": ""
+      "mediaUrl": "",
+      "likedBy": [
+        "1"
+      ]
     },
     {
       "id": "3",
@@ -1018,8 +1036,8 @@
         "french"
       ],
       "reactions": {
-        "likes": 1448,
-        "dislikes": 39
+        "likes": 1451,
+        "dislikes": 40
       },
       "views": 4152,
       "userId": 3,
@@ -1035,12 +1053,13 @@
         "american"
       ],
       "reactions": {
-        "likes": 359,
-        "dislikes": 18
+        "likes": 360,
+        "dislikes": 19
       },
       "views": 4548,
       "userId": 4,
-      "mediaUrl": ""
+      "mediaUrl": "",
+      "likedBy": []
     },
     {
       "id": "5",
@@ -1052,8 +1071,8 @@
         "love"
       ],
       "reactions": {
-        "likes": 119,
-        "dislikes": 30
+        "likes": 120,
+        "dislikes": 31
       },
       "views": 626,
       "userId": 5,
@@ -1069,12 +1088,13 @@
         "american"
       ],
       "reactions": {
-        "likes": 15,
-        "dislikes": 8
+        "likes": 16,
+        "dislikes": 9
       },
       "views": 38,
       "userId": 6,
-      "mediaUrl": ""
+      "mediaUrl": "",
+      "likedBy": []
     },
     {
       "id": "7",
@@ -1085,8 +1105,8 @@
         "crime"
       ],
       "reactions": {
-        "likes": 127,
-        "dislikes": 26
+        "likes": 128,
+        "dislikes": 27
       },
       "views": 168,
       "userId": 7,
@@ -1101,8 +1121,8 @@
         "english"
       ],
       "reactions": {
-        "likes": 1271,
-        "dislikes": 36
+        "likes": 1272,
+        "dislikes": 37
       },
       "views": 2116,
       "userId": 8,
@@ -1118,8 +1138,8 @@
         "magical"
       ],
       "reactions": {
-        "likes": 703,
-        "dislikes": 18
+        "likes": 704,
+        "dislikes": 19
       },
       "views": 2235,
       "userId": 9,
@@ -1135,8 +1155,8 @@
         "history"
       ],
       "reactions": {
-        "likes": 455,
-        "dislikes": 3
+        "likes": 456,
+        "dislikes": 4
       },
       "views": 4504,
       "userId": 10,
@@ -1480,27 +1500,28 @@
       "title": "كتابة الكود ",
       "body": "كتابة الكود من المهارات الاسأسة الذي يجب ان يتمتع بها كل شخص 🌐",
       "reactions": {
-        "likes": 0,
+        "likes": 3,
         "dislikes": 0
       },
       "mediaURL": "https://sailingbyte.com/wp-content/uploads/2025/07/coding-1.jpg",
       "views": 0,
       "userId": "HDW_vczMKDw",
       "id": "STA4ThGE5hI"
+    },
+    {
+      "title": "test 9/2",
+      "body": "test tes tes tes tset tets etste ",
+      "reactions": {
+        "likes": 2,
+        "dislikes": 0
+      },
+      "mediaURL": "",
+      "views": 0,
+      "userId": "HDW_vczMKDw",
+      "id": "OBNL_9NOVz8"
     }
   ],
   "comments": [
-    {
-      "id": "1",
-      "body": "This is some awesome thinking!",
-      "postId": 1,
-      "likes": 3,
-      "user": {
-        "id": 1,
-        "username": "emmac",
-        "fullName": "Emma Wilson"
-      }
-    },
     {
       "id": "2",
       "body": "Completely agree with this perspective, really well written.",

@@ -1,4 +1,4 @@
-import type { AddPostType, CommentType } from '../../interfaces/interfaces.ts';
+import type { AddPostType, CommentType, IReactions } from '../../interfaces/interfaces.ts';
 import {API} from '../BaseAPI.ts';
 import type { PaginatedPosts } from '../../interfaces/interfaces.ts';
 
@@ -36,3 +36,7 @@ export const addComments = async (comment:CommentType) => {
     const res = await API.post(`/comments?postId=${comment.postId}`, comment );
     return res.data;
 };
+export const updateReactions = async ({postId , reactions} : IReactions)=>{
+    const res = await API.patch(`/posts/${postId}` , {reactions})
+    return res.data ; 
+}

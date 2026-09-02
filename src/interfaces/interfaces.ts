@@ -101,3 +101,11 @@ export interface PaginatedPosts {
   items: number;
   data: PostType[];
 }
+
+export interface IReactions {
+  postId : string 
+  reactions : {
+    likes : number , 
+    dislikes : number ,
+  }
+}
