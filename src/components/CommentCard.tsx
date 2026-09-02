@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { addComments, getComments } from "../apis/Posts/Posts.api";
+import { addComments, getComments, deleteComment } from "../apis/Posts/Posts.api";
 import type { CommentType , UserType} from "../interfaces/interfaces";
 import { useState } from "react";
 import { getLoginedUser } from "../apis/Auth/Users.api";
@@ -21,12 +21,47 @@ export default function CommentCard() {
 
   const { isPending, mutate } = useMutation({
     mutationFn: addComments,
-    onSuccess: () => {
+    onMutate: async (newComment) => {
+      await queryClient.cancelQueries({ queryKey: ['comments', id] });
+      const previousComments = queryClient.getQueryData(['comments', id]);
+      
+      queryClient.setQueryData(['comments', id], (old: any) => {
+        return old ? [...old, { ...newComment, id: Date.now().toString() }] : [{ ...newComment, id: Date.now().toString() }];
+      });
+      
+      return { previousComments };
+    },
+    onError: (_err, _newComment, context) => {
+      if (context?.previousComments) {
+        queryClient.setQueryData(['comments', id], context.previousComments);
+      }
+    },
+    onSettled: () => {
       setCommentBody("");
-      queryClient.invalidateQueries({
-        queryKey: ['comments']
-      })
-    } 
+      queryClient.invalidateQueries({ queryKey: ['comments', id] });
+    }
+  });
+
+  const { mutate: mutateDelete } = useMutation({
+    mutationFn: deleteComment,
+    onMutate: async (deletedId) => {
+      await queryClient.cancelQueries({ queryKey: ['comments', id] });
+      const previousComments = queryClient.getQueryData(['comments', id]);
+      
+      queryClient.setQueryData(['comments', id], (old: any) => {
+        return old ? old.filter((c: CommentType) => String(c.id) !== String(deletedId)) : [];
+      });
+      
+      return { previousComments };
+    },
+    onError: (_err, _deletedId, context) => {
+      if (context?.previousComments) {
+        queryClient.setQueryData(['comments', id], context.previousComments);
+      }
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ['comments', id] });
+    }
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -83,10 +118,20 @@ export default function CommentCard() {
                 {comment.user?.fullName || "User"}
               </h4>
             </div>
-            <button className="flex items-center gap-1.5 text-xs font-medium text-slate-300 bg-slate-800/60 hover:bg-indigo-600/20 hover:text-indigo-400 hover:border-indigo-500/30 px-3 py-1.5 rounded-lg border border-slate-700/70 transition-all duration-200">
-              <i className="fa-solid fa-thumbs-up text-[11px]"></i>
-              <span>{comment.likes}</span>
-            </button>
+            <div className="flex items-center gap-2">
+              <button className="flex items-center gap-1.5 text-xs font-medium text-slate-300 bg-slate-800/60 hover:bg-indigo-600/20 hover:text-indigo-400 hover:border-indigo-500/30 px-3 py-1.5 rounded-lg border border-slate-700/70 transition-all duration-200">
+                <i className="fa-solid fa-thumbs-up text-[11px]"></i>
+                <span>{comment.likes}</span>
+              </button>
+              {String(comment.user?.id) === String(user?.id) && (
+                <button 
+                  onClick={() => mutateDelete(String(comment.id))}
+                  className="flex items-center gap-1.5 text-xs font-medium text-red-400 bg-slate-800/60 hover:bg-red-600/20 hover:text-red-300 hover:border-red-500/30 px-3 py-1.5 rounded-lg border border-slate-700/70 transition-all duration-200"
+                >
+                  <i className="fa-solid fa-trash text-[11px]"></i>
+                </button>
+              )}
+            </div>
           </div>
 
           <div className="mt-3.5 pl-13.5">
