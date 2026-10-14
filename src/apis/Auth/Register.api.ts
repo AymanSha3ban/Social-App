@@ -1,7 +1,7 @@
 import type { RegisterData } from "../../schema/RegisterSchema";
 import { API } from "../BaseAPI";
 import { getUsers } from "./Users.api";
-import { mapRouteUserToUserType } from "../mappers";
+import { mapRouteUserToUserType, saveRegisteredAccount } from "../mappers";
 
 export const addUser = async (registerFormData: RegisterData) => {
   const fullName = `${registerFormData.firstName.trim()} ${registerFormData.lastName.trim()}`;
