@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { addComments, getComments, deleteComment } from "../apis/Posts/Posts.api";
-import type { CommentType , UserType} from "../interfaces/interfaces";
+import type { CommentType, UserType } from "../interfaces/interfaces";
 import { useState } from "react";
 import { getLoginedUser } from "../apis/Auth/Users.api";
+
 export default function CommentCard() {
   const [commentBody, setCommentBody] = useState("");
   const { id } = useParams();
@@ -11,13 +12,14 @@ export default function CommentCard() {
 
   const comments = useQuery({
     queryKey: ['comments', id],
-    queryFn: () => getComments(Number(id))
+    queryFn: () => getComments(id || ""),
+    enabled: Boolean(id),
   });
 
-  const {data :user} = useQuery<UserType>({
-    queryKey:['loginedUser'] ,
-    queryFn: getLoginedUser
-  })
+  const { data: user } = useQuery<UserType>({
+    queryKey: ['LoginedUser'],
+    queryFn: getLoginedUser,
+  });
 
   const { isPending, mutate } = useMutation({
     mutationFn: addComments,
@@ -26,7 +28,7 @@ export default function CommentCard() {
       const previousComments = queryClient.getQueryData(['comments', id]);
       
       queryClient.setQueryData(['comments', id], (old: any) => {
-        return old ? [...old, { ...newComment, id: Date.now().toString() }] : [{ ...newComment, id: Date.now().toString() }];
+        return old ? [newComment, ...old] : [newComment];
       });
       
       return { previousComments };
@@ -66,81 +68,95 @@ export default function CommentCard() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!commentBody.trim()) return;
+    if (!commentBody.trim() || !id) return;
     mutate({
-      body: commentBody,
-      postId: Number(id),
+      body: commentBody.trim(),
+      postId: id,
       likes: 0,
       user: {
-        id: user?.id ?? 1,
+        id: user?.id ?? "guest",
         username: user?.username ?? "guest",
-        fullName: user ? `${user.firstName} ${user.lastName}` : "Guest User"}
+        fullName: user ? `${user.firstName} ${user.lastName}` : "Guest User",
+        avatar: user?.image || `https://i.pravatar.cc/150?u=${user?.id || "guest"}`,
+      },
+      createdAt: new Date().toISOString(),
     });
   };
 
   return (
-    <div className="space-y-2">
-      <form onSubmit={handleSubmit} className="border border-slate-800 rounded-2xl p-4 shadow-xl dark:text-purple font-bold">
-        <label htmlFor="message" className="block mb-2.5 text-lg font-medium text-heading">Your Comment</label>
+    <div className="space-y-4">
+      <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm transition-colors">
+        <label htmlFor="message" className="block mb-2 text-sm font-semibold text-gray-800 dark:text-gray-200">
+          Leave a comment
+        </label>
         <textarea 
           id="message" 
           rows={2} 
-          className="bg-neutral-secondary-medium border border-purple-600 text-heading text-lg rounded-xl outline-none focus:border-2 focus:border-purple-500 block w-full p-3.5 shadow-xs placeholder:text-body" 
-          placeholder="Write your comment here..."  
+          className="bg-gray-50 dark:bg-slate-800/80 border border-gray-300 dark:border-slate-700 text-gray-900 dark:text-gray-100 text-sm rounded-xl outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 block w-full p-3 transition" 
+          placeholder="Share your thoughts..."  
           value={commentBody}
           onChange={(e) => setCommentBody(e.target.value)}
         />        
-        <button  
-          disabled={isPending}
-          type="submit"
-          className="p-3 bg-purple text-blue-50 m-2.5 rounded hover:bg-purple-500 cursor-pointer disabled:opacity-50"
-        >
-          {isPending ? "sending..." : 'Comment'}
-        </button>
+        <div className="flex justify-end mt-2">
+          <button  
+            disabled={isPending || !commentBody.trim()}
+            type="submit"
+            className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold rounded-xl cursor-pointer disabled:opacity-50 transition shadow-sm"
+          >
+            {isPending ? "Posting..." : "Comment"}
+          </button>
+        </div>
       </form>
 
-      {comments.data?.map((comment: CommentType) => (
-        <div 
-          key={comment.id} 
-          className="group bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-xl hover:bg-slate-900/80 hover:border-slate-700/60 transition-all duration-300"
-        >
-          <div className="flex items-start justify-between gap-4">
-            <div className="flex items-start gap-3.5">
-              <div className="relative shrink-0">
+      <div className="space-y-3">
+        {comments.data?.map((comment: CommentType) => (
+          <div 
+            key={comment.id} 
+            className="bg-white dark:bg-slate-900/40 border border-gray-200 dark:border-slate-800 rounded-2xl p-4 shadow-xs transition hover:border-slate-700"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex items-center gap-3">
                 <img 
-                    src={`https://i.pravatar.cc/150?u=${comment.id}`} 
-                    alt="User Avatar" 
-                    className="w-10 h-10 rounded-full object-cover bg-gray-200"
+                  src={comment.user?.avatar || `https://i.pravatar.cc/150?u=${comment.user?.id || comment.id}`} 
+                  alt="User Avatar" 
+                  className="w-9 h-9 rounded-full object-cover bg-gray-200 border border-gray-200 dark:border-gray-700"
                 />
-                <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-slate-100 text-xs">
+                    {comment.user?.fullName || "Community Member"}
+                  </h4>
+                  <span className="text-[10px] text-gray-400">
+                    @{comment.user?.username || "user"}
+                  </span>
+                </div>
               </div>
-              <h4 className="font-semibold text-slate-100 text-sm tracking-tight hover:text-indigo-400 transition-colors cursor-pointer">
-                {comment.user?.fullName || "User"}
-              </h4>
+              <div className="flex items-center gap-2">
+                <span className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+                  <i className="fa-regular fa-thumbs-up text-[11px]"></i>
+                  <span>{comment.likes}</span>
+                </span>
+                {String(comment.user?.id) === String(user?.id) && (
+                  <button 
+                    onClick={() => mutateDelete(String(comment.id))}
+                    className="text-xs text-gray-400 hover:text-red-500 p-1 transition cursor-pointer"
+                    title="Delete Comment"
+                  >
+                    <i className="fa-solid fa-trash text-[11px]"></i>
+                  </button>
+                )}
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <button className="flex items-center gap-1.5 text-xs font-medium text-slate-300 bg-slate-800/60 hover:bg-indigo-600/20 hover:text-indigo-400 hover:border-indigo-500/30 px-3 py-1.5 rounded-lg border border-slate-700/70 transition-all duration-200">
-                <i className="fa-solid fa-thumbs-up text-[11px]"></i>
-                <span>{comment.likes}</span>
-              </button>
-              {String(comment.user?.id) === String(user?.id) && (
-                <button 
-                  onClick={() => mutateDelete(String(comment.id))}
-                  className="flex items-center gap-1.5 text-xs font-medium text-red-400 bg-slate-800/60 hover:bg-red-600/20 hover:text-red-300 hover:border-red-500/30 px-3 py-1.5 rounded-lg border border-slate-700/70 transition-all duration-200"
-                >
-                  <i className="fa-solid fa-trash text-[11px]"></i>
-                </button>
-              )}
-            </div>
-          </div>
 
-          <div className="mt-3.5 pl-13.5">
-            <p className="text-slate-300 text-sm leading-relaxed font-normal">
-              {comment.body}
-            </p>
+            <div className="mt-2 pl-12 text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
+              <p>{comment.body}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+
+        {comments.data?.length === 0 && (
+          <p className="text-center text-xs text-gray-400 py-4">No comments yet. Be the first to comment!</p>
+        )}
+      </div>
     </div>
   );
-}
+}

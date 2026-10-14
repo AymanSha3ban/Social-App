@@ -23,7 +23,7 @@ export default function Profile() {
 
   const { data: user, isLoading: isUserLoading, isError } = useQuery<UserType>({
     queryKey: ['user', targetUserId],
-    queryFn: () => isOwnProfile ? getLoginedUser() : getUser(Number(targetUserId)),
+    queryFn: () => isOwnProfile ? getLoginedUser() : getUser(targetUserId!),
     enabled: !!targetUserId
   });
 

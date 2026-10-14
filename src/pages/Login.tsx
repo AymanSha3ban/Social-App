@@ -28,28 +28,41 @@ export default function Login() {
       toast.success("Login successful!");
       navigate('/home');
     },
-    onError: () => {
-      toast.error("Invalid username or password");
+    onError: (err: any) => {
+      toast.error(err.message || "Invalid username or password");
     },
-  })
+  });
   
-  const onSubmit= (data : LoginData) => {
-    mutate(data)
+  const onSubmit = (data: LoginData) => {
+    mutate(data);
+  };
 
+  const handleDemoLogin = () => {
+    mutate({ username: "aymanshaaban", password: "demopassword" });
   };
 
   return (
-    <div className="min-h-[80vh] flex justify-center items-center">
+    <div className="min-h-[80vh] flex justify-center items-center px-4">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full max-w-md flex flex-col bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl shadow-purple-200 dark:shadow-none border dark:border-gray-700 gap-5 transition-colors"
+        className="w-full max-w-md flex flex-col bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl shadow-purple-200/50 dark:shadow-none border border-gray-100 dark:border-gray-700 gap-5 transition-colors"
       >
+        <div className="text-center mb-1">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Welcome Back</h2>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+            Sign in with your credentials or explore via 1-click Demo
+          </p>
+        </div>
+
         <div className="flex flex-col">
+          <label className="text-xs font-semibold text-gray-600 dark:text-gray-300 mb-1">
+            Username or Email
+          </label>
           <input
             type="text"
             {...register("username")}
-            placeholder="Enter your username"
-            className="w-full p-2 outline-none border-b-2 border-gray-300 dark:border-gray-600 focus:border-purple-500 dark:focus:border-purple-400 transition-colors bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+            placeholder="Username or email address"
+            className="w-full p-2.5 outline-none border-b-2 border-gray-300 dark:border-gray-600 focus:border-purple-500 dark:focus:border-purple-400 transition-colors bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm"
           />
           {errors.username && (
             <span className="text-red-500 dark:text-red-400 text-xs font-medium mt-1">
@@ -59,11 +72,14 @@ export default function Login() {
         </div>
 
         <div className="flex flex-col">
+          <label className="text-xs font-semibold text-gray-600 dark:text-gray-300 mb-1">
+            Password
+          </label>
           <input
             type="password"
             {...register("password")}
-            placeholder="Enter the password"
-            className="w-full p-2 outline-none border-b-2 border-gray-300 dark:border-gray-600 focus:border-purple-500 dark:focus:border-purple-400 transition-colors bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+            placeholder="Enter your password"
+            className="w-full p-2.5 outline-none border-b-2 border-gray-300 dark:border-gray-600 focus:border-purple-500 dark:focus:border-purple-400 transition-colors bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm"
           />
           {errors.password && (
             <span className="text-red-500 dark:text-red-400 text-xs font-medium mt-1">
@@ -72,17 +88,30 @@ export default function Login() {
           )}
         </div>
 
-        <button
-          type="submit"
-          disabled={isPending}
-          className="w-full mt-4 py-3 rounded-xl cursor-pointer bg-purple-600 text-white font-bold text-lg shadow-lg shadow-purple-300 dark:shadow-none hover:bg-purple-700 hover:scale-[1.02] transition-all disabled:opacity-50"
-        >
-          {isPending ? <i className="fas fa-spinner fa-spin"></i> : "Login"}
-        </button>
+        <div className="flex flex-col gap-2.5 mt-2">
+          <button
+            type="submit"
+            disabled={isPending}
+            className="w-full py-3 rounded-xl cursor-pointer bg-purple-600 text-white font-bold text-base shadow-lg shadow-purple-300 dark:shadow-none hover:bg-purple-700 hover:scale-[1.01] transition-all disabled:opacity-50"
+          >
+            {isPending ? <i className="fas fa-spinner fa-spin"></i> : "Sign In"}
+          </button>
 
-        <div className="flex justify-between px-5">
-          <p className="text-gray-600 dark:text-gray-300">If you don't have account</p>
-          <Link className="text-purple-500 dark:text-purple-400 font-bold hover:text-purple-600 dark:hover:text-purple-300 transition-colors" to={'/register'}>Go to have account</Link>
+          <button
+            type="button"
+            onClick={handleDemoLogin}
+            disabled={isPending}
+            className="w-full py-2.5 rounded-xl cursor-pointer bg-purple-50 hover:bg-purple-100 dark:bg-purple-900/30 dark:hover:bg-purple-900/50 text-purple-700 dark:text-purple-300 font-semibold text-sm border border-purple-200 dark:border-purple-800 transition-all flex items-center justify-center gap-2"
+          >
+            <span>Click Demo Sign-In (Portfolio Mode)</span>
+          </button>
+        </div>
+
+        <div className="flex justify-between items-center text-xs px-2 pt-2 border-t border-gray-100 dark:border-gray-700">
+          <span className="text-gray-600 dark:text-gray-400">Don't have an account?</span>
+          <Link className="text-purple-600 dark:text-purple-400 font-bold hover:underline" to={'/register'}>
+            Create an account
+          </Link>
         </div>
       </form>
     </div>

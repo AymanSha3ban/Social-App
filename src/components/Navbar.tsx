@@ -44,8 +44,8 @@ export default function Navbar() {
         navigate('/login');
     };
     
-    const firstName = user?.firstName;
-    const image = user?.image;
+    const firstName = user?.firstName || "Profile";
+    const image = user?.image || `https://i.pravatar.cc/150?u=${user?.id || 'me'}`;
 
     return (
         <div className="w-full" ref={menuRef}>

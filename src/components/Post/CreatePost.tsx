@@ -17,6 +17,7 @@ export default function CreatePost() {
     handleSubmit,
     setValue,
     watch,
+    reset,
     formState: { errors },
   } = useForm<PostSchemaType>({
     resolver: zodResolver(PostSchema),
@@ -37,7 +38,11 @@ export default function CreatePost() {
     mutationFn: addPost,
     onSuccess: () => {
       toast.success("Post created successfully!");
+      reset();
+      setImgInput(false);
+      setShowEmojiPicker(false);
       queryClient.invalidateQueries({ queryKey: ['posts'] });
+      queryClient.invalidateQueries({ queryKey: ['userPosts'] });
     },
     onError: () => {
       toast.error("Failed to create post. Please try again.");

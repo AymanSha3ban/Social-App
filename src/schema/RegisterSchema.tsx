@@ -36,6 +36,9 @@ export const RegisterSchema = z.object({
   image : z
     .string()
     .optional(),
+  phone: z
+    .string()
+    .optional(),
   
   gender: z.enum(["male", "female"], {
     message: "select your gender!",

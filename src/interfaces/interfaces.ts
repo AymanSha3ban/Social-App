@@ -25,16 +25,21 @@ export interface PostType {
   id?: number | string;
   title: string;
   body: string;
-  tags: string[] ;
+  tags: string[];
   reactions: {
     likes: number;
     dislikes: number;
   };
   likedBy?: string[];
-  mediaURL : string ;
+  mediaURL: string;
   views: number;
-  userId: number;
+  userId: number | string;
+  price?: number;
+  categoryName?: string;
+  brandName?: string;
+  createdAt?: string;
 }
+
 export interface AddPostType {
   id?: number | string;
   title: string;
@@ -45,22 +50,62 @@ export interface AddPostType {
     dislikes: number;
   };
   likedBy?: string[];
-  mediaURL : string ;
+  mediaURL: string;
   views: number;
-  userId: string;
+  userId: string | number;
+  price?: number;
+  categoryName?: string;
 }
+
 export interface CommentType {
   id?: number | string;
   body: string;
-  postId: number;
+  postId: number | string;
   likes: number;
   user: {
     id: number | string;
     username: string; 
     fullName: string;
-  }
+    avatar?: string;
+  };
+  createdAt?: string;
 }
 
+export interface CategoryType {
+  _id: string;
+  name: string;
+  slug: string;
+  image: string;
+}
+
+export interface RouteProductType {
+  _id: string;
+  id?: string;
+  title: string;
+  slug?: string;
+  description: string;
+  quantity?: number;
+  price: number;
+  imageCover: string;
+  images?: string[];
+  category?: {
+    _id: string;
+    name: string;
+    slug: string;
+    image?: string;
+  };
+  brand?: {
+    _id: string;
+    name: string;
+    slug: string;
+    image?: string;
+  };
+  ratingsAverage?: number;
+  ratingsQuantity?: number;
+  sold?: number;
+  createdAt?: string;
+  updatedAt?: string;
+}
 
 export interface Story {
   id: string;
@@ -89,28 +134,29 @@ export interface UserType {
   address: UserAddress;
   followers?: string[];
   following?: string[];
-}
-export interface StoryType{
-  id ? : number | string  ; 
-  mediaUrl :string ; 
+  bio?: string;
 }
 
+export interface StoryType {
+  id?: number | string; 
+  mediaUrl: string; 
+}
 
 export interface PaginatedPosts {
-  first: number;
+  first?: number;
   prev: number | null;
   next: number | null;
-  last: number;
+  last?: number;
   pages: number;
-  items: number;
+  items?: number;
   data: PostType[];
 }
 
 export interface IReactions {
-  postId : string 
-  reactions : {
-    likes : number , 
-    dislikes : number ,
-  },
-  likedBy?: string[]
+  postId: string;
+  reactions: {
+    likes: number;
+    dislikes: number;
+  };
+  likedBy?: string[];
 }
